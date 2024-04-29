@@ -1,0 +1,59 @@
+[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In constructor ‘[01m[KControlNode::ControlNode()[m[K’:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:24:22:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+   24 |         takeoff_cl = [01;31m[Knode[m[K -> create_client<px4_msgs::srv::VehicleCommand>("/fmu/vehicle_command");
+      |                      [01;31m[K^~~~[m[K
+      |                      [32m[KNode[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:24:73:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   24 |         takeoff_cl = node -> create_client<px4_msgs::srv::VehicleCommand[01;31m[K>[m[K("/fmu/vehicle_command");
+      |                                                                         [01;31m[K^[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:27:97:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   27 | _position_check = node -> create_subscription<px4_msgs::msg::VehicleGlobalPosition[01;31m[K>[m[K("/fmu/out/vehicle_global_position",qos,
+      |                                                                                   [01;31m[K^[m[K
+
+[01m[K/root/workspace/src/core/src/offb_node.cpp:27:99:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   27 | osition_check = node -> create_subscription<px4_msgs::msg::VehicleGlobalPosition>([01;35m[K"/fmu/out/vehicle_global_position"[m[K,qos,
+      |                                                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/root/workspace/src/core/src/offb_node.cpp:28:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kbind()[m[K’
+   28 |         std::bind([01;31m[K)[m[K);
+      |                   [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/context.hpp:19[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/contexts/default_context.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:32[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[01m[K/usr/include/c++/9/functional:808:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Func, class ... _BoundArgs> typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type std::bind(_Func&&, _BoundArgs&& ...)[m[K’
+  808 |     [01;36m[Kbind[m[K(_Func&& __f, _BoundArgs&&... __args)
+      |     [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/9/functional:808:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:28:19:[m[K [01;36m[Knote: [m[K  candidate expects at least 1 argument, 0 provided
+   28 |         std::bind([01;36m[K)[m[K);
+      |                   [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/context.hpp:19[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/contexts/default_context.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:32[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[01m[K/usr/include/c++/9/functional:832:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Result, class _Func, class ... _BoundArgs> typename std::_Bindres_helper<_Result, _Func, _BoundArgs>::type std::bind(_Func&&, _BoundArgs&& ...)[m[K’
+  832 |     [01;36m[Kbind[m[K(_Func&& __f, _BoundArgs&&... __args)
+      |     [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/9/functional:832:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:28:19:[m[K [01;36m[Knote: [m[K  candidate expects at least 1 argument, 0 provided
+   28 |         std::bind([01;36m[K)[m[K);
+      |                   [01;36m[K^[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:29:71:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   29 |         takeoff_srv = node -> create_subscription<std_msgs::msg::Empty[01;31m[K>[m[K("/ddscore/takeoff",qos, );
+      |                                                                       [01;31m[K^[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:29:73:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+   29 |         takeoff_srv = node -> create_subscription<std_msgs::msg::Empty>([01;35m[K"/ddscore/takeoff"[m[K,qos, );
+      |                                                                         [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:29:97:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   29 |         takeoff_srv = node -> create_subscription<std_msgs::msg::Empty>("/ddscore/takeoff",qos, [01;31m[K)[m[K;
+      |                                                                                                 [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

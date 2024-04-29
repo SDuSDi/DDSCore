@@ -18,13 +18,14 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(px4_msgs REQUIRED)
 
 # # Link CPP source code to main code
 # file(GLOB SOURCES src/pid.cpp)
 
 add_executable(node src/offb_node.cpp) 
-ament_target_dependencies(node rclcpp px4_msgs)
+ament_target_dependencies(node rclcpp std_msgs px4_msgs)
 
 install(TARGETS
   node

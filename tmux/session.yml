@@ -1,0 +1,23 @@
+name: Offboard ROS 2 + DDS
+root: ./
+startup_window: control
+windows:
+  - gazebo:
+      layout: tiled
+      panes:
+        - cd PX4-Autopilot && make px4_sitl gazebo
+  - DDS:
+      layout: tiled
+      panes:
+        - ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888
+  - QGroundControl:
+      layout: tiled
+      panes:
+        - su -c "/home/user/QGroundControl.AppImage" user
+  - control:
+      layout: tiled
+      panes:
+        - cd workspace && colcon build && source install/setup.bash && clear
+        - 
+        - 
+        - 
