@@ -1,0 +1,85 @@
+[0.009s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.043s] [35m[1mScanning dependencies of target node[0m
+[0.062s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[0.817s] [01m[K/root/workspace/src/core/src/offb_node.cpp:66:70:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ does not name a type
+[0.817s]    66 |     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr disarm_sub;[01;31m[Ks[m[K
+[0.817s]       |                                                                      [01;31m[K^[m[K
+[0.838s] [01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::publish_vehicle_command(uint16_t, float, float)[m[K’:
+[0.838s] [01m[K/root/workspace/src/core/src/offb_node.cpp:120:2:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicleCommand[m[K’ was not declared in this scope
+[0.838s]   120 |  [01;31m[KVehicleCommand[m[K msg{};
+[0.838s]       |  [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.838s] [01m[K/root/workspace/src/core/src/offb_node.cpp:120:2:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[0.838s] In file included from [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__struct.hpp:19[m[K,
+[0.838s]                  from [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp:7[m[K,
+[0.838s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:7[m[K:
+[0.838s] [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp:613:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::VehicleCommand[m[K’
+[0.838s]   613 | using [01;36m[KVehicleCommand[m[K =
+[0.838s]       |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[0.838s] In file included from [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp:7[m[K,
+[0.838s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:7[m[K:
+[0.838s] [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__struct.hpp:244:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::srv::VehicleCommand[m[K’
+[0.838s]   244 | struct [01;36m[KVehicleCommand[m[K
+[0.838s]       |        [01;36m[K^~~~~~~~~~~~~~[m[K
+[0.838s] [01m[K/root/workspace/src/core/src/offb_node.cpp:121:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[0.838s]   121 |  [01;31m[Kmsg[m[K.param1 = param1;
+[0.839s]       |  [01;31m[K^~~[m[K
+[0.839s] [01m[K/root/workspace/src/core/src/offb_node.cpp:121:2:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[0.839s] In file included from [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp:7[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/duration.hpp:20[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/qos.hpp:20[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:34[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[0.839s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[0.839s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[0.839s] [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[0.839s]    26 | namespace [01;36m[Kmsg[m[K
+[0.839s]       |           [01;36m[K^~~[m[K
+[0.839s] In file included from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:22[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[0.840s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[0.840s] [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[0.840s]    26 | namespace [01;36m[Kmsg[m[K
+[0.840s]       |           [01;36m[K^~~[m[K
+[0.840s] In file included from [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/list_parameters_result.hpp:7[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:34[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[0.840s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[0.840s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[0.840s] [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[0.840s]    26 | namespace [01;36m[Kmsg[m[K
+[0.840s]       |           [01;36m[K^~~[m[K
+[0.840s] In file included from [01m[K/opt/ros/foxy/include/std_msgs/msg/empty.hpp:7[m[K,
+[0.840s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:3[m[K:
+[0.840s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/empty__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[0.840s]    26 | namespace [01;36m[Kmsg[m[K
+[0.841s]       |           [01;36m[K^~~[m[K
+[0.841s] In file included from [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__struct.hpp:19[m[K,
+[0.841s]                  from [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp:7[m[K,
+[0.841s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:7[m[K:
+[0.841s] [01m[K/root/microros_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg[m[K’
+[0.841s]    26 | namespace [01;36m[Kmsg[m[K
+[0.841s]       |           [01;36m[K^~~[m[K
+[2.589s] make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
+[2.589s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
+[2.589s] make: *** [Makefile:141: all] Error 2
+[2.592s] Invoked command in '/root/workspace/build/core' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20

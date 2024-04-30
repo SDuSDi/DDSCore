@@ -18,6 +18,9 @@ class ControlNode : public rclcpp::Node
 public:
     ControlNode() : Node("ddscore")
     {
+        // Definition of publishers
+        vehicle_commander = this -> create_publisher<px4_msgs::msg::VehicleCommand>("/fmu/in/vehicle_command",10);
+
         // Definition of quality of service for all subscribers
         rmw_qos_profile_t qos_profile = rmw_qos_profile_sensor_data;
         auto qos = rclcpp::QoS(rclcpp::QoSInitialization(qos_profile.history, 5), qos_profile);
@@ -32,6 +35,10 @@ public:
                       std::bind(&ControlNode::set_takeoff, this, std::placeholders::_1));
         land_srv = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/land",qos,
                    std::bind(&ControlNode::set_land, this, std::placeholders::_1));
+        arm_sub = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/arm",qos,
+                  std::bind(&ControlNode::arm, this, std::placeholders::_1));
+        disarm_sub = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/disarm",qos,
+                     std::bind(&ControlNode::disarm, this, std::placeholders::_1));
     }
 
 private:
@@ -40,15 +47,23 @@ private:
 
     void cb_srv_command(const rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedFuture future);
     void publish_srv_command(uint16_t command, float alt = 0.0);
+    void publish_vehicle_command(uint16_t command, float param1 = 0.0, float param2 = 0.0);
 
     void set_takeoff(const std_msgs::msg::Float32::SharedPtr msg);
     void set_land(const std_msgs::msg::Empty::SharedPtr msg);
+    void arm(const std_msgs::msg::Empty::SharedPtr msg);
+    void disarm(const std_msgs::msg::Empty::SharedPtr msg);
+
+    rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_commander;
 
     rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedPtr command_cl;
 
     rclcpp::Subscription<px4_msgs::msg::VehicleGlobalPosition>::SharedPtr global_position_check;
+
     rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr takeoff_srv;
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr land_srv;
+    rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr arm_sub;
+    rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr disarm_sub;
 
 };
 
@@ -101,6 +116,20 @@ void ControlNode::publish_srv_command(uint16_t command, float alt) {
     auto result = command_cl -> async_send_request(request, std::bind(&ControlNode::cb_srv_command, this, std::placeholders::_1));
 }
 
+void ControlNode::publish_vehicle_command(uint16_t command, float param1, float param2){
+	px4_msgs::msg::VehicleCommand msg{};
+	msg.param1 = param1;
+	msg.param2 = param2;
+	msg.command = command;
+	msg.target_system = 1;
+	msg.target_component = 1;
+	msg.source_system = 1;
+	msg.source_component = 1;
+	msg.from_external = true;
+	msg.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+	vehicle_commander -> publish(msg);  
+}
+
 void ControlNode::set_takeoff(const std_msgs::msg::Float32::SharedPtr msg) {
     RCLCPP_INFO(this -> get_logger(), "Hey! I'm going to take off!");
     publish_srv_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_TAKEOFF, msg -> data);
@@ -110,6 +139,18 @@ void ControlNode::set_land(const std_msgs::msg::Empty::SharedPtr msg) {
     (void) msg; //Shuts the compiler up about the empty message not being used
     RCLCPP_INFO(this -> get_logger(), "Hey! I'm going to land!");
     publish_srv_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND);
+}
+
+void ControlNode::arm(const std_msgs::msg::Empty::SharedPtr msg) {
+    (void) msg; //Shuts the compiler up about the empty message not being used
+    RCLCPP_INFO(this -> get_logger(), "Vehicle is getting armed!");
+    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM,1);
+}
+
+void ControlNode::disarm(const std_msgs::msg::Empty::SharedPtr msg) {
+    (void) msg; //Shuts the compiler up about the empty message not being used
+    RCLCPP_INFO(this -> get_logger(), "Vehicle is getting disarmed!");
+    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM,0);
 }
 
 int main(int argc, char **argv){

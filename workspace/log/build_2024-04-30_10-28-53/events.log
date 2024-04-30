@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.000886] (core) JobQueued: {'identifier': 'core', 'dependencies': OrderedDict()}
+[0.000917] (core) JobStarted: {'identifier': 'core'}
+[0.007209] (core) JobProgress: {'identifier': 'core', 'progress': 'cmake'}
+[0.007577] (core) JobProgress: {'identifier': 'core', 'progress': 'build'}
+[0.007893] (core) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/workspace/build/core', '--', '-j20', '-l20'], 'cwd': '/root/workspace/build/core', 'env': OrderedDict([('TMUX', '/tmp/tmux-0/default,49,0'), ('HOSTNAME', 'GTX-3060-2'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/root/microros_ws/install/px4_ros_com/lib:/root/microros_ws/install/px4_msgs/lib:/root/microros_ws/install/micro_ros_agent/lib:/root/microros_ws/install/micro_ros_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/microros_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'screen'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('PWD', '/root/workspace/build/core'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/microros_ws/install/px4_ros_com/lib/python3.8/site-packages:/root/microros_ws/install/px4_msgs/lib/python3.8/site-packages:/root/microros_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('TMUX_PANE', '%3'), ('CMAKE_PREFIX_PATH', '/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy')]), 'shell': False}
+[0.041008] (core) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o\x1b[0m\n'}
+[0.099856] (-) TimerEvent: {}
+[0.200144] (-) TimerEvent: {}
+[0.300430] (-) TimerEvent: {}
+[0.400703] (-) TimerEvent: {}
+[0.500953] (-) TimerEvent: {}
+[0.601232] (-) TimerEvent: {}
+[0.653899] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:66:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ks\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[0.654082] (core) StderrLine: {'line': b'   66 |     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr disarm_sub;\x1b[01;31m\x1b[Ks\x1b[m\x1b[K\n'}
+[0.654151] (core) StderrLine: {'line': b'      |                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[0.670436] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ControlNode::publish_vehicle_command(uint16_t, float, float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.670589] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:120:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KVehicleCommand\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[0.670643] (core) StderrLine: {'line': b'  120 |  \x1b[01;31m\x1b[KVehicleCommand\x1b[m\x1b[K msg{};\n'}
+[0.670682] (core) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.670721] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:120:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[0.670784] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__struct.hpp:19\x1b[m\x1b[K,\n'}
+[0.670924] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp:7\x1b[m\x1b[K,\n'}
+[0.670966] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:7\x1b[m\x1b[K:\n'}
+[0.671007] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp:613:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kpx4_msgs::msg::VehicleCommand\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.671048] (core) StderrLine: {'line': b'  613 | using \x1b[01;36m\x1b[KVehicleCommand\x1b[m\x1b[K =\n'}
+[0.671089] (core) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.671135] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp:7\x1b[m\x1b[K,\n'}
+[0.671273] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:7\x1b[m\x1b[K:\n'}
+[0.671341] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__struct.hpp:244:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kpx4_msgs::srv::VehicleCommand\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.671403] (core) StderrLine: {'line': b'  244 | struct \x1b[01;36m\x1b[KVehicleCommand\x1b[m\x1b[K\n'}
+[0.671460] (core) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.671516] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:121:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[0.671573] (core) StderrLine: {'line': b'  121 |  \x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K.param1 = param1;\n'}
+[0.671627] (core) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.671682] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:121:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[0.671737] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp:7\x1b[m\x1b[K,\n'}
+[0.671792] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/duration.hpp:20\x1b[m\x1b[K,\n'}
+[0.671847] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[0.671911] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/node_interfaces/node_graph_interface.hpp:31\x1b[m\x1b[K,\n'}
+[0.671967] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/client.hpp:34\x1b[m\x1b[K,\n'}
+[0.672024] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[0.672079] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[0.672135] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[0.672191] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[0.672246] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[0.672302] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[0.672358] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[0.672414] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[0.672470] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[0.672531] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:2\x1b[m\x1b[K:\n'}
+[0.672588] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp:26:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kbuiltin_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.672645] (core) StderrLine: {'line': b'   26 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[0.672702] (core) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.672758] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:22\x1b[m\x1b[K,\n'}
+[0.672814] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp:7\x1b[m\x1b[K,\n'}
+[0.672875] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:21\x1b[m\x1b[K,\n'}
+[0.672935] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[0.672991] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[0.673048] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[0.673104] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[0.673161] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[0.673217] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[0.673273] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[0.673328] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[0.673384] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[0.673443] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[0.673499] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:2\x1b[m\x1b[K:\n'}
+[0.673554] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:26:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstatistics_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.673610] (core) StderrLine: {'line': b'   26 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[0.673666] (core) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.673721] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rcl_interfaces/msg/list_parameters_result.hpp:7\x1b[m\x1b[K,\n'}
+[0.673778] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/node.hpp:34\x1b[m\x1b[K,\n'}
+[0.673834] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[0.673889] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[0.673945] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[0.674001] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:2\x1b[m\x1b[K:\n'}
+[0.674057] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:26:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.674114] (core) StderrLine: {'line': b'   26 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[0.674170] (core) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.674226] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/std_msgs/msg/empty.hpp:7\x1b[m\x1b[K,\n'}
+[0.674284] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:3\x1b[m\x1b[K:\n'}
+[0.674341] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/std_msgs/msg/detail/empty__struct.hpp:26:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.674398] (core) StderrLine: {'line': b'   26 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[0.674454] (core) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.674510] (core) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__struct.hpp:19\x1b[m\x1b[K,\n'}
+[0.674567] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp:7\x1b[m\x1b[K,\n'}
+[0.674622] (core) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/root/workspace/src/core/src/offb_node.cpp:7\x1b[m\x1b[K:\n'}
+[0.674679] (core) StderrLine: {'line': b'\x1b[01m\x1b[K/root/microros_ws/install/px4_msgs/include/px4_msgs/msg/detail/vehicle_command__struct.hpp:26:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kpx4_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[0.674736] (core) StderrLine: {'line': b'   26 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[0.674794] (core) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[0.701366] (-) TimerEvent: {}
+[0.801655] (-) TimerEvent: {}
+[0.901947] (-) TimerEvent: {}
+[1.002213] (-) TimerEvent: {}
+[1.102527] (-) TimerEvent: {}
+[1.202783] (-) TimerEvent: {}
+[1.303088] (-) TimerEvent: {}
+[1.403411] (-) TimerEvent: {}
+[1.503666] (-) TimerEvent: {}
+[1.603979] (-) TimerEvent: {}
+[1.704297] (-) TimerEvent: {}
+[1.804617] (-) TimerEvent: {}
+[1.904908] (-) TimerEvent: {}
+[2.005165] (-) TimerEvent: {}
+[2.065540] (core) StderrLine: {'line': b'make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1\n'}
+[2.065800] (core) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2\n'}
+[2.065961] (core) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[2.066910] (core) CommandEnded: {'returncode': 2}
+[2.088918] (core) JobEnded: {'identifier': 'core', 'rc': 2}
+[2.099740] (-) EventReactorShutdown: {}
