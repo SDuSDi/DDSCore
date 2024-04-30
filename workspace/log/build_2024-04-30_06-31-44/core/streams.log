@@ -1,0 +1,29 @@
+[0.009s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.039s] [35m[1mScanning dependencies of target node[0m
+[0.056s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[0.834s] [01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::publish_takeoff(std_msgs::msg::Empty_<std::allocator<void> >::SharedPtr)[m[K’:
+[0.834s] [01m[K/root/workspace/src/core/src/offb_node.cpp:79:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin_until_future_complete(ControlNode*, std::shared_future<std::shared_ptr<px4_msgs::srv::VehicleCommand_Response_<std::allocator<void> > > >&)[m[K’
+[0.834s]    79 |     if (rclcpp::spin_until_future_complete(this, result[01;31m[K)[m[K == rclcpp::FutureReturnCode::SUCCESS)
+[0.834s]       |                                                        [01;31m[K^[m[K
+[0.834s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[0.834s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[0.834s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:105:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class FutureT, class TimeRepT, class TimeT> rclcpp::FutureReturnCode rclcpp::spin_until_future_complete(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, const std::shared_future<_Res>&, std::chrono::duration<_Rep, _Period>)[m[K’
+[0.834s]   105 | [01;36m[Kspin_until_future_complete[m[K(
+[0.834s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.834s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:105:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[0.834s] [01m[K/root/workspace/src/core/src/offb_node.cpp:79:56:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K(ControlNode*)this[m[K’ (type ‘[01m[KControlNode*[m[K’) to type ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+[0.834s]    79 |     if (rclcpp::spin_until_future_complete(this, result[01;36m[K)[m[K == rclcpp::FutureReturnCode::SUCCESS)
+[0.834s]       |                                                        [01;36m[K^[m[K
+[0.834s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[0.834s]                  from [01m[K/root/workspace/src/core/src/offb_node.cpp:2[m[K:
+[0.834s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:117:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class NodeT, class FutureT, class TimeRepT, class TimeT> rclcpp::FutureReturnCode rclcpp::spin_until_future_complete(std::shared_ptr<_Tp>, const std::shared_future<ResponseT>&, std::chrono::duration<_Rep2, _Period2>)[m[K’
+[0.834s]   117 | [01;36m[Kspin_until_future_complete[m[K(
+[0.834s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.834s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:117:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[0.834s] [01m[K/root/workspace/src/core/src/offb_node.cpp:79:56:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::shared_ptr<_Tp>[m[K’ and ‘[01m[KControlNode*[m[K’
+[0.834s]    79 |     if (rclcpp::spin_until_future_complete(this, result[01;36m[K)[m[K == rclcpp::FutureReturnCode::SUCCESS)
+[0.834s]       |                                                        [01;36m[K^[m[K
+[1.790s] make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
+[1.790s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
+[1.790s] make: *** [Makefile:141: all] Error 2
+[1.791s] Invoked command in '/root/workspace/build/core' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20

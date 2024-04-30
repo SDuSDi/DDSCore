@@ -1,0 +1,16 @@
+/root/workspace/install/core/lib/core/node
+/root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+/root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+/root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+/root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+/root/workspace/install/core/share/core/environment/path.sh
+/root/workspace/install/core/share/core/environment/path.dsv
+/root/workspace/install/core/share/core/local_setup.bash
+/root/workspace/install/core/share/core/local_setup.sh
+/root/workspace/install/core/share/core/local_setup.zsh
+/root/workspace/install/core/share/core/local_setup.dsv
+/root/workspace/install/core/share/core/package.dsv
+/root/workspace/install/core/share/ament_index/resource_index/packages/core
+/root/workspace/install/core/share/core/cmake/coreConfig.cmake
+/root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+/root/workspace/install/core/share/core/package.xml

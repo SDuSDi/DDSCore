@@ -1,0 +1,26 @@
+[0.011s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.042s] [35m[1mScanning dependencies of target node[0m
+[0.058s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[3.106s] [100%] [32m[1mLinking CXX executable node[0m
+[3.260s] [100%] Built target node
+[3.268s] Invoked command in '/root/workspace/build/core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[3.288s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /root/workspace/build/core
+[3.294s] -- Install configuration: ""
+[3.294s] -- Installing: /root/workspace/install/core/lib/core/node
+[3.295s] -- Set runtime path of "/root/workspace/install/core/lib/core/node" to ""
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.sh
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.dsv
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.bash
+[3.295s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.sh
+[3.296s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.zsh
+[3.296s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.dsv
+[3.296s] -- Installing: /root/workspace/install/core/share/core/package.dsv
+[3.296s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/packages/core
+[3.296s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig.cmake
+[3.296s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+[3.296s] -- Up-to-date: /root/workspace/install/core/share/core/package.xml
+[3.297s] Invoked command in '/root/workspace/build/core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /root/workspace/build/core
