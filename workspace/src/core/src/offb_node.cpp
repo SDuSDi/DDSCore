@@ -2,16 +2,16 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/empty.hpp"
 #include "std_msgs/msg/float32.hpp"
+#include "std_msgs/msg/int16.hpp"
 
 // PX4 libraries and dependencies
 #include "px4_msgs/srv/vehicle_command.hpp"
 #include "px4_msgs/msg/vehicle_command.hpp"
 #include "px4_msgs/msg/vehicle_command_ack.hpp"
 #include "px4_msgs/msg/vehicle_global_position.hpp"
+#include "px4_msgs/msg/offboard_control_mode.hpp"
 
 std::array<float,3> global_pos;
-
-// Subnormal
 
 class ControlNode : public rclcpp::Node
 {
@@ -20,6 +20,7 @@ public:
     {
         // Definition of publishers
         vehicle_commander = this -> create_publisher<px4_msgs::msg::VehicleCommand>("/fmu/in/vehicle_command",10);
+        offboard_controller = this -> create_publisher<px4_msgs::msg::OffboardControlMode>("/fmu/in/offboard_control_mode",10);
 
         // Definition of quality of service for all subscribers
         rmw_qos_profile_t qos_profile = rmw_qos_profile_sensor_data;
@@ -31,14 +32,16 @@ public:
         // Definition of subscribers
         global_position_check = this -> create_subscription<px4_msgs::msg::VehicleGlobalPosition>("/fmu/out/vehicle_global_position",qos,
                                 std::bind(&ControlNode::global_pos_cb, this, std::placeholders::_1));
-        takeoff_srv = this -> create_subscription<std_msgs::msg::Float32>("/ddscore/takeoff",qos, 
-                      std::bind(&ControlNode::set_takeoff, this, std::placeholders::_1));
-        land_srv = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/land",qos,
-                   std::bind(&ControlNode::set_land, this, std::placeholders::_1));
-        arm_sub = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/arm",qos,
-                  std::bind(&ControlNode::arm, this, std::placeholders::_1));
-        disarm_sub = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/disarm",qos,
-                     std::bind(&ControlNode::disarm, this, std::placeholders::_1));
+        takeoff_srv =           this -> create_subscription<std_msgs::msg::Float32>("/ddscore/takeoff",qos, 
+                                std::bind(&ControlNode::set_takeoff, this, std::placeholders::_1));
+        land_srv =              this -> create_subscription<std_msgs::msg::Empty>("/ddscore/land",qos,
+                                std::bind(&ControlNode::set_land, this, std::placeholders::_1));
+        arm_sub =               this -> create_subscription<std_msgs::msg::Empty>("/ddscore/arm",qos,
+                                std::bind(&ControlNode::arm, this, std::placeholders::_1));
+        disarm_sub =            this -> create_subscription<std_msgs::msg::Empty>("/ddscore/disarm",qos,
+                                std::bind(&ControlNode::disarm, this, std::placeholders::_1));
+        mode_sub =              this -> create_subscription<std_msgs::msg::Int16>("/ddscore/mode",qos,
+                                std::bind(&ControlNode::set_mode, this, std::placeholders::_1));
     }
 
 private:
@@ -47,14 +50,16 @@ private:
 
     void cb_srv_command(const rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedFuture future);
     void publish_srv_command(uint16_t command, float alt = 0.0);
-    void publish_vehicle_command(uint16_t command, float param1 = 0.0, float param2 = 0.0);
+    void publish_vehicle_command(uint16_t command, float param1 = 0.0);
 
     void set_takeoff(const std_msgs::msg::Float32::SharedPtr msg);
     void set_land(const std_msgs::msg::Empty::SharedPtr msg);
     void arm(const std_msgs::msg::Empty::SharedPtr msg);
     void disarm(const std_msgs::msg::Empty::SharedPtr msg);
+    void set_mode(const std_msgs::msg::Int16::SharedPtr msg);
 
     rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_commander;
+    rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_controller;
 
     rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedPtr command_cl;
 
@@ -64,6 +69,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr land_srv;
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr arm_sub;
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr disarm_sub;
+    rclcpp::Subscription<std_msgs::msg::Int16>::SharedPtr mode_sub;
 
 };
 
@@ -116,10 +122,9 @@ void ControlNode::publish_srv_command(uint16_t command, float alt) {
     auto result = command_cl -> async_send_request(request, std::bind(&ControlNode::cb_srv_command, this, std::placeholders::_1));
 }
 
-void ControlNode::publish_vehicle_command(uint16_t command, float param1, float param2){
+void ControlNode::publish_vehicle_command(uint16_t command, float param1){
 	px4_msgs::msg::VehicleCommand msg{};
 	msg.param1 = param1;
-	msg.param2 = param2;
 	msg.command = command;
 	msg.target_system = 1;
 	msg.target_component = 1;
@@ -151,6 +156,11 @@ void ControlNode::disarm(const std_msgs::msg::Empty::SharedPtr msg) {
     (void) msg; //Shuts the compiler up about the empty message not being used
     RCLCPP_INFO(this -> get_logger(), "Vehicle is getting disarmed!");
     publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM,0);
+}
+
+void ControlNode::set_mode(const std_msgs::msg::Int16::SharedPtr msg) {
+    RCLCPP_INFO(this -> get_logger(), "Setting mode to: "+std::to_string(msg -> data));
+    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE, msg -> data);
 }
 
 int main(int argc, char **argv){
