@@ -376,6 +376,9 @@ core_BINARY_DIR:STATIC=/root/workspace/build/core
 //Value Computed by CMake
 core_SOURCE_DIR:STATIC=/root/workspace/src/core
 
+//The directory containing a CMake configuration file for core_msgs.
+core_msgs_DIR:PATH=/root/workspace/install/core_msgs/share/core_msgs/cmake
+
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/opt/ros/foxy/lib/cmake/fastcdr
 
@@ -387,6 +390,9 @@ fastrtps_cmake_module_DIR:PATH=/opt/ros/foxy/share/fastrtps_cmake_module/cmake
 
 //The directory containing a CMake configuration file for foonathan_memory.
 foonathan_memory_DIR:PATH=/opt/ros/foxy/lib/foonathan_memory/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/foxy/share/geometry_msgs/cmake
 
 //The directory containing a CMake configuration file for libstatistics_collector.
 libstatistics_collector_DIR:PATH=/opt/ros/foxy/share/libstatistics_collector/cmake

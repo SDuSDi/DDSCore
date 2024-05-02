@@ -1,0 +1,52 @@
+[0.010s] Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /root/workspace/src/core_msgs -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core_msgs
+[0.016s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.028s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.096s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.097s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.099s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.171s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.195s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.224s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[0.224s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name core_msgs
+[0.224s]   --arguments-file
+[0.225s]   /root/workspace/build/core_msgs/rosidl_adapter__arguments__core_msgs.json
+[0.225s]   --output-dir /root/workspace/build/core_msgs/rosidl_adapter/core_msgs
+[0.225s]   --output-file
+[0.225s]   /root/workspace/build/core_msgs/rosidl_adapter/core_msgs.idls) returned
+[0.225s]   error code 1:
+[0.225s] 
+[0.225s]   Error processing 'float yaw' of 'core_msgs/Trajectory': ''float' is an
+[0.225s]   invalid message name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$''
+[0.225s] 
+[0.225s]   Traceback (most recent call last):
+[0.225s] 
+[0.225s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[0.225s]       return _run_code(code, main_globals, None,
+[0.225s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[0.225s]       exec(code, run_globals)
+[0.225s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.225s]       sys.exit(main())
+[0.226s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.226s]       abs_idl_file = convert_to_idl(
+[0.226s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.226s]       return convert_msg_to_idl(
+[0.226s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.226s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.226s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string
+[0.226s]       Type(type_string, context_package_name=pkg_name),
+[0.226s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__
+[0.226s]       super(Type, self).__init__(
+[0.226s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[0.226s]       raise InvalidResourceName(
+[0.226s] 
+[0.226s]   rosidl_adapter.parser.InvalidResourceName: 'float' is an invalid message
+[0.226s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[0.226s] 
+[0.226s] Call Stack (most recent call first):
+[0.226s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.226s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[0.226s] 
+[0.226s] 
+[0.226s] -- Configuring incomplete, errors occurred!
+[0.226s] See also "/root/workspace/build/core_msgs/CMakeFiles/CMakeOutput.log".
+[0.228s] Invoked command in '/root/workspace/build/core_msgs' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /root/workspace/src/core_msgs -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core_msgs

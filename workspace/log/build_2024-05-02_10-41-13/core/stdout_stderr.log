@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::set_trajectory(geometry_msgs::msg::Point_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:203:42:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((const std::__shared_ptr_access<geometry_msgs::msg::Point_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<geometry_msgs::msg::Point_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->geometry_msgs::msg::Point_<std::allocator<void> >::x[m[K’ from ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::_x_type[m[K’ {aka ‘[01m[Kdouble[m[K’} to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  203 |     std::array<float,3> vector = {[01;35m[Kmsg -> x[m[K, msg -> y, -(msg -> z)};
+      |                                   [01;35m[K~~~~~~~^[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:203:52:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((const std::__shared_ptr_access<geometry_msgs::msg::Point_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<geometry_msgs::msg::Point_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->geometry_msgs::msg::Point_<std::allocator<void> >::y[m[K’ from ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::_y_type[m[K’ {aka ‘[01m[Kdouble[m[K’} to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  203 |     std::array<float,3> vector = {msg -> x, [01;35m[Kmsg -> y[m[K, -(msg -> z)};
+      |                                             [01;35m[K~~~~~~~^[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:203:55:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K-((const std::__shared_ptr_access<geometry_msgs::msg::Point_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& msg))->std::__shared_ptr_access<geometry_msgs::msg::Point_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->geometry_msgs::msg::Point_<std::allocator<void> >::z[m[K’ from ‘[01m[Kgeometry_msgs::msg::Point_<std::allocator<void> >::_z_type[m[K’ {aka ‘[01m[Kdouble[m[K’} to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  203 |     std::array<float,3> vector = {msg -> x, msg -> y, [01;35m[K-(msg -> z)[m[K};
+      |                                                       [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:204:39:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint msg[m[K’ shadows a parameter
+  204 |     px4_msgs::msg::TrajectorySetpoint [01;31m[Kmsg[m[K{};
+      |                                       [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

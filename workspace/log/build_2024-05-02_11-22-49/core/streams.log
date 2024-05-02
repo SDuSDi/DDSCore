@@ -1,0 +1,50 @@
+[0.007s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.023s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.036s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.114s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.131s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.133s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.198s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.224s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.225s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.303s] -- Found core_msgs: 0.0.0 (/root/workspace/install/core_msgs/share/core_msgs/cmake)
+[0.306s] -- Found px4_msgs: 2.0.1 (/root/microros_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.316s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.351s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.351s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.351s] -- Configured cppcheck include dirs: 
+[0.351s] -- Configured cppcheck exclude dirs and/or files: 
+[0.351s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.351s] -- Configured cpplint exclude dirs and/or files: 
+[0.351s] -- Added test 'lint_cmake' to check CMake code style
+[0.352s] -- Added test 'uncrustify' to check C / C++ code style
+[0.352s] -- Configured uncrustify additional arguments: 
+[0.352s] -- Added test 'xmllint' to check XML markup files
+[0.353s] -- Configuring done
+[0.357s] -- Generating done
+[0.358s] -- Build files have been written to: /root/workspace/build/core
+[0.373s] [35m[1mScanning dependencies of target node[0m
+[0.389s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[7.415s] [100%] [32m[1mLinking CXX executable node[0m
+[7.702s] [100%] Built target node
+[7.707s] Invoked command in '/root/workspace/build/core' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[7.721s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy /usr/bin/cmake --install /root/workspace/build/core
+[7.725s] -- Install configuration: ""
+[7.725s] -- Installing: /root/workspace/install/core/lib/core/node
+[7.729s] -- Set runtime path of "/root/workspace/install/core/lib/core/node" to ""
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+[7.729s] -- Installing: /root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+[7.729s] -- Installing: /root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.sh
+[7.729s] -- Installing: /root/workspace/install/core/share/core/environment/path.dsv
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.bash
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.sh
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.zsh
+[7.729s] -- Installing: /root/workspace/install/core/share/core/local_setup.dsv
+[7.729s] -- Installing: /root/workspace/install/core/share/core/package.dsv
+[7.729s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/packages/core
+[7.730s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig.cmake
+[7.730s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+[7.730s] -- Up-to-date: /root/workspace/install/core/share/core/package.xml
+[7.731s] Invoked command in '/root/workspace/build/core' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy /usr/bin/cmake --install /root/workspace/build/core

@@ -80,6 +80,10 @@ node_EXTERNAL_OBJECTS =
 node: CMakeFiles/node.dir/src/offb_node.cpp.o
 node: CMakeFiles/node.dir/build.make
 node: /opt/ros/foxy/lib/librclcpp.so
+node: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_c.so
+node: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_c.so
+node: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_cpp.so
+node: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_cpp.so
 node: /root/microros_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_c.so
 node: /root/microros_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_c.so
 node: /root/microros_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_typesupport_introspection_cpp.so
@@ -118,6 +122,7 @@ node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_c.so
 node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so
 node: /opt/ros/foxy/lib/libstatistics_msgs__rosidl_typesupport_cpp.so
 node: /opt/ros/foxy/lib/libtracetools.so
+node: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_c.so
 node: /root/microros_ws/install/px4_msgs/lib/libpx4_msgs__rosidl_generator_c.so
 node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so

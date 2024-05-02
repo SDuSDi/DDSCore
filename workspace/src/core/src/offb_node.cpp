@@ -4,6 +4,7 @@
 #include "std_msgs/msg/float32.hpp"
 #include "std_msgs/msg/int16.hpp"
 #include "std_msgs/msg/bool.hpp"
+#include "core_msgs/msg/trajectory.hpp"
 
 // PX4 libraries and dependencies
 #include "px4_msgs/srv/vehicle_command.hpp"
@@ -11,6 +12,7 @@
 #include "px4_msgs/msg/vehicle_command_ack.hpp"
 #include "px4_msgs/msg/vehicle_global_position.hpp"
 #include "px4_msgs/msg/offboard_control_mode.hpp"
+#include "px4_msgs/msg/trajectory_setpoint.hpp"
 
 std::array<float,3> global_pos;
 bool enable = true;
@@ -23,6 +25,7 @@ public:
         // Definition of publishers
         vehicle_commander = this -> create_publisher<px4_msgs::msg::VehicleCommand>("/fmu/in/vehicle_command",10);
         offboard_controller = this -> create_publisher<px4_msgs::msg::OffboardControlMode>("/fmu/in/offboard_control_mode",10);
+        trajectory_publisher = this -> create_publisher<px4_msgs::msg::TrajectorySetpoint>("/fmu/in/trajectory_setpoint",10);
 
         // Definition of quality of service for all subscribers
         rmw_qos_profile_t qos_profile = rmw_qos_profile_sensor_data;
@@ -46,6 +49,8 @@ public:
                                 std::bind(&ControlNode::set_mode, this, std::placeholders::_1));
         offb_control_sub =      this -> create_subscription<std_msgs::msg::Bool>("/ddscore/offboard_control", qos,
                                 std::bind(&ControlNode::offbctrl_sub, this, std::placeholders::_1));
+        trajectory_sub =        this -> create_subscription<core_msgs::msg::Trajectory>("/ddscore/trajectory",qos,
+                                std::bind(&ControlNode::set_trajectory, this, std::placeholders::_1));
 
         // Definition of loop timer function
         auto publish_offboard_control = [this]() -> void {
@@ -77,9 +82,11 @@ private:
     void disarm(const std_msgs::msg::Empty::SharedPtr msg);
     void set_mode(const std_msgs::msg::Int16::SharedPtr msg);
     void offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg);
+    void set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg);
 
     rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_commander;
     rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_controller;
+    rclcpp::Publisher<px4_msgs::msg::TrajectorySetpoint>::SharedPtr trajectory_publisher;
 
     rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedPtr command_cl;
 
@@ -91,6 +98,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr disarm_sub;
     rclcpp::Subscription<std_msgs::msg::Int16>::SharedPtr mode_sub;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr offb_control_sub;
+    rclcpp::Subscription<core_msgs::msg::Trajectory>::SharedPtr trajectory_sub;
 
     rclcpp::TimerBase::SharedPtr offboard_ctrl;
 
@@ -189,6 +197,20 @@ void ControlNode::set_mode(const std_msgs::msg::Int16::SharedPtr msg) {
 void ControlNode::offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg) {
     RCLCPP_INFO(this -> get_logger(), "Setting offboard position control to: "+std::to_string(msg -> data));
     enable = msg -> data;
+}
+
+void ControlNode::set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg) {
+    px4_msgs::msg::TrajectorySetpoint tmp{};
+    if(enable){
+        tmp.position = {msg -> x, msg -> y, -(msg -> z)};
+        tmp.yaw = msg -> yaw; // [-PI,PI]
+        tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+    }else{
+        tmp.velocity = {msg -> x, msg -> y, -(msg -> z)};
+        tmp.yaw = msg -> yaw; // [-PI,PI]
+        tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+    }
+    trajectory_publisher -> publish(tmp);
 }
 
 int main(int argc, char **argv){

@@ -1,0 +1,55 @@
+[0.006s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.020s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.031s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.098s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.115s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.117s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.182s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.207s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.208s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.284s] -- Found core_msgs: 0.0.0 (/root/workspace/install/core_msgs/share/core_msgs/cmake)
+[0.287s] -- Found px4_msgs: 2.0.1 (/root/microros_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.297s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.332s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.333s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.333s] -- Configured cppcheck include dirs: 
+[0.333s] -- Configured cppcheck exclude dirs and/or files: 
+[0.333s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.333s] -- Configured cpplint exclude dirs and/or files: 
+[0.333s] -- Added test 'lint_cmake' to check CMake code style
+[0.334s] -- Added test 'uncrustify' to check C / C++ code style
+[0.334s] -- Configured uncrustify additional arguments: 
+[0.334s] -- Added test 'xmllint' to check XML markup files
+[0.335s] -- Configuring done
+[0.339s] -- Generating done
+[0.340s] -- Build files have been written to: /root/workspace/build/core
+[0.354s] [35m[1mScanning dependencies of target node[0m
+[0.371s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[1.070s] [01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::set_trajectory(core_msgs::msg::Trajectory_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.070s] [01m[K/root/workspace/src/core/src/offb_node.cpp:202:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.070s]   202 | ::set_trajectory([01;35m[Kconst core_msgs::msg::Trajectory::SharedPtr msg[m[K) {
+[1.070s]       |                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[1.070s] 
+[7.318s] [100%] [32m[1mLinking CXX executable node[0m
+[7.604s] [100%] Built target node
+[7.610s] Invoked command in '/root/workspace/build/core' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[7.622s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /root/workspace/build/core
+[7.627s] -- Install configuration: ""
+[7.627s] -- Installing: /root/workspace/install/core/lib/core/node
+[7.630s] -- Set runtime path of "/root/workspace/install/core/lib/core/node" to ""
+[7.631s] -- Installing: /root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+[7.631s] -- Installing: /root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+[7.631s] -- Installing: /root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.sh
+[7.631s] -- Installing: /root/workspace/install/core/share/core/environment/path.dsv
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.bash
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.sh
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.zsh
+[7.631s] -- Installing: /root/workspace/install/core/share/core/local_setup.dsv
+[7.631s] -- Installing: /root/workspace/install/core/share/core/package.dsv
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/packages/core
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig.cmake
+[7.631s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+[7.631s] -- Installing: /root/workspace/install/core/share/core/package.xml
+[7.634s] Invoked command in '/root/workspace/build/core' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/foxy LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /root/workspace/build/core

@@ -17,6 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/root/workspace/install/core_msgs/include"
   "/root/microros_ws/install/px4_msgs/include"
   "/opt/ros/foxy/include"
   "/root/microros_ws/install/micro_ros_agent/include"
