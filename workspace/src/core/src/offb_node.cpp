@@ -3,6 +3,7 @@
 #include "std_msgs/msg/empty.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "std_msgs/msg/int16.hpp"
+#include "std_msgs/msg/bool.hpp"
 
 // PX4 libraries and dependencies
 #include "px4_msgs/srv/vehicle_command.hpp"
@@ -12,6 +13,7 @@
 #include "px4_msgs/msg/offboard_control_mode.hpp"
 
 std::array<float,3> global_pos;
+bool enable = true;
 
 class ControlNode : public rclcpp::Node
 {
@@ -42,6 +44,23 @@ public:
                                 std::bind(&ControlNode::disarm, this, std::placeholders::_1));
         mode_sub =              this -> create_subscription<std_msgs::msg::Int16>("/ddscore/mode",qos,
                                 std::bind(&ControlNode::set_mode, this, std::placeholders::_1));
+        offb_control_sub =      this -> create_subscription<std_msgs::msg::Bool>("/ddscore/offboard_control", qos,
+                                std::bind(&ControlNode::offbctrl_sub, this, std::placeholders::_1));
+
+        // Definition of loop timer function
+        auto publish_offboard_control = [this]() -> void {
+                px4_msgs::msg::OffboardControlMode msg{};
+                msg.position = enable;
+                msg.velocity = !enable;
+                msg.acceleration = false;
+                msg.attitude = false;
+                msg.body_rate = false;
+                msg.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+                offboard_controller -> publish(msg);
+        };
+        // Definition of the timer itself
+        offboard_ctrl = this -> create_wall_timer(std::chrono::milliseconds(100), publish_offboard_control);
+
     }
 
 private:
@@ -57,6 +76,7 @@ private:
     void arm(const std_msgs::msg::Empty::SharedPtr msg);
     void disarm(const std_msgs::msg::Empty::SharedPtr msg);
     void set_mode(const std_msgs::msg::Int16::SharedPtr msg);
+    void offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg);
 
     rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_commander;
     rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_controller;
@@ -70,6 +90,9 @@ private:
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr arm_sub;
     rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr disarm_sub;
     rclcpp::Subscription<std_msgs::msg::Int16>::SharedPtr mode_sub;
+    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr offb_control_sub;
+
+    rclcpp::TimerBase::SharedPtr offboard_ctrl;
 
 };
 
@@ -161,6 +184,11 @@ void ControlNode::disarm(const std_msgs::msg::Empty::SharedPtr msg) {
 void ControlNode::set_mode(const std_msgs::msg::Int16::SharedPtr msg) {
     RCLCPP_INFO(this -> get_logger(), "Setting mode to: "+std::to_string(msg -> data));
     publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE, msg -> data);
+}
+
+void ControlNode::offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg) {
+    RCLCPP_INFO(this -> get_logger(), "Setting offboard position control to: "+std::to_string(msg -> data));
+    enable = msg -> data;
 }
 
 int main(int argc, char **argv){
