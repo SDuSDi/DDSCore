@@ -48,6 +48,20 @@ rcutils/visibility_control_macros.h
 
 /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 
+/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c
+core_msgs/msg/detail/aux_global_position__functions.h
+/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/core_msgs/msg/detail/aux_global_position__functions.h
+assert.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+rcutils/allocator.h
+/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/rcutils/allocator.h
+
 /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c
 core_msgs/msg/detail/trajectory__functions.h
 /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/core_msgs/msg/detail/trajectory__functions.h
@@ -61,6 +75,26 @@ string.h
 -
 rcutils/allocator.h
 /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/rcutils/allocator.h
+
+rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/core_msgs/msg/detail/rosidl_runtime_c/visibility_control.h
+core_msgs/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/core_msgs/msg/detail/core_msgs/msg/rosidl_generator_c__visibility_control.h
+core_msgs/msg/detail/aux_global_position__struct.h
+rosidl_generator_c/core_msgs/msg/detail/core_msgs/msg/detail/aux_global_position__struct.h
+
+rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
 
 rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.h
 stdbool.h

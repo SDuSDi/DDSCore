@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c" "/root/workspace/build/core_msgs/CMakeFiles/core_msgs__python.dir/rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c.o"
   "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_trajectory_s.c" "/root/workspace/build/core_msgs/CMakeFiles/core_msgs__python.dir/rosidl_generator_py/core_msgs/msg/_trajectory_s.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

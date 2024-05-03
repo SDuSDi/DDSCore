@@ -1,2 +1,4 @@
+msg/AuxGlobalPosition.idl
+msg/AuxGlobalPosition.msg
 msg/Trajectory.idl
 msg/Trajectory.msg

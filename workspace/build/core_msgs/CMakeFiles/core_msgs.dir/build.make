@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /root/workspace/build/core_msgs
 include CMakeFiles/core_msgs.dir/progress.make
 
 CMakeFiles/core_msgs: /root/workspace/src/core_msgs/msg/Trajectory.msg
+CMakeFiles/core_msgs: /root/workspace/src/core_msgs/msg/AuxGlobalPosition.msg
 
 
 core_msgs: CMakeFiles/core_msgs

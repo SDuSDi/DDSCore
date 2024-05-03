@@ -1,0 +1,4 @@
+[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::aux_global(core_msgs::msg::AuxGlobalPosition_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:227:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  227 | void ControlNode::aux_global([01;35m[Kconst core_msgs::msg::AuxGlobalPosition::SharedPtr msg[m[K) {
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

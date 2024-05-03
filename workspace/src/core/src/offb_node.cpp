@@ -4,7 +4,6 @@
 #include "std_msgs/msg/float32.hpp"
 #include "std_msgs/msg/int16.hpp"
 #include "std_msgs/msg/bool.hpp"
-#include "core_msgs/msg/trajectory.hpp"
 
 // PX4 libraries and dependencies
 #include "px4_msgs/srv/vehicle_command.hpp"
@@ -14,8 +13,13 @@
 #include "px4_msgs/msg/offboard_control_mode.hpp"
 #include "px4_msgs/msg/trajectory_setpoint.hpp"
 
+// Own messages from core_msgs
+#include "core_msgs/msg/trajectory.hpp"
+#include "core_msgs/msg/aux_global_position.hpp"
+
 std::array<float,3> global_pos;
 bool enable = true;
+px4_msgs::msg::VehicleGlobalPosition global_info{};
 
 class ControlNode : public rclcpp::Node
 {
@@ -26,6 +30,7 @@ public:
         vehicle_commander = this -> create_publisher<px4_msgs::msg::VehicleCommand>("/fmu/in/vehicle_command",10);
         offboard_controller = this -> create_publisher<px4_msgs::msg::OffboardControlMode>("/fmu/in/offboard_control_mode",10);
         trajectory_publisher = this -> create_publisher<px4_msgs::msg::TrajectorySetpoint>("/fmu/in/trajectory_setpoint",10);
+        global_positioner = this -> create_publisher<px4_msgs::msg::VehicleGlobalPosition>("/fmu/in/aux_global_position",10);
 
         // Definition of quality of service for all subscribers
         rmw_qos_profile_t qos_profile = rmw_qos_profile_sensor_data;
@@ -51,6 +56,8 @@ public:
                                 std::bind(&ControlNode::offbctrl_sub, this, std::placeholders::_1));
         trajectory_sub =        this -> create_subscription<core_msgs::msg::Trajectory>("/ddscore/trajectory",qos,
                                 std::bind(&ControlNode::set_trajectory, this, std::placeholders::_1));
+        aux_global_sub =        this -> create_subscription<core_msgs::msg::AuxGlobalPosition>("/ddscore/global_position_controller",qos,
+                                std::bind(&ControlNode::aux_global, this, std::placeholders::_1));
 
         // Definition of loop timer function
         auto publish_offboard_control = [this]() -> void {
@@ -83,10 +90,12 @@ private:
     void set_mode(const std_msgs::msg::Int16::SharedPtr msg);
     void offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg);
     void set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg);
+    void aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr msg);
 
     rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_commander;
     rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_controller;
     rclcpp::Publisher<px4_msgs::msg::TrajectorySetpoint>::SharedPtr trajectory_publisher;
+    rclcpp::Publisher<px4_msgs::msg::VehicleGlobalPosition>::SharedPtr global_positioner;
 
     rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedPtr command_cl;
 
@@ -99,6 +108,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Int16>::SharedPtr mode_sub;
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr offb_control_sub;
     rclcpp::Subscription<core_msgs::msg::Trajectory>::SharedPtr trajectory_sub;
+    rclcpp::Subscription<core_msgs::msg::AuxGlobalPosition>::SharedPtr aux_global_sub;
 
     rclcpp::TimerBase::SharedPtr offboard_ctrl;
 
@@ -106,6 +116,7 @@ private:
 
 void ControlNode::global_pos_cb(const px4_msgs::msg::VehicleGlobalPosition::SharedPtr msg) {
     global_pos[1] = msg -> lat; global_pos[2] = msg -> lon; global_pos[3] = msg -> alt;
+    global_info = *msg;
 }
 
 void ControlNode::cb_srv_command(const rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedFuture future) {
@@ -211,6 +222,14 @@ void ControlNode::set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg
         tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
     }
     trajectory_publisher -> publish(tmp);
+}
+
+void ControlNode::aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr msg) {
+    px4_msgs::msg::VehicleGlobalPosition tmp{};
+    //TODO: Finish global control with Jose
+    tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+    tmp.timestamp_sample = tmp.timestamp;
+    global_positioner -> publish(tmp);
 }
 
 int main(int argc, char **argv){

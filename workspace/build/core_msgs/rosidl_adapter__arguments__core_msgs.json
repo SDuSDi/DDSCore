@@ -1,6 +1,7 @@
 {
   "package_name": "core_msgs",
   "non_idl_tuples": [
-    "/root/workspace/src/core_msgs:msg/Trajectory.msg"
+    "/root/workspace/src/core_msgs:msg/Trajectory.msg",
+    "/root/workspace/src/core_msgs:msg/AuxGlobalPosition.msg"
   ]
 }

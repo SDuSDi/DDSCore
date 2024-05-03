@@ -32,6 +32,26 @@ cstddef
 
 /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
 
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/aux_global_position__type_support.cpp
+cstddef
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/cstddef
+rosidl_runtime_c/message_type_support_struct.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_runtime_c/message_type_support_struct.h
+core_msgs/msg/rosidl_typesupport_c__visibility_control.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/core_msgs/msg/rosidl_typesupport_c__visibility_control.h
+core_msgs/msg/detail/aux_global_position__struct.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/core_msgs/msg/detail/aux_global_position__struct.h
+rosidl_typesupport_c/identifier.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_c/identifier.h
+rosidl_typesupport_c/message_type_support_dispatch.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_c/message_type_support_dispatch.h
+rosidl_typesupport_c/type_support_map.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_c/type_support_map.h
+rosidl_typesupport_c/visibility_control.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_c/visibility_control.h
+rosidl_typesupport_interface/macros.h
+/root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_interface/macros.h
+
 /root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/trajectory__type_support.cpp
 cstddef
 /root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/cstddef
@@ -51,6 +71,14 @@ rosidl_typesupport_c/visibility_control.h
 /root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_c/visibility_control.h
 rosidl_typesupport_interface/macros.h
 /root/workspace/build/core_msgs/rosidl_typesupport_c/core_msgs/msg/rosidl_typesupport_interface/macros.h
+
+rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
 
 rosidl_generator_c/core_msgs/msg/detail/trajectory__struct.h
 stdbool.h

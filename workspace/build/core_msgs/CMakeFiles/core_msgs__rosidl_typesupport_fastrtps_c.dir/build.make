@@ -66,11 +66,18 @@ rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesuppor
 rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em
 rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h: /opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em
 rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/core_msgs/msg/Trajectory.idl
+rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/core_msgs/msg/AuxGlobalPosition.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/workspace/build/core_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support for eProsima Fast-RTPS"
 	/usr/bin/python3 /opt/ros/foxy/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c --generator-arguments-file /root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_c__arguments.json
 
 rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp
 
 CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o: CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp
@@ -85,14 +92,29 @@ CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastr
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp -o CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.s
 
+CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o: CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/workspace/build/core_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o -c /root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp
+
+CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp > CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.i
+
+CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp -o CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.s
+
 # Object files for target core_msgs__rosidl_typesupport_fastrtps_c
 core_msgs__rosidl_typesupport_fastrtps_c_OBJECTS = \
-"CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o"
+"CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o" \
+"CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o"
 
 # External object files for target core_msgs__rosidl_typesupport_fastrtps_c
 core_msgs__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
 
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o
+libcore_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/build.make
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/foxy/lib/librosidl_typesupport_fastrtps_c.so
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: libcore_msgs__rosidl_generator_c.so
@@ -109,7 +131,7 @@ libcore_msgs__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libssl
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: /opt/ros/foxy/lib/libfastcdr.so.1.0.13
 libcore_msgs__rosidl_typesupport_fastrtps_c.so: CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/workspace/build/core_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libcore_msgs__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/workspace/build/core_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libcore_msgs__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +145,8 @@ CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/clean:
 
 CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp
+CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp
 	cd /root/workspace/build/core_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/workspace/src/core_msgs /root/workspace/src/core_msgs /root/workspace/build/core_msgs /root/workspace/build/core_msgs /root/workspace/build/core_msgs/CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/depend
 

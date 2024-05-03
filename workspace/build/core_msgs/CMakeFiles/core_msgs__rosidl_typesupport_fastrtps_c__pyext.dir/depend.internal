@@ -95,6 +95,9 @@ CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_
  /usr/include/python3.8/unicodeobject.h
  /usr/include/python3.8/warnings.h
  /usr/include/python3.8/weakrefobject.h
+ rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h
+ rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h
+ rosidl_generator_c/core_msgs/msg/detail/aux_global_position__type_support.h
  rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.h
  rosidl_generator_c/core_msgs/msg/detail/trajectory__struct.h
  rosidl_generator_c/core_msgs/msg/detail/trajectory__type_support.h

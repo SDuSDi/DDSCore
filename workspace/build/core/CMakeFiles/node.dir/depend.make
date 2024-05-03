@@ -347,6 +347,11 @@ CMakeFiles/node.dir/src/offb_node.cpp.o: /root/microros_ws/install/px4_msgs/incl
 CMakeFiles/node.dir/src/offb_node.cpp.o: /root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__traits.hpp
 CMakeFiles/node.dir/src/offb_node.cpp.o: /root/microros_ws/install/px4_msgs/include/px4_msgs/srv/detail/vehicle_command__type_support.hpp
 CMakeFiles/node.dir/src/offb_node.cpp.o: /root/microros_ws/install/px4_msgs/include/px4_msgs/srv/vehicle_command.hpp
+CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/aux_global_position.hpp
+CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/aux_global_position__builder.hpp
+CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/aux_global_position__struct.hpp
+CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/aux_global_position__traits.hpp
+CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/aux_global_position__type_support.hpp
 CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/trajectory__builder.hpp
 CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/trajectory__struct.hpp
 CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/install/core_msgs/include/core_msgs/msg/detail/trajectory__traits.hpp
