@@ -5,6 +5,8 @@
 #include "std_msgs/msg/int16.hpp"
 #include "std_msgs/msg/empty.hpp"
 #include "std_msgs/msg/float32.hpp"
+#include "core_msgs/msg/trajectory.hpp"
+#include "geometry_msgs/msg/twist.hpp"
 
 int main(int argc, char **argv){
 
@@ -30,20 +32,16 @@ int main(int argc, char **argv){
     RCLCPP_INFO(node -> get_logger(), "Sending takeoff request");
     takeoff_pub -> publish(takeoff_msg);
 
-    // rclcpp::Publisher<
+    rclcpp::Publisher<core_msgs::msg::Trajectory>::SharedPtr trajectory_pub = node -> create_publisher<core_msgs::msg::Trajectory>("/ddscore/trajectory",10);
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr attitude_sub = node -> create_publisher<geometry_msgs::msg::Twist>("/ddscore/attitude",10);
 
-    // while(true){
-    //     try{
+    core_msgs::msg::Trajectory trajectory_msg{};
+    trajectory_msg.x = 1; trajectory_msg.y = 1; trajectory_msg.z = 2; trajectory_msg.yaw = 0;
 
-    //         rclcpp::spin(node);
-    //     }
-    //     catch(const std::exception& e){
-    //         RCLCPP_INFO(node -> get_logger(), "Exception: %s", e.what());
-    //         rclcpp::shutdown();
-    //     }
-
-    // }
-
+    while(true){
+        RCLCPP_INFO(node -> get_logger(), "Sending trajectory setpoint");
+        trajectory_pub -> publish(trajectory_msg);
+    }
     rclcpp::shutdown();
     return 0;
 }

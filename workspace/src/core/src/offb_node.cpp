@@ -266,14 +266,14 @@ void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){
 
 void ControlNode::euler2quaternion(float roll, float pitch, float yaw, float *q){
 
-    std::array<float,3> radians = {roll * (float)M_PI / 180, pitch * (float)M_PI / 180, yaw * (float)M_PI / 180};
+    // std::array<float,3> radians = {roll * (float)M_PI / 180, pitch * (float)M_PI / 180, yaw * (float)M_PI / 180};
 
-    float cosYaw   = cos(radians[2]/2.0);
-    float sinYaw   = sin(radians[2]/2.0);
-    float cosPitch = cos(radians[1]/2.0);
-    float sinPitch = sin(radians[1]/2.0);
-    float cosRoll  = cos(radians[0]/2.0);
-    float sinRoll  = sin(radians[0]/2.0);
+    float cosYaw   = cos(yaw/2.0);
+    float sinYaw   = sin(yaw/2.0);
+    float cosPitch = cos(pitch/2.0);
+    float sinPitch = sin(pitch/2.0);
+    float cosRoll  = cos(roll/2.0);
+    float sinRoll  = sin(roll/2.0);
 
     q[0] = cosRoll * cosPitch * cosYaw + sinRoll * sinPitch * sinYaw;
     q[1] = sinRoll * cosPitch * cosYaw - cosRoll * sinPitch * sinYaw;
