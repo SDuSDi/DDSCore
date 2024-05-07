@@ -1,0 +1,152 @@
+[35m[1mConsolidate compiler generated dependencies of target node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:5[m[K:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::cb_srv_command(rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedFuture)[m[K’:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kpx4_msgs::msg::VehicleCommandAck_<std::allocator<void> >::_command_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  140 |         [01;35m[K"\n\nCommand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n"[m[K,
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  141 |         [32m[Kfuture.get() -> reply.command[m[K,
+      |         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[K|[m[K
+      |                               [32m[Kpx4_msgs::msg::VehicleCommandAck_<std::allocator<void> >::_command_type {aka unsigned int}[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:29:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  140 |         "\n\nCommand sent: [01;36m[K%s[m[K\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n",
+      |                            [01;36m[K~^[m[K
+      |                             [01;36m[K|[m[K
+      |                             [01;36m[Kchar*[m[K
+      |                            [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:5[m[K:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 6 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  140 |         [01;35m[K"\n\nCommand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n"[m[K,
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  141 |         future.get() -> reply.command,
+  142 |         [32m[Kfuture.get() -> reply.result[m[K,
+      |         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[K|[m[K
+      |                               [32m[Kint[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:41:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  140 |         "\n\nCommand sent: %s\nResult: [01;36m[K%s[m[K\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n",
+      |                                        [01;36m[K~^[m[K
+      |                                         [01;36m[K|[m[K
+      |                                         [01;36m[Kchar*[m[K
+      |                                        [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:5[m[K:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 7 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  140 |         [01;35m[K"\n\nCommand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n"[m[K,
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+......
+  143 |         [32m[Kfuture.get() -> reply.target_system[m[K,
+      |         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[K|[m[K
+      |                               [32m[Kint[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:60:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  140 |         "\n\nCommand sent: %s\nResult: %s\nTarget System: [01;36m[K%s[m[K\nTarget Component: %s\nExternal source: %s\n",
+      |                                                           [01;36m[K~^[m[K
+      |                                                            [01;36m[K|[m[K
+      |                                                            [01;36m[Kchar*[m[K
+      |                                                           [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:5[m[K:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 8 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  140 |         [01;35m[K"\n\nCommand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n"[m[K,
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+......
+  144 |         [32m[Kfuture.get() -> reply.target_component[m[K,
+      |         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[K|[m[K
+      |                               [32m[Kint[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:82:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  140 |         "\n\nCommand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: [01;36m[K%s[m[K\nExternal source: %s\n",
+      |                                                                                 [01;36m[K~^[m[K
+      |                                                                                  [01;36m[K|[m[K
+      |                                                                                  [01;36m[Kchar*[m[K
+      |                                                                                 [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/root/workspace/src/core/src/offb_node.cpp:5[m[K:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 9 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  140 |         [01;35m[K"\n\nCommand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: %s\n"[m[K,
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+......
+  145 |         [32m[Kfuture.get() -> reply.from_external[m[K
+      |         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[K|[m[K
+      |                               [32m[Kint[m[K
+[01m[K/root/workspace/src/core/src/offb_node.cpp:140:103:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  140 | mmand sent: %s\nResult: %s\nTarget System: %s\nTarget Component: %s\nExternal source: [01;36m[K%s[m[K\n",
+      |                                                                                       [01;36m[K~^[m[K
+      |                                                                                        [01;36m[K|[m[K
+      |                                                                                        [01;36m[Kchar*[m[K
+      |                                                                                       [32m[K%d[m[K
+[100%] [32m[1mLinking CXX executable node[0m
+[100%] Built target node
+-- Install configuration: ""
+-- Installing: /root/workspace/install/core/lib/core/node
+-- Set runtime path of "/root/workspace/install/core/lib/core/node" to ""
+-- Installing: /root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+-- Installing: /root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+-- Installing: /root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+-- Installing: /root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+-- Installing: /root/workspace/install/core/share/core/environment/path.sh
+-- Installing: /root/workspace/install/core/share/core/environment/path.dsv
+-- Installing: /root/workspace/install/core/share/core/local_setup.bash
+-- Installing: /root/workspace/install/core/share/core/local_setup.sh
+-- Installing: /root/workspace/install/core/share/core/local_setup.zsh
+-- Installing: /root/workspace/install/core/share/core/local_setup.dsv
+-- Installing: /root/workspace/install/core/share/core/package.dsv
+-- Installing: /root/workspace/install/core/share/ament_index/resource_index/packages/core
+-- Installing: /root/workspace/install/core/share/core/cmake/coreConfig.cmake
+-- Installing: /root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+-- Installing: /root/workspace/install/core/share/core/package.xml

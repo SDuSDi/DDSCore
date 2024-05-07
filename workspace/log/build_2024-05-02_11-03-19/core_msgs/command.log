@@ -1,2 +1,0 @@
-Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /root/workspace/src/core_msgs -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core_msgs
-Invoked command in '/root/workspace/build/core_msgs' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /root/workspace/src/core_msgs -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core_msgs

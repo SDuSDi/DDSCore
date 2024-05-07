@@ -1,7 +1,0 @@
-[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In constructor ‘[01m[KControlNode::ControlNode()[m[K’:
-[01m[K/root/workspace/src/core/src/offb_node.cpp:33:44:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kvoid ControlNode::set_land(std_msgs::msg::Empty_<std::allocator<void> >::SharedPtr)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
-   33 |                    std::bind(&[01;31m[KControlNode::set_land[m[K. this, std::placeholders::_1));
-      |                               [01;31m[K~~~~~~~~~~~~~^~~~~~~~[m[K
-make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

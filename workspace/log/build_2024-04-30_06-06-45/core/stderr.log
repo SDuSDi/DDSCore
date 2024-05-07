@@ -1,8 +1,0 @@
-[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In constructor ‘[01m[KControlNode::ControlNode()[m[K’:
-[01m[K/root/workspace/src/core/src/offb_node.cpp:28:92:[m[K [01;31m[Kerror: [m[K‘[01m[Kqos[m[K’ was not declared in this scope; did you mean ‘[01m[Kcos[m[K’?
-   28 | akeoff_srv = this -> create_subscription<std_msgs::msg::Empty>("/ddscore/takeoff",[01;31m[Kqos[m[K, std::bind(&ControlNode::publish_takeoff, this, std::placeholders::_1));
-      |                                                                                   [01;31m[K^~~[m[K
-      |                                                                                   [32m[Kcos[m[K
-make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

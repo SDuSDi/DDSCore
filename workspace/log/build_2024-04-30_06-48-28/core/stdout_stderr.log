@@ -1,9 +1,0 @@
-[35m[1mScanning dependencies of target node[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
-[01m[K/root/workspace/src/core/src/offb_node.cpp:34:92:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
-   34 | p::Client<px4_msgs::srv::VehicleCommand>::SharedFuture future[01;31m[K)[m[K
-      |                                                              [01;31m[K^[m[K
-      |                                                               [32m[K;[m[K
-make[2]: *** [CMakeFiles/node.dir/build.make:63: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/node.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,9 @@
+setup.py
+core_msgs/__init__.py
+core_msgs.egg-info/PKG-INFO
+core_msgs.egg-info/SOURCES.txt
+core_msgs.egg-info/dependency_links.txt
+core_msgs.egg-info/top_level.txt
+core_msgs/msg/__init__.py
+core_msgs/msg/_aux_global_position.py
+core_msgs/msg/_trajectory.py

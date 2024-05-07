@@ -1,1 +1,1 @@
-docker run -it --rm -v /home/bmartinez/ros2_ws/ddscore/workspace:/root/workspace --net=host --env DISPLAY=$DISPLAY --privileged prueba
+docker run -it --rm -v /home/bmartinez/ros2_ws/ddscore/workspace:/root/workspace --net=host --env DISPLAY=$DISPLAY --privileged --runtime=nvidia prueba

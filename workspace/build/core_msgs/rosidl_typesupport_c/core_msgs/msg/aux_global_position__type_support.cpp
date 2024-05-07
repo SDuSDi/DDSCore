@@ -4,8 +4,8 @@
 
 #include "cstddef"
 #include "rosidl_runtime_c/message_type_support_struct.h"
-#include "core_msgs/msg/rosidl_typesupport_c__visibility_control.h"
 #include "core_msgs/msg/detail/aux_global_position__struct.h"
+#include "core_msgs/msg/detail/aux_global_position__type_support.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -85,7 +85,6 @@ extern "C"
 {
 #endif
 
-ROSIDL_TYPESUPPORT_C_EXPORT_core_msgs
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, core_msgs, msg, AuxGlobalPosition)() {
   return &::core_msgs::msg::rosidl_typesupport_c::AuxGlobalPosition_message_type_support_handle;

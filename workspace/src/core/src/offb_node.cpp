@@ -1,9 +1,13 @@
+// Base C++ libraries and dependencies
+#include <cmath>
+
 // ROS libraries and dependencies
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/empty.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "std_msgs/msg/int16.hpp"
 #include "std_msgs/msg/bool.hpp"
+#include "geometry_msgs/msg/twist.hpp"
 
 // PX4 libraries and dependencies
 #include "px4_msgs/srv/vehicle_command.hpp"
@@ -12,6 +16,7 @@
 #include "px4_msgs/msg/vehicle_global_position.hpp"
 #include "px4_msgs/msg/offboard_control_mode.hpp"
 #include "px4_msgs/msg/trajectory_setpoint.hpp"
+#include "px4_msgs/msg/vehicle_attitude_setpoint.hpp"
 
 // Own messages from core_msgs
 #include "core_msgs/msg/trajectory.hpp"
@@ -31,6 +36,7 @@ public:
         offboard_controller = this -> create_publisher<px4_msgs::msg::OffboardControlMode>("/fmu/in/offboard_control_mode",10);
         trajectory_publisher = this -> create_publisher<px4_msgs::msg::TrajectorySetpoint>("/fmu/in/trajectory_setpoint",10);
         global_positioner = this -> create_publisher<px4_msgs::msg::VehicleGlobalPosition>("/fmu/in/aux_global_position",10);
+        attitude_publisher = this -> create_publisher<px4_msgs::msg::VehicleAttitudeSetpoint>("/fmu/in/vehicle_attitude_setpoint",10);
 
         // Definition of quality of service for all subscribers
         rmw_qos_profile_t qos_profile = rmw_qos_profile_sensor_data;
@@ -58,6 +64,8 @@ public:
                                 std::bind(&ControlNode::set_trajectory, this, std::placeholders::_1));
         aux_global_sub =        this -> create_subscription<core_msgs::msg::AuxGlobalPosition>("/ddscore/global_position_controller",qos,
                                 std::bind(&ControlNode::aux_global, this, std::placeholders::_1));
+        attitude_sub =          this -> create_subscription<geometry_msgs::msg::Twist>("/ddscore/attitude",qos,
+                                std::bind(&ControlNode::set_attitude, this, std::placeholders::_1));
 
         // Definition of loop timer function
         auto publish_offboard_control = [this]() -> void {
@@ -72,6 +80,7 @@ public:
         };
         // Definition of the timer itself
         offboard_ctrl = this -> create_wall_timer(std::chrono::milliseconds(100), publish_offboard_control);
+        RCLCPP_INFO(this -> get_logger(), "Node started with attitude control");
 
     }
 
@@ -91,11 +100,15 @@ private:
     void offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg);
     void set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg);
     void aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr msg);
+    void set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg);
+
+    void euler2quaternion(float roll, float pitch, float yaw, float *q);
 
     rclcpp::Publisher<px4_msgs::msg::VehicleCommand>::SharedPtr vehicle_commander;
     rclcpp::Publisher<px4_msgs::msg::OffboardControlMode>::SharedPtr offboard_controller;
     rclcpp::Publisher<px4_msgs::msg::TrajectorySetpoint>::SharedPtr trajectory_publisher;
     rclcpp::Publisher<px4_msgs::msg::VehicleGlobalPosition>::SharedPtr global_positioner;
+    rclcpp::Publisher<px4_msgs::msg::VehicleAttitudeSetpoint>::SharedPtr attitude_publisher;
 
     rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedPtr command_cl;
 
@@ -109,6 +122,7 @@ private:
     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr offb_control_sub;
     rclcpp::Subscription<core_msgs::msg::Trajectory>::SharedPtr trajectory_sub;
     rclcpp::Subscription<core_msgs::msg::AuxGlobalPosition>::SharedPtr aux_global_sub;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr attitude_sub;
 
     rclcpp::TimerBase::SharedPtr offboard_ctrl;
 
@@ -123,9 +137,13 @@ void ControlNode::cb_srv_command(const rclcpp::Client<px4_msgs::srv::VehicleComm
     auto status = future.wait_for(std::chrono::seconds(1));
     if (status == std::future_status::ready) {
         RCLCPP_INFO(this -> get_logger(), 
-        "\n\nCommand sent: "+std::to_string(future.get() -> reply.command)+"\nResult: "+std::to_string(future.get() -> reply.result)
-        +"\nTarget System: "+std::to_string(future.get() -> reply.target_system)+"\nTarget Component: "+std::to_string(future.get() -> reply.target_component)
-        +"\nExternal source: "+std::to_string(future.get() -> reply.from_external)+"\n");
+        "\n\nCommand sent: %d\nResult: %d\nTarget System: %d\nTarget Component: %d\nExternal source: %d\n", 
+        future.get() -> reply.command, 
+        future.get() -> reply.result, 
+        future.get() -> reply.target_system, 
+        future.get() -> reply.target_component,
+        future.get() -> reply.from_external
+        );
     } else {
         RCLCPP_INFO(this -> get_logger(), "Service in progress");
     }
@@ -201,12 +219,12 @@ void ControlNode::disarm(const std_msgs::msg::Empty::SharedPtr msg) {
 }
 
 void ControlNode::set_mode(const std_msgs::msg::Int16::SharedPtr msg) {
-    RCLCPP_INFO(this -> get_logger(), "Setting mode to: "+std::to_string(msg -> data));
+    RCLCPP_INFO(this -> get_logger(), "Setting mode to: " + msg -> data);
     publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE, msg -> data);
 }
 
 void ControlNode::offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg) {
-    RCLCPP_INFO(this -> get_logger(), "Setting offboard position control to: "+std::to_string(msg -> data));
+    RCLCPP_INFO(this -> get_logger(), "Setting offboard position control to: " + msg -> data);
     enable = msg -> data;
 }
 
@@ -225,11 +243,42 @@ void ControlNode::set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg
 }
 
 void ControlNode::aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr msg) {
+    (void) msg;
     px4_msgs::msg::VehicleGlobalPosition tmp{};
     //TODO: Finish global control with Jose
     tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
     tmp.timestamp_sample = tmp.timestamp;
     global_positioner -> publish(tmp);
+}
+
+void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){
+    RCLCPP_INFO(this -> get_logger(), "Doing shady shit");
+    float mod = sqrt(pow(msg -> linear.x,2) + pow(msg -> linear.y,2) + pow(msg -> linear.z,2));
+    float q[4];
+    euler2quaternion(msg -> angular.x, msg -> angular.y, msg -> angular.z, q);
+    px4_msgs::msg::VehicleAttitudeSetpoint tmp{};
+    tmp.q_d = {q[0],q[1],q[2],q[3]};
+    tmp.thrust_body = {0,0,-mod};
+    // msg.yaw_sp_move_rate = 0.0;  //HARDCODED: YAWRATE SET TO 0 RAD/S
+    tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+    attitude_publisher -> publish(tmp);
+}
+
+void ControlNode::euler2quaternion(float roll, float pitch, float yaw, float *q){
+
+    std::array<float,3> radians = {roll * (float)M_PI / 180, pitch * (float)M_PI / 180, yaw * (float)M_PI / 180};
+
+    float cosYaw   = cos(radians[2]/2.0);
+    float sinYaw   = sin(radians[2]/2.0);
+    float cosPitch = cos(radians[1]/2.0);
+    float sinPitch = sin(radians[1]/2.0);
+    float cosRoll  = cos(radians[0]/2.0);
+    float sinRoll  = sin(radians[0]/2.0);
+
+    q[0] = cosRoll * cosPitch * cosYaw + sinRoll * sinPitch * sinYaw;
+    q[1] = sinRoll * cosPitch * cosYaw - cosRoll * sinPitch * sinYaw;
+    q[2] = cosRoll * sinPitch * cosYaw + sinRoll * cosPitch * sinYaw;
+    q[3] = cosRoll * cosPitch * sinYaw - sinRoll * sinPitch * cosYaw;
 }
 
 int main(int argc, char **argv){

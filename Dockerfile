@@ -1,5 +1,5 @@
 # Specify ROS version for the image
-FROM ros:foxy
+FROM ros:humble
 
 # Set bash as default shell
 SHELL ["/bin/bash", "-c"]
@@ -58,9 +58,10 @@ RUN source /root/microros_ws/install/setup.bash && \
     
 ######################################################################################################
 
-# Install wget for PX4 setup
+# Install wget for PX4 setup and Gazebo dependencies
 RUN apt-get update  && \
-    apt-get install -y wget
+    apt-get install -y wget && \
+    apt-get install lsb-release gnupg
 
 # Clone the PX4 repository and its dependencies
 WORKDIR /root
@@ -69,9 +70,15 @@ RUN git clone https://github.com/PX4/PX4-Autopilot.git --recursive
 # Setup of PX4 on Ubuntu for simulation purposes
 RUN bash /root/PX4-Autopilot/Tools/setup/ubuntu.sh
 
+# Install Gazebo (Ignition) Garden
+RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
+    apt-get update && \
+    apt-get install gz-garden
+
 # Build PX4
 RUN cd /root/PX4-Autopilot && \
-    DONT_RUN=1 make px4_sitl_default gazebo-classic
+    DONT_RUN=1 make px4_sitl_default
 
 ######################################################################################################
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o"
+  "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o.d"
   "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o"
+  "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o.d"
   "libcore_msgs__rosidl_generator_c.pdb"
   "libcore_msgs__rosidl_generator_c.so"
   "rosidl_generator_c/core_msgs/msg/aux_global_position.h"
