@@ -678,4 +678,14 @@ CMakeFiles/node.dir/src/test_case.cpp.o
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp
+ /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.hpp
+ /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.hpp
+ /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__builder.hpp
+ /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__traits.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp
+ /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
 

@@ -1,0 +1,26 @@
+[0.009s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.030s] [35m[1mConsolidate compiler generated dependencies of target node[0m
+[0.038s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[16.090s] [100%] [32m[1mLinking CXX executable node[0m
+[17.084s] [100%] Built target node
+[17.089s] Invoked command in '/root/workspace/build/core' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[17.101s] Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/core
+[17.104s] -- Install configuration: ""
+[17.104s] -- Installing: /root/workspace/install/core/lib/core/node
+[17.113s] -- Set runtime path of "/root/workspace/install/core/lib/core/node" to ""
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.sh
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.dsv
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.bash
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.sh
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.zsh
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.dsv
+[17.113s] -- Installing: /root/workspace/install/core/share/core/package.dsv
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/packages/core
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig.cmake
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+[17.113s] -- Up-to-date: /root/workspace/install/core/share/core/package.xml
+[17.114s] Invoked command in '/root/workspace/build/core' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/core

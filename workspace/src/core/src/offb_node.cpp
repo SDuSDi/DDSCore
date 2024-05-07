@@ -90,7 +90,7 @@ private:
 
     void cb_srv_command(const rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedFuture future);
     void publish_srv_command(uint16_t command, float alt = 0.0);
-    void publish_vehicle_command(uint16_t command, float param1 = 0.0);
+    void publish_vehicle_command(uint16_t command, float param1 = 0.0, float param2 = 0.0);
 
     void set_takeoff(const std_msgs::msg::Float32::SharedPtr msg);
     void set_land(const std_msgs::msg::Empty::SharedPtr msg);
@@ -182,9 +182,10 @@ void ControlNode::publish_srv_command(uint16_t command, float alt) {
     auto result = command_cl -> async_send_request(request, std::bind(&ControlNode::cb_srv_command, this, std::placeholders::_1));
 }
 
-void ControlNode::publish_vehicle_command(uint16_t command, float param1){
+void ControlNode::publish_vehicle_command(uint16_t command, float param1, float param2){
 	px4_msgs::msg::VehicleCommand msg{};
 	msg.param1 = param1;
+    msg.param2 = param2;
 	msg.command = command;
 	msg.target_system = 1;
 	msg.target_component = 1;
@@ -219,8 +220,8 @@ void ControlNode::disarm(const std_msgs::msg::Empty::SharedPtr msg) {
 }
 
 void ControlNode::set_mode(const std_msgs::msg::Int16::SharedPtr msg) {
-    RCLCPP_INFO(this -> get_logger(), "Setting mode to: " + msg -> data);
-    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE, msg -> data);
+    RCLCPP_INFO(this -> get_logger(), "Setting mode to: %d", msg -> data);
+    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_SET_MODE, (int)msg -> data, 6);
 }
 
 void ControlNode::offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg) {
@@ -239,6 +240,7 @@ void ControlNode::set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg
         tmp.yaw = msg -> yaw; // [-PI,PI]
         tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
     }
+    RCLCPP_INFO(this -> get_logger(), "Setting trajectory waypoint as current objective");
     trajectory_publisher -> publish(tmp);
 }
 
@@ -266,14 +268,14 @@ void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){
 
 void ControlNode::euler2quaternion(float roll, float pitch, float yaw, float *q){
 
-    std::array<float,3> radians = {roll * (float)M_PI / 180, pitch * (float)M_PI / 180, yaw * (float)M_PI / 180};
+    // std::array<float,3> radians = {roll * (float)M_PI / 180, pitch * (float)M_PI / 180, yaw * (float)M_PI / 180};
 
-    float cosYaw   = cos(radians[2]/2.0);
-    float sinYaw   = sin(radians[2]/2.0);
-    float cosPitch = cos(radians[1]/2.0);
-    float sinPitch = sin(radians[1]/2.0);
-    float cosRoll  = cos(radians[0]/2.0);
-    float sinRoll  = sin(radians[0]/2.0);
+    float cosYaw   = cos(yaw/2.0);
+    float sinYaw   = sin(yaw/2.0);
+    float cosPitch = cos(pitch/2.0);
+    float sinPitch = sin(pitch/2.0);
+    float cosRoll  = cos(roll/2.0);
+    float sinRoll  = sin(roll/2.0);
 
     q[0] = cosRoll * cosPitch * cosYaw + sinRoll * sinPitch * sinYaw;
     q[1] = sinRoll * cosPitch * cosYaw - cosRoll * sinPitch * sinYaw;

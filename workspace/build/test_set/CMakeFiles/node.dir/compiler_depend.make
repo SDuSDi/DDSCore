@@ -676,8 +676,24 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
   /opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__builder.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
 
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
+
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__traits.hpp:
+
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp:
 
@@ -1117,6 +1133,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
 
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.hpp:
+
 /usr/include/c++/11/bits/exception_defines.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/event.hpp:
@@ -1177,6 +1195,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/intra_process_buffer_type.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
@@ -1189,6 +1209,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 
 /usr/include/c++/11/ctime:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
@@ -1196,6 +1218,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
 
 /usr/include/c++/11/iosfwd:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp:
 
 /usr/include/c++/11/initializer_list:
 
@@ -1483,6 +1507,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 
 /opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:
 
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__builder.hpp:
+
 /usr/include/c++/11/algorithm:
 
 /usr/include/c++/11/backward/binders.h:
@@ -1742,6 +1768,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 /opt/ros/humble/include/rcl/rcl/time.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
 
@@ -2012,6 +2040,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
 

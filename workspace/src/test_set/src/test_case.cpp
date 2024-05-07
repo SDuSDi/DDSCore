@@ -5,6 +5,8 @@
 #include "std_msgs/msg/int16.hpp"
 #include "std_msgs/msg/empty.hpp"
 #include "std_msgs/msg/float32.hpp"
+#include "core_msgs/msg/trajectory.hpp"
+#include "geometry_msgs/msg/twist.hpp"
 
 int main(int argc, char **argv){
 
@@ -15,7 +17,7 @@ int main(int argc, char **argv){
     rclcpp::Publisher<std_msgs::msg::Int16>::SharedPtr mode_pub = node -> create_publisher<std_msgs::msg::Int16>("/ddscore/mode",10);
     std_msgs::msg::Int16 mode_msg{};
     mode_msg.data = 1;
-    RCLCPP_INFO(node -> get_logger(), "Sending request to change mode to: "+mode_msg.data);
+    RCLCPP_INFO(node -> get_logger(), "Sending request to change mode to: %d", mode_msg.data);
     mode_pub -> publish(mode_msg);
     std::this_thread::sleep_for(std::chrono::seconds(2));
 
@@ -29,21 +31,25 @@ int main(int argc, char **argv){
     takeoff_msg.data = 2.0;
     RCLCPP_INFO(node -> get_logger(), "Sending takeoff request");
     takeoff_pub -> publish(takeoff_msg);
+    std::this_thread::sleep_for(std::chrono::seconds(30));
 
-    // rclcpp::Publisher<
+    rclcpp::Publisher<core_msgs::msg::Trajectory>::SharedPtr trajectory_pub = node -> create_publisher<core_msgs::msg::Trajectory>("/ddscore/trajectory",10);
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr attitude_sub = node -> create_publisher<geometry_msgs::msg::Twist>("/ddscore/attitude",10);
 
-    // while(true){
-    //     try{
+    core_msgs::msg::Trajectory trajectory_msg{};
+    trajectory_msg.x = 3; trajectory_msg.y = 3; trajectory_msg.z = 5; trajectory_msg.yaw = 0;
+    mode_pub -> publish(mode_msg);
 
-    //         rclcpp::spin(node);
-    //     }
-    //     catch(const std::exception& e){
-    //         RCLCPP_INFO(node -> get_logger(), "Exception: %s", e.what());
-    //         rclcpp::shutdown();
-    //     }
-
-    // }
-
-    rclcpp::shutdown();
+    while(true){
+        try{
+            RCLCPP_INFO(node -> get_logger(), "Sending trajectory setpoint");
+            trajectory_pub -> publish(trajectory_msg);
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+        catch(const std::exception& e){
+            break;
+        }
+    }
+    //rclcpp::shutdown();
     return 0;
 }
