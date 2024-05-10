@@ -81,7 +81,6 @@ public:
         // Definition of the timer itself
         offboard_ctrl = this -> create_wall_timer(std::chrono::milliseconds(100), publish_offboard_control);
         RCLCPP_INFO(this -> get_logger(), "Node started with attitude control");
-
     }
 
 private:
@@ -130,7 +129,6 @@ private:
 
 void ControlNode::global_pos_cb(const px4_msgs::msg::VehicleGlobalPosition::SharedPtr msg) {
     global_pos[1] = msg -> lat; global_pos[2] = msg -> lon; global_pos[3] = msg -> alt;
-    global_info = *msg;
 }
 
 void ControlNode::cb_srv_command(const rclcpp::Client<px4_msgs::srv::VehicleCommand>::SharedFuture future) {
@@ -225,7 +223,7 @@ void ControlNode::set_mode(const std_msgs::msg::Int16::SharedPtr msg) {
 }
 
 void ControlNode::offbctrl_sub(const std_msgs::msg::Bool::SharedPtr msg) {
-    RCLCPP_INFO(this -> get_logger(), "Setting offboard position control to: " + msg -> data);
+    RCLCPP_INFO(this -> get_logger(), "Setting offboard position control to: %d", msg -> data);
     enable = msg -> data;
 }
 
@@ -245,12 +243,28 @@ void ControlNode::set_trajectory(const core_msgs::msg::Trajectory::SharedPtr msg
 }
 
 void ControlNode::aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr msg) {
-    (void) msg;
-    px4_msgs::msg::VehicleGlobalPosition tmp{};
-    //TODO: Finish global control with Jose
-    tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
-    tmp.timestamp_sample = tmp.timestamp;
-    global_positioner -> publish(tmp);
+    RCLCPP_INFO(this -> get_logger(), "Setting global position as current objective");
+	px4_msgs::msg::VehicleCommand tmp{};
+
+	tmp.param1 = msg -> speed; // Ground speed [m/s]
+    tmp.param2 = 0.0; // Bitmask
+    tmp.param3 = msg -> radius; // Loiter radius [m] for planes (useless for drones)
+
+    float base_yaw = std::atan2(global_pos[1] - msg -> lat, global_pos[2] - msg -> lon);
+    tmp.param4 = base_yaw - msg -> yaw; // Yaw	[deg]
+    
+    tmp.param5 = msg -> lat; // Latitude
+    tmp.param6 = msg -> lon; // Longitude
+    tmp.param7 = msg -> alt; // Altitude
+
+	tmp.command = px4_msgs::msg::VehicleCommand::VEHICLE_CMD_DO_REPOSITION;
+	tmp.target_system = 1;
+	tmp.target_component = 1;
+	tmp.source_system = 1;
+	tmp.source_component = 1;
+	tmp.from_external = true;
+	tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+	vehicle_commander -> publish(tmp);
 }
 
 void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){

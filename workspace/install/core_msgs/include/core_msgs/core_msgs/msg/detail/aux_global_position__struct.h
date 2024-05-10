@@ -20,6 +20,9 @@ extern "C"
 /// Struct defined in msg/AuxGlobalPosition in the package core_msgs.
 typedef struct core_msgs__msg__AuxGlobalPosition
 {
+  float speed;
+  float radius;
+  float yaw;
   double lat;
   double lon;
   float alt;

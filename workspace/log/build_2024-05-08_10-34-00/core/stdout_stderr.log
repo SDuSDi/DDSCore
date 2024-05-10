@@ -1,0 +1,8 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::aux_global(core_msgs::msg::AuxGlobalPosition_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/workspace/src/core/src/offb_node.cpp:250:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct core_msgs::msg::AuxGlobalPosition_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct core_msgs::msg::AuxGlobalPosition_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kspeed[m[K’
+  250 |     tmp.param2 = msg -> [01;31m[Kspeed[m[K;
+      |                         [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/node.dir/build.make:76: CMakeFiles/node.dir/src/offb_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

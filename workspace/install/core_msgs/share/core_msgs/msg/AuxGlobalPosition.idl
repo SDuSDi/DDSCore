@@ -6,6 +6,12 @@
 module core_msgs {
   module msg {
     struct AuxGlobalPosition {
+      float speed;
+
+      float radius;
+
+      float yaw;
+
       double lat;
 
       double lon;

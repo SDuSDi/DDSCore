@@ -38,6 +38,9 @@ struct AuxGlobalPosition_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->speed = 0.0f;
+      this->radius = 0.0f;
+      this->yaw = 0.0f;
       this->lat = 0.0;
       this->lon = 0.0;
       this->alt = 0.0f;
@@ -50,6 +53,9 @@ struct AuxGlobalPosition_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->speed = 0.0f;
+      this->radius = 0.0f;
+      this->yaw = 0.0f;
       this->lat = 0.0;
       this->lon = 0.0;
       this->alt = 0.0f;
@@ -57,6 +63,15 @@ struct AuxGlobalPosition_
   }
 
   // field types and members
+  using _speed_type =
+    float;
+  _speed_type speed;
+  using _radius_type =
+    float;
+  _radius_type radius;
+  using _yaw_type =
+    float;
+  _yaw_type yaw;
   using _lat_type =
     double;
   _lat_type lat;
@@ -68,6 +83,24 @@ struct AuxGlobalPosition_
   _alt_type alt;
 
   // setters for named parameter idiom
+  Type & set__speed(
+    const float & _arg)
+  {
+    this->speed = _arg;
+    return *this;
+  }
+  Type & set__radius(
+    const float & _arg)
+  {
+    this->radius = _arg;
+    return *this;
+  }
+  Type & set__yaw(
+    const float & _arg)
+  {
+    this->yaw = _arg;
+    return *this;
+  }
   Type & set__lat(
     const double & _arg)
   {
@@ -129,6 +162,15 @@ struct AuxGlobalPosition_
   // comparison operators
   bool operator==(const AuxGlobalPosition_ & other) const
   {
+    if (this->speed != other.speed) {
+      return false;
+    }
+    if (this->radius != other.radius) {
+      return false;
+    }
+    if (this->yaw != other.yaw) {
+      return false;
+    }
     if (this->lat != other.lat) {
       return false;
     }

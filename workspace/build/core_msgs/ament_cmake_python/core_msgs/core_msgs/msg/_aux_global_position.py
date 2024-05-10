@@ -57,18 +57,24 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
     """Message class 'AuxGlobalPosition'."""
 
     __slots__ = [
+        '_speed',
+        '_yaw',
         '_lat',
         '_lon',
         '_alt',
     ]
 
     _fields_and_field_types = {
+        'speed': 'float',
+        'yaw': 'float',
         'lat': 'double',
         'lon': 'double',
         'alt': 'float',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
@@ -78,6 +84,8 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.speed = kwargs.get('speed', float())
+        self.yaw = kwargs.get('yaw', float())
         self.lat = kwargs.get('lat', float())
         self.lon = kwargs.get('lon', float())
         self.alt = kwargs.get('alt', float())
@@ -111,6 +119,10 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.speed != other.speed:
+            return False
+        if self.yaw != other.yaw:
+            return False
         if self.lat != other.lat:
             return False
         if self.lon != other.lon:
@@ -123,6 +135,36 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def speed(self):
+        """Message field 'speed'."""
+        return self._speed
+
+    @speed.setter
+    def speed(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'speed' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._speed = value
+
+    @builtins.property
+    def yaw(self):
+        """Message field 'yaw'."""
+        return self._yaw
+
+    @yaw.setter
+    def yaw(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'yaw' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'yaw' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._yaw = value
 
     @builtins.property
     def lat(self):

@@ -49,6 +49,21 @@ static bool _AuxGlobalPosition__cdr_serialize(
     return false;
   }
   const _AuxGlobalPosition__ros_msg_type * ros_message = static_cast<const _AuxGlobalPosition__ros_msg_type *>(untyped_ros_message);
+  // Field name: speed
+  {
+    cdr << ros_message->speed;
+  }
+
+  // Field name: radius
+  {
+    cdr << ros_message->radius;
+  }
+
+  // Field name: yaw
+  {
+    cdr << ros_message->yaw;
+  }
+
   // Field name: lat
   {
     cdr << ros_message->lat;
@@ -76,6 +91,21 @@ static bool _AuxGlobalPosition__cdr_deserialize(
     return false;
   }
   _AuxGlobalPosition__ros_msg_type * ros_message = static_cast<_AuxGlobalPosition__ros_msg_type *>(untyped_ros_message);
+  // Field name: speed
+  {
+    cdr >> ros_message->speed;
+  }
+
+  // Field name: radius
+  {
+    cdr >> ros_message->radius;
+  }
+
+  // Field name: yaw
+  {
+    cdr >> ros_message->yaw;
+  }
+
   // Field name: lat
   {
     cdr >> ros_message->lat;
@@ -108,6 +138,24 @@ size_t get_serialized_size_core_msgs__msg__AuxGlobalPosition(
   (void)padding;
   (void)wchar_size;
 
+  // field.name speed
+  {
+    size_t item_size = sizeof(ros_message->speed);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name radius
+  {
+    size_t item_size = sizeof(ros_message->radius);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name yaw
+  {
+    size_t item_size = sizeof(ros_message->yaw);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name lat
   {
     size_t item_size = sizeof(ros_message->lat);
@@ -155,6 +203,30 @@ size_t max_serialized_size_core_msgs__msg__AuxGlobalPosition(
   full_bounded = true;
   is_plain = true;
 
+  // member: speed
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: radius
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: yaw
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
   // member: lat
   {
     size_t array_size = 1;

@@ -17,6 +17,9 @@ core_msgs__msg__AuxGlobalPosition__init(core_msgs__msg__AuxGlobalPosition * msg)
   if (!msg) {
     return false;
   }
+  // speed
+  // radius
+  // yaw
   // lat
   // lon
   // alt
@@ -29,6 +32,9 @@ core_msgs__msg__AuxGlobalPosition__fini(core_msgs__msg__AuxGlobalPosition * msg)
   if (!msg) {
     return;
   }
+  // speed
+  // radius
+  // yaw
   // lat
   // lon
   // alt
@@ -38,6 +44,18 @@ bool
 core_msgs__msg__AuxGlobalPosition__are_equal(const core_msgs__msg__AuxGlobalPosition * lhs, const core_msgs__msg__AuxGlobalPosition * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // speed
+  if (lhs->speed != rhs->speed) {
+    return false;
+  }
+  // radius
+  if (lhs->radius != rhs->radius) {
+    return false;
+  }
+  // yaw
+  if (lhs->yaw != rhs->yaw) {
     return false;
   }
   // lat
@@ -63,6 +81,12 @@ core_msgs__msg__AuxGlobalPosition__copy(
   if (!input || !output) {
     return false;
   }
+  // speed
+  output->speed = input->speed;
+  // radius
+  output->radius = input->radius;
+  // yaw
+  output->yaw = input->yaw;
   // lat
   output->lat = input->lat;
   // lon

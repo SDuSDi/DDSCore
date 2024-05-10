@@ -25,6 +25,27 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: speed
+  {
+    out << "speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << ", ";
+  }
+
+  // member: radius
+  {
+    out << "radius: ";
+    rosidl_generator_traits::value_to_yaml(msg.radius, out);
+    out << ", ";
+  }
+
+  // member: yaw
+  {
+    out << "yaw: ";
+    rosidl_generator_traits::value_to_yaml(msg.yaw, out);
+    out << ", ";
+  }
+
   // member: lat
   {
     out << "lat: ";
@@ -51,6 +72,36 @@ inline void to_block_style_yaml(
   const AuxGlobalPosition & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: speed
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "speed: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << "\n";
+  }
+
+  // member: radius
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "radius: ";
+    rosidl_generator_traits::value_to_yaml(msg.radius, out);
+    out << "\n";
+  }
+
+  // member: yaw
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "yaw: ";
+    rosidl_generator_traits::value_to_yaml(msg.yaw, out);
+    out << "\n";
+  }
+
   // member: lat
   {
     if (indentation > 0) {

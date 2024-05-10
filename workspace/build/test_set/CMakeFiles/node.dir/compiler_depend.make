@@ -686,8 +686,18 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__builder.hpp \
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp
 
+
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp:
+
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__builder.hpp:
+
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
@@ -1342,6 +1352,8 @@ CMakeFiles/node.dir/src/test_case.cpp.o: /root/workspace/src/test_set/src/test_c
 /usr/include/c++/11/atomic:
 
 /usr/include/pthread.h:
+
+/root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 

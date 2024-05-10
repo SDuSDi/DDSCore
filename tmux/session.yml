@@ -18,6 +18,6 @@ windows:
       layout: tiled
       panes:
         - cd workspace && colcon build && source install/setup.bash && clear
-        - 
-        - 
-        - 
+        - source workspace/install/setup.bash && clear
+        - source workspace/install/setup.bash && clear
+        - source workspace/install/setup.bash && clear

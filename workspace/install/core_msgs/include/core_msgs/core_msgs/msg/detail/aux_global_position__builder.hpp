@@ -56,13 +56,61 @@ private:
 class Init_AuxGlobalPosition_lat
 {
 public:
-  Init_AuxGlobalPosition_lat()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_AuxGlobalPosition_lat(::core_msgs::msg::AuxGlobalPosition & msg)
+  : msg_(msg)
   {}
   Init_AuxGlobalPosition_lon lat(::core_msgs::msg::AuxGlobalPosition::_lat_type arg)
   {
     msg_.lat = std::move(arg);
     return Init_AuxGlobalPosition_lon(msg_);
+  }
+
+private:
+  ::core_msgs::msg::AuxGlobalPosition msg_;
+};
+
+class Init_AuxGlobalPosition_yaw
+{
+public:
+  explicit Init_AuxGlobalPosition_yaw(::core_msgs::msg::AuxGlobalPosition & msg)
+  : msg_(msg)
+  {}
+  Init_AuxGlobalPosition_lat yaw(::core_msgs::msg::AuxGlobalPosition::_yaw_type arg)
+  {
+    msg_.yaw = std::move(arg);
+    return Init_AuxGlobalPosition_lat(msg_);
+  }
+
+private:
+  ::core_msgs::msg::AuxGlobalPosition msg_;
+};
+
+class Init_AuxGlobalPosition_radius
+{
+public:
+  explicit Init_AuxGlobalPosition_radius(::core_msgs::msg::AuxGlobalPosition & msg)
+  : msg_(msg)
+  {}
+  Init_AuxGlobalPosition_yaw radius(::core_msgs::msg::AuxGlobalPosition::_radius_type arg)
+  {
+    msg_.radius = std::move(arg);
+    return Init_AuxGlobalPosition_yaw(msg_);
+  }
+
+private:
+  ::core_msgs::msg::AuxGlobalPosition msg_;
+};
+
+class Init_AuxGlobalPosition_speed
+{
+public:
+  Init_AuxGlobalPosition_speed()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_AuxGlobalPosition_radius speed(::core_msgs::msg::AuxGlobalPosition::_speed_type arg)
+  {
+    msg_.speed = std::move(arg);
+    return Init_AuxGlobalPosition_radius(msg_);
   }
 
 private:
@@ -80,7 +128,7 @@ template<>
 inline
 auto build<::core_msgs::msg::AuxGlobalPosition>()
 {
-  return core_msgs::msg::builder::Init_AuxGlobalPosition_lat();
+  return core_msgs::msg::builder::Init_AuxGlobalPosition_speed();
 }
 
 }  // namespace core_msgs

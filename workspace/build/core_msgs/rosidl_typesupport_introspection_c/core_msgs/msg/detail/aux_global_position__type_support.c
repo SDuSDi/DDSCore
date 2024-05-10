@@ -31,7 +31,58 @@ void core_msgs__msg__AuxGlobalPosition__rosidl_typesupport_introspection_c__AuxG
   core_msgs__msg__AuxGlobalPosition__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember core_msgs__msg__AuxGlobalPosition__rosidl_typesupport_introspection_c__AuxGlobalPosition_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember core_msgs__msg__AuxGlobalPosition__rosidl_typesupport_introspection_c__AuxGlobalPosition_message_member_array[6] = {
+  {
+    "speed",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(core_msgs__msg__AuxGlobalPosition, speed),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "radius",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(core_msgs__msg__AuxGlobalPosition, radius),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "yaw",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(core_msgs__msg__AuxGlobalPosition, yaw),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "lat",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -88,7 +139,7 @@ static rosidl_typesupport_introspection_c__MessageMember core_msgs__msg__AuxGlob
 static const rosidl_typesupport_introspection_c__MessageMembers core_msgs__msg__AuxGlobalPosition__rosidl_typesupport_introspection_c__AuxGlobalPosition_message_members = {
   "core_msgs__msg",  // message namespace
   "AuxGlobalPosition",  // message name
-  3,  // number of fields
+  6,  // number of fields
   sizeof(core_msgs__msg__AuxGlobalPosition),
   core_msgs__msg__AuxGlobalPosition__rosidl_typesupport_introspection_c__AuxGlobalPosition_message_member_array,  // message members
   core_msgs__msg__AuxGlobalPosition__rosidl_typesupport_introspection_c__AuxGlobalPosition_init_function,  // function to initialize message memory (memory has to be allocated)

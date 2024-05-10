@@ -50,6 +50,33 @@ bool core_msgs__msg__aux_global_position__convert_from_py(PyObject * _pymsg, voi
     assert(strncmp("core_msgs.msg._aux_global_position.AuxGlobalPosition", full_classname_dest, 52) == 0);
   }
   core_msgs__msg__AuxGlobalPosition * ros_message = _ros_message;
+  {  // speed
+    PyObject * field = PyObject_GetAttrString(_pymsg, "speed");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->speed = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // radius
+    PyObject * field = PyObject_GetAttrString(_pymsg, "radius");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->radius = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // yaw
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->yaw = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // lat
     PyObject * field = PyObject_GetAttrString(_pymsg, "lat");
     if (!field) {
@@ -99,6 +126,39 @@ PyObject * core_msgs__msg__aux_global_position__convert_to_py(void * raw_ros_mes
     }
   }
   core_msgs__msg__AuxGlobalPosition * ros_message = (core_msgs__msg__AuxGlobalPosition *)raw_ros_message;
+  {  // speed
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->speed);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "speed", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // radius
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->radius);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "radius", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // yaw
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->yaw);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "yaw", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // lat
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->lat);

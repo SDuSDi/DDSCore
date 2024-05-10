@@ -7,6 +7,7 @@
 #include "std_msgs/msg/float32.hpp"
 #include "core_msgs/msg/trajectory.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "core_msgs/msg/aux_global_position.hpp"
 
 int main(int argc, char **argv){
 
@@ -31,25 +32,44 @@ int main(int argc, char **argv){
     takeoff_msg.data = 2.0;
     RCLCPP_INFO(node -> get_logger(), "Sending takeoff request");
     takeoff_pub -> publish(takeoff_msg);
-    std::this_thread::sleep_for(std::chrono::seconds(30));
+    std::this_thread::sleep_for(std::chrono::seconds(20));
 
     rclcpp::Publisher<core_msgs::msg::Trajectory>::SharedPtr trajectory_pub = node -> create_publisher<core_msgs::msg::Trajectory>("/ddscore/trajectory",10);
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr attitude_sub = node -> create_publisher<geometry_msgs::msg::Twist>("/ddscore/attitude",10);
+    rclcpp::Publisher<core_msgs::msg::AuxGlobalPosition>::SharedPtr aux_pub = node -> create_publisher<core_msgs::msg::AuxGlobalPosition>("/ddscore/global_position_controller",10);
 
     core_msgs::msg::Trajectory trajectory_msg{};
-    trajectory_msg.x = 3; trajectory_msg.y = 3; trajectory_msg.z = 5; trajectory_msg.yaw = 0;
-    mode_pub -> publish(mode_msg);
+    trajectory_msg.x = 0; trajectory_msg.y = 0; trajectory_msg.z = 5; trajectory_msg.yaw = 0;
 
-    while(true){
-        try{
-            RCLCPP_INFO(node -> get_logger(), "Sending trajectory setpoint");
-            trajectory_pub -> publish(trajectory_msg);
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        }
-        catch(const std::exception& e){
-            break;
-        }
-    }
-    //rclcpp::shutdown();
+    // geometry_msgs::msg::Twist attitude_msg{};
+    // attitude_msg.linear.x = 0.5;
+    // attitude_msg.angular.y = 2.9;
+
+    core_msgs::msg::AuxGlobalPosition aux_msg{};
+    aux_msg.speed = 0.0;
+    aux_msg.radius = 0.0;
+    aux_msg.yaw = 0.0;
+    aux_msg.lat = 47.4;
+    aux_msg.lon = 8.54;
+    aux_msg.alt = 5;
+
+    // mode_pub -> publish(mode_msg);
+    RCLCPP_INFO(node -> get_logger(), "Sending global setpoint");
+    aux_pub -> publish(aux_msg);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+    // while(true){
+    //     try{
+    //         RCLCPP_INFO(node -> get_logger(), "Sending global setpoint");
+    //         trajectory_pub -> publish(trajectory_msg);
+    //         attitude_sub -> publish(attitude_msg);
+    //         aux_pub -> publish(aux_msg);
+    //         std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    //     }
+    //     catch(const std::exception& e){
+    //         break;
+    //     }
+    // }
+    rclcpp::shutdown();
     return 0;
 }
