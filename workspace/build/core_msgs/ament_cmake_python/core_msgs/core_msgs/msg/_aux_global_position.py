@@ -58,6 +58,7 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
 
     __slots__ = [
         '_speed',
+        '_radius',
         '_yaw',
         '_lat',
         '_lon',
@@ -66,6 +67,7 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
 
     _fields_and_field_types = {
         'speed': 'float',
+        'radius': 'float',
         'yaw': 'float',
         'lat': 'double',
         'lon': 'double',
@@ -73,6 +75,7 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -85,6 +88,7 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.speed = kwargs.get('speed', float())
+        self.radius = kwargs.get('radius', float())
         self.yaw = kwargs.get('yaw', float())
         self.lat = kwargs.get('lat', float())
         self.lon = kwargs.get('lon', float())
@@ -121,6 +125,8 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
             return False
         if self.speed != other.speed:
             return False
+        if self.radius != other.radius:
+            return False
         if self.yaw != other.yaw:
             return False
         if self.lat != other.lat:
@@ -150,6 +156,21 @@ class AuxGlobalPosition(metaclass=Metaclass_AuxGlobalPosition):
             assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
                 "The 'speed' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._speed = value
+
+    @builtins.property
+    def radius(self):
+        """Message field 'radius'."""
+        return self._radius
+
+    @radius.setter
+    def radius(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'radius' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'radius' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._radius = value
 
     @builtins.property
     def yaw(self):

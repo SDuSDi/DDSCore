@@ -251,7 +251,10 @@ void ControlNode::aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr 
     tmp.param3 = msg -> radius; // Loiter radius [m] for planes (useless for drones)
 
     float base_yaw = std::atan2(global_pos[1] - msg -> lat, global_pos[2] - msg -> lon);
-    tmp.param4 = base_yaw - msg -> yaw; // Yaw	[deg]
+    RCLCPP_INFO(this -> get_logger(), "Global Pos: Lat: %f Lon: %f", global_pos[1], global_pos[2]);
+    RCLCPP_INFO(this -> get_logger(), "Base yaw: %f Lat: %f Lon: %f", base_yaw * 180 / M_PI, global_pos[1] - msg -> lat, global_pos[2] - msg -> lon);
+    tmp.param4 = - M_PI/2 - base_yaw; //+ base_yaw * 180 / M_PI;// msg -> yaw; // Yaw	[deg]
+    RCLCPP_INFO(this -> get_logger(), "Yaw: %f", tmp.param4);
     
     tmp.param5 = msg -> lat; // Latitude
     tmp.param6 = msg -> lon; // Longitude

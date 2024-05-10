@@ -1,0 +1,25 @@
+[0.005s] Invoking command in '/root/workspace/build/test_set': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/test_set -- -j20 -l20
+[0.033s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/test_case.cpp.o[0m
+[3.508s] [100%] [32m[1mLinking CXX executable node[0m
+[3.654s] [100%] Built target node
+[3.661s] Invoked command in '/root/workspace/build/test_set' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/test_set -- -j20 -l20
+[3.680s] Invoking command in '/root/workspace/build/test_set': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/test_set
+[3.684s] -- Install configuration: ""
+[3.687s] -- Installing: /root/workspace/install/test_set/lib/test_set/node
+[3.688s] -- Set runtime path of "/root/workspace/install/test_set/lib/test_set/node" to ""
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/ament_index/resource_index/package_run_dependencies/test_set
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/ament_index/resource_index/parent_prefix_path/test_set
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/environment/ament_prefix_path.sh
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/environment/ament_prefix_path.dsv
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/environment/path.sh
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/environment/path.dsv
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/local_setup.bash
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/local_setup.sh
+[3.688s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/local_setup.zsh
+[3.689s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/local_setup.dsv
+[3.689s] -- Installing: /root/workspace/install/test_set/share/test_set/package.dsv
+[3.689s] -- Up-to-date: /root/workspace/install/test_set/share/ament_index/resource_index/packages/test_set
+[3.689s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/cmake/test_setConfig.cmake
+[3.689s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/cmake/test_setConfig-version.cmake
+[3.689s] -- Up-to-date: /root/workspace/install/test_set/share/test_set/package.xml
+[3.689s] Invoked command in '/root/workspace/build/test_set' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/test_set

@@ -32,7 +32,7 @@ int main(int argc, char **argv){
     takeoff_msg.data = 2.0;
     RCLCPP_INFO(node -> get_logger(), "Sending takeoff request");
     takeoff_pub -> publish(takeoff_msg);
-    std::this_thread::sleep_for(std::chrono::seconds(20));
+    std::this_thread::sleep_for(std::chrono::seconds(10));
 
     rclcpp::Publisher<core_msgs::msg::Trajectory>::SharedPtr trajectory_pub = node -> create_publisher<core_msgs::msg::Trajectory>("/ddscore/trajectory",10);
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr attitude_sub = node -> create_publisher<geometry_msgs::msg::Twist>("/ddscore/attitude",10);
@@ -49,7 +49,7 @@ int main(int argc, char **argv){
     aux_msg.speed = 0.0;
     aux_msg.radius = 0.0;
     aux_msg.yaw = 0.0;
-    aux_msg.lat = 47.4;
+    aux_msg.lat = 47.5;
     aux_msg.lon = 8.54;
     aux_msg.alt = 5;
 
