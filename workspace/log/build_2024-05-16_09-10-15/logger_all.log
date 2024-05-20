@@ -1,0 +1,256 @@
+[0.088s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.088s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f05a58dc550>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f05a589fee0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f05a589fee0>>, mixin_verb=('build',))
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.159s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.159s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.159s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.159s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.159s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.159s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.159s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.159s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/workspace'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/core) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/core' with type 'ros.ament_cmake' and name 'core'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(src/core_msgs) by extension 'ros'
+[0.172s] DEBUG:colcon.colcon_core.package_identification:Package 'src/core_msgs' with type 'ros.ament_cmake' and name 'core_msgs'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_set) by extension 'ros'
+[0.173s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_set' with type 'ros.ament_cmake' and name 'test_set'
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'cmake_args' from command line to 'None'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'cmake_target' from command line to 'None'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.187s] DEBUG:colcon.colcon_core.verb:Building package 'core_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/workspace/build/core_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/workspace/install/core_msgs', 'merge_install': False, 'path': '/root/workspace/src/core_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.187s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_target' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_clean_first' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'cmake_force_configure' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'ament_cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.188s] DEBUG:colcon.colcon_core.verb:Building package 'core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/workspace/build/core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/workspace/install/core', 'merge_install': False, 'path': '/root/workspace/src/core', 'symlink_install': False, 'test_result_base': None}
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'cmake_target' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'cmake_clean_cache' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'cmake_clean_first' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'cmake_force_configure' from command line to 'False'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'ament_cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'catkin_cmake_args' from command line to 'None'
+[0.188s] Level 5:colcon.colcon_core.verb:set package 'test_set' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.188s] DEBUG:colcon.colcon_core.verb:Building package 'test_set' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/workspace/build/test_set', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/workspace/install/test_set', 'merge_install': False, 'path': '/root/workspace/src/test_set', 'symlink_install': False, 'test_result_base': None}
+[0.188s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.189s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.189s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/workspace/src/core_msgs' with build type 'ament_cmake'
+[0.189s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/workspace/src/core_msgs'
+[0.199s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.199s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.199s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.204s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core_msgs -- -j20 -l20
+[0.373s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/workspace/build/core_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core_msgs -- -j20 -l20
+[0.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/core_msgs
+[0.441s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(core_msgs)
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs' for CMake module files
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs' for CMake config files
+[0.444s] Level 1:colcon.colcon_core.shell:create_environment_hook('core_msgs', 'cmake_prefix_path')
+[0.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/cmake_prefix_path.ps1'
+[0.445s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/core_msgs/share/core_msgs/hook/cmake_prefix_path.dsv'
+[0.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/cmake_prefix_path.sh'
+[0.446s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/lib'
+[0.446s] Level 1:colcon.colcon_core.shell:create_environment_hook('core_msgs', 'ld_library_path_lib')
+[0.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/ld_library_path_lib.ps1'
+[0.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/core_msgs/share/core_msgs/hook/ld_library_path_lib.dsv'
+[0.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/ld_library_path_lib.sh'
+[0.447s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/bin'
+[0.447s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/lib/pkgconfig/core_msgs.pc'
+[0.448s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/lib/python3.10/site-packages'
+[0.448s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/bin'
+[0.448s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.ps1'
+[0.448s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/workspace/install/core_msgs/share/core_msgs/package.dsv'
+[0.449s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.sh'
+[0.449s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.bash'
+[0.449s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.zsh'
+[0.450s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/workspace/install/core_msgs/share/colcon-core/packages/core_msgs)
+[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/workspace/build/core_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/core_msgs
+[0.494s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(core_msgs)
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs' for CMake module files
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs' for CMake config files
+[0.495s] Level 1:colcon.colcon_core.shell:create_environment_hook('core_msgs', 'cmake_prefix_path')
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/cmake_prefix_path.ps1'
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/core_msgs/share/core_msgs/hook/cmake_prefix_path.dsv'
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/cmake_prefix_path.sh'
+[0.497s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/lib'
+[0.497s] Level 1:colcon.colcon_core.shell:create_environment_hook('core_msgs', 'ld_library_path_lib')
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/ld_library_path_lib.ps1'
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/core_msgs/share/core_msgs/hook/ld_library_path_lib.dsv'
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core_msgs/share/core_msgs/hook/ld_library_path_lib.sh'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/bin'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/lib/pkgconfig/core_msgs.pc'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/lib/python3.10/site-packages'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core_msgs/bin'
+[0.498s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.ps1'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/workspace/install/core_msgs/share/core_msgs/package.dsv'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.sh'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.bash'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core_msgs/share/core_msgs/package.zsh'
+[0.501s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/workspace/install/core_msgs/share/colcon-core/packages/core_msgs)
+[0.501s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/workspace/src/core' with build type 'ament_cmake'
+[0.501s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/workspace/src/core'
+[0.502s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.502s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.504s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/workspace/src/test_set' with build type 'ament_cmake'
+[0.504s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/workspace/src/test_set'
+[0.504s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.504s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.508s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/workspace/build/core': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/workspace/build/test_set': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/test_set -- -j20 -l20
+[4.309s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/workspace/build/test_set' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/test_set -- -j20 -l20
+[4.325s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/workspace/build/test_set': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/test_set
+[4.334s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_set)
+[4.334s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set' for CMake module files
+[4.334s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set' for CMake config files
+[4.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_set', 'cmake_prefix_path')
+[4.335s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/test_set/share/test_set/hook/cmake_prefix_path.ps1'
+[4.335s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/test_set/share/test_set/hook/cmake_prefix_path.dsv'
+[4.335s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/test_set/share/test_set/hook/cmake_prefix_path.sh'
+[4.335s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/lib'
+[4.335s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/bin'
+[4.335s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/lib/pkgconfig/test_set.pc'
+[4.335s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/lib/python3.10/site-packages'
+[4.336s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/bin'
+[4.336s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.ps1'
+[4.336s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/workspace/install/test_set/share/test_set/package.dsv'
+[4.336s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.sh'
+[4.337s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.bash'
+[4.337s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.zsh'
+[4.337s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/workspace/install/test_set/share/colcon-core/packages/test_set)
+[4.338s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/workspace/build/test_set' returned '0': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/test_set
+[4.353s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_set)
+[4.353s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set' for CMake module files
+[4.353s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set' for CMake config files
+[4.354s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_set', 'cmake_prefix_path')
+[4.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/test_set/share/test_set/hook/cmake_prefix_path.ps1'
+[4.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/test_set/share/test_set/hook/cmake_prefix_path.dsv'
+[4.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/test_set/share/test_set/hook/cmake_prefix_path.sh'
+[4.355s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/lib'
+[4.355s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/bin'
+[4.355s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/lib/pkgconfig/test_set.pc'
+[4.355s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/lib/python3.10/site-packages'
+[4.355s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/test_set/bin'
+[4.355s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.ps1'
+[4.355s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/workspace/install/test_set/share/test_set/package.dsv'
+[4.356s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.sh'
+[4.356s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.bash'
+[4.356s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/test_set/share/test_set/package.zsh'
+[4.356s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/workspace/install/test_set/share/colcon-core/packages/test_set)
+[8.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/workspace/build/core' returned '2': CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/workspace/install/test_set:/root/workspace/install/core:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[8.931s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(core)
+[8.932s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core' for CMake module files
+[8.932s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core' for CMake config files
+[8.932s] Level 1:colcon.colcon_core.shell:create_environment_hook('core', 'cmake_prefix_path')
+[8.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core/share/core/hook/cmake_prefix_path.ps1'
+[8.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/workspace/install/core/share/core/hook/cmake_prefix_path.dsv'
+[8.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/workspace/install/core/share/core/hook/cmake_prefix_path.sh'
+[8.933s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core/lib'
+[8.933s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core/bin'
+[8.933s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core/lib/pkgconfig/core.pc'
+[8.933s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core/lib/python3.10/site-packages'
+[8.933s] Level 1:colcon.colcon_core.environment:checking '/root/workspace/install/core/bin'
+[8.933s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core/share/core/package.ps1'
+[8.934s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/workspace/install/core/share/core/package.dsv'
+[8.934s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core/share/core/package.sh'
+[8.934s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core/share/core/package.bash'
+[8.934s] INFO:colcon.colcon_core.shell:Creating package script '/root/workspace/install/core/share/core/package.zsh'
+[8.934s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/workspace/install/core/share/colcon-core/packages/core)
+[8.945s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.945s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.945s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[8.945s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.949s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[8.949s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.950s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.950s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.951s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[8.951s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.951s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/workspace/install/local_setup.ps1'
+[8.952s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/workspace/install/_local_setup_util_ps1.py'
+[8.952s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/workspace/install/setup.ps1'
+[8.953s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/workspace/install/local_setup.sh'
+[8.953s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/workspace/install/_local_setup_util_sh.py'
+[8.953s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/workspace/install/setup.sh'
+[8.954s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/workspace/install/local_setup.bash'
+[8.954s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/workspace/install/setup.bash'
+[8.955s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/workspace/install/local_setup.zsh'
+[8.955s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/workspace/install/setup.zsh'

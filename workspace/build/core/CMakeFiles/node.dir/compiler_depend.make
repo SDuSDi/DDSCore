@@ -722,7 +722,8 @@ CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/src/core/src/offb_node.
   /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.hpp \
   /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.hpp \
   /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__builder.hpp \
-  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp
+  /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp \
+  /root/workspace/src/core/src/pid.cpp
 
 
 /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp:
@@ -2062,6 +2063,8 @@ CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/src/core/src/offb_node.
 /usr/include/alloca.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_base.hpp:
+
+/root/workspace/src/core/src/pid.cpp:
 
 /opt/ros/humble/include/rmw/rmw/network_flow_endpoint.h:
 

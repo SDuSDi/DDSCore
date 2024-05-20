@@ -1,0 +1,32 @@
+[0.004s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.030s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/offb_node.cpp.o[0m
+[1.431s] [01m[K/root/workspace/src/core/src/offb_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::set_attitude(geometry_msgs::msg::Twist_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.431s] [01m[K/root/workspace/src/core/src/offb_node.cpp:281:33:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(2.9999999999999999e-1 * ((double)(global_pos.std::array<float, 3>::operator[](3) - ((float)stable_alt))))[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[1.431s]   281 |     tmp.thrust_body = {0,0, [01;35m[K0.3 * (global_pos[3] - stable_alt)[m[K};
+[1.431s]       |                             [01;35m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.431s] [01m[K/root/workspace/src/core/src/offb_node.cpp:276:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmod[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.432s]   276 |     float [01;35m[Kmod[m[K = sqrt(pow(msg -> linear.x,2) + pow(msg -> linear.y,2) + pow(msg -> linear.z,2));
+[1.432s]       |           [01;35m[K^~~[m[K
+[15.353s] [100%] [32m[1mLinking CXX executable node[0m
+[16.306s] [100%] Built target node
+[16.311s] Invoked command in '/root/workspace/build/core' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[16.322s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/workspace/build/core
+[16.326s] -- Install configuration: ""
+[16.326s] -- Installing: /root/workspace/install/core/lib/core/node
+[16.336s] -- Set runtime path of "/root/workspace/install/core/lib/core/node" to ""
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/package_run_dependencies/core
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/parent_prefix_path/core
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.sh
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/core/environment/ament_prefix_path.dsv
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.sh
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/core/environment/path.dsv
+[16.336s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.bash
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.sh
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.zsh
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/core/local_setup.dsv
+[16.337s] -- Installing: /root/workspace/install/core/share/core/package.dsv
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/ament_index/resource_index/packages/core
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig.cmake
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/core/cmake/coreConfig-version.cmake
+[16.337s] -- Up-to-date: /root/workspace/install/core/share/core/package.xml
+[16.338s] Invoked command in '/root/workspace/build/core' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/workspace/build/core

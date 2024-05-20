@@ -99,3 +99,11 @@ xhost +local:root
 # Run the container in a interactive terminal
 docker run -it --rm -v ./ros2_ws/ddscore/workspace:/root/workspace --net=host --env DISPLAY=$DISPLAY --privileged --runtime=nvidia --gpus all bmartinez/ddscore
 ```
+
+## Work in progress
+
+At the time of writing this, the control mode with attitude is still incomplete and being developed. The reason for it being incomplete is the complexity of the problems it presents. The control through attitude can be sumed up as control through quaternions and thrust. Since thrust is a vector of forces applied on the drone, the only force needed to keep the drone flying is the force in the Z axis. Using this, the movement of the drone on the horizontal plane must be made slightly tilting the drone and lightly raising the thurst to keep it at the same altitude and moving. Problems come from the need of calculating the angle needed to decompose the thrust to reach a certain speed on any of the horizontal movement axis. For this reason, this method of control is on standby. If anyone knows how to do it, please contact me.
+
+## Contact
+
+Brais Martínez -> bmartinez.ext@catec.aero 

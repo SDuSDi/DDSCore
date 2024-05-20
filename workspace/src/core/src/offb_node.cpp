@@ -22,9 +22,14 @@
 #include "core_msgs/msg/trajectory.hpp"
 #include "core_msgs/msg/aux_global_position.hpp"
 
+// Linked cpp code
+#include "pid.cpp"
+
 std::array<float,3> global_pos;
 bool enable = true;
-px4_msgs::msg::VehicleGlobalPosition global_info{};
+
+float stable_alt = 2.0; bool first = true;
+PID attitude_thrust(0.5,0.1,0.2,0.1);
 
 class ControlNode : public rclcpp::Node
 {
@@ -70,17 +75,17 @@ public:
         // Definition of loop timer function
         auto publish_offboard_control = [this]() -> void {
                 px4_msgs::msg::OffboardControlMode msg{};
-                msg.position = enable;
-                msg.velocity = !enable;
+                msg.position = false;
+                msg.velocity = false;//!enable;
                 msg.acceleration = false;
-                msg.attitude = false;
+                msg.attitude = true;
                 msg.body_rate = false;
                 msg.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
                 offboard_controller -> publish(msg);
         };
         // Definition of the timer itself
         offboard_ctrl = this -> create_wall_timer(std::chrono::milliseconds(100), publish_offboard_control);
-        RCLCPP_INFO(this -> get_logger(), "Node started with attitude control");
+        RCLCPP_INFO(this -> get_logger(), "Node started with attitude control - READY");
     }
 
 private:
@@ -155,6 +160,11 @@ void ControlNode::publish_srv_command(uint16_t command, float alt) {
 
     msg.param5 = global_pos[1]; // Latitude
     msg.param6 = global_pos[2]; // Longitude
+
+    if(first){
+        first = false;
+        stable_alt = global_pos[3] + alt;
+    }
 
     // Absolute altitude + takeoff altitude
     if (command == 22) msg.param7 = global_pos[3] + alt;  //22 is the takeoff command
@@ -270,17 +280,23 @@ void ControlNode::aux_global(const core_msgs::msg::AuxGlobalPosition::SharedPtr 
 	vehicle_commander -> publish(tmp);
 }
 
-void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){
+void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){ // Currently WORK IN PROGRESS
     RCLCPP_INFO(this -> get_logger(), "Doing shady shit");
-    float mod = sqrt(pow(msg -> linear.x,2) + pow(msg -> linear.y,2) + pow(msg -> linear.z,2));
+    //float mod = sqrt(pow(msg -> linear.x,2) + pow(msg -> linear.y,2) + pow(msg -> linear.z,2));
     float q[4];
-    euler2quaternion(msg -> angular.x, msg -> angular.y, msg -> angular.z, q);
+    euler2quaternion(msg -> angular.x, -msg -> angular.y, msg -> angular.z, q);
     px4_msgs::msg::VehicleAttitudeSetpoint tmp{};
     tmp.q_d = {q[0],q[1],q[2],q[3]};
-    tmp.thrust_body = {0,0,-mod};
+    tmp.thrust_body = {0,0,attitude_thrust.calculate((float)global_pos[3],stable_alt)};
+    RCLCPP_INFO(this -> get_logger(), "Global alt: %f Stable alt: %f Thrust: %f", global_pos[3], stable_alt, tmp.thrust_body[2]);
     // msg.yaw_sp_move_rate = 0.0;  //HARDCODED: YAWRATE SET TO 0 RAD/S
     tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
     attitude_publisher -> publish(tmp);
+
+    float hip_x = sqrt(pow(tmp.thrust_body[2],2) + pow(msg -> linear.x,2));
+    float deg_x = atan2(tmp.thrust_body[2], 1.0);
+    RCLCPP_INFO(this -> get_logger(), "Hip: %f Deg: %f", hip_x, deg_x);
+
 }
 
 void ControlNode::euler2quaternion(float roll, float pitch, float yaw, float *q){

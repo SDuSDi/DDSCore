@@ -1,0 +1,11 @@
+[01m[K/root/workspace/src/test_set/src/test_case.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/root/workspace/src/test_set/src/test_case.cpp:69:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   69 | }
+      |  [01;31m[K^[m[K
+[01m[K/root/workspace/src/test_set/src/test_case.cpp:12:32:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   12 | t main(int argc, char **argv)[01;36m[K{[m[K
+      |                              [01;36m[K^[m[K
+
+gmake[2]: *** [CMakeFiles/node.dir/build.make:76: CMakeFiles/node.dir/src/test_case.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
