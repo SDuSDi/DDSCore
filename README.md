@@ -6,6 +6,10 @@ DDSCore is a ROS 2 Humble package that implements an abstraction layer to make R
 
 This proyect is still a WIP.
 
+## Attention
+
+This branch is for the use of the Kubernetes tool <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noreferrer">Minikube</a>. If you wish to test this repository through Docker, please go <a href="https://github.com/SDuSDi/DDSCore/tree/master" target="_blank" rel="noreferrer">here</a>.
+
 ## Dependencies
 
 To use the code hosted on this repo, it is required that you use <a href="https://www.docker.com/" target="_blank" rel="noreferrer">Docker</a>. To install Docker Engine, which is the required part, you can find the instructions <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noreferrer">here</a>.
@@ -74,30 +78,23 @@ sudo systemctl restart docker
 
 ## Build
 
-Now that you got the prerequisites and dependencies, you need to clone this repository.
-
 ```
 git clone https://github.com/SDuSDi/DDSCore.git ros2_ws/ddscore
-```
 
-Once you clone it, you have to build the Docker image that comes in it, since all the code is thought out to work on a container. This process takes around 10 minutes to finish.
+minikube docker-env
 
+docker build -t local/ddscore:v1 ./ros2_ws/ddscore/.
 ```
-docker build -t bmartinez/ddscore ./ros2_ws/ddscore/.
-```
-
-If you wish to use it outside a container, you will have to manually install all the dependencies that are installed through the Dockerfile (use it for reference) and get a few things up in secondary terminals, such as a DDS Agent, the PX4 software, Gazebo Garden and QGroundControl.
 
 ## Usage
 
-To run the image as a container, two commands are needed. Be careful with the commands, and check if you may need to remove some options from the ```docker run``` command.
+To begin using this repository
 
 ```
-# Allow the docker to display in the host's monitor
-xhost +local:root
+minikube start
 
-# Run the container in a interactive terminal
-docker run -it --rm -v ./ros2_ws/ddscore/workspace:/root/workspace --net=host --env DISPLAY=$DISPLAY --privileged --runtime=nvidia --gpus all bmartinez/ddscore
+kubectl apply -f ./ros2_ws/ddscore/deployment.yaml
+
 ```
 
 ## Work in progress
