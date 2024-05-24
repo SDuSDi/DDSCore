@@ -6,6 +6,10 @@ DDSCore is a ROS 2 Humble package that implements an abstraction layer to make R
 
 This proyect is still a WIP.
 
+## Attention
+
+This branch is for the use of single-UAV Docker applications. If you wish to use the multi-UAV version through <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noreferrer">Minikube</a>, please head to <a href="https://github.com/SDuSDi/DDSCore/tree/kubernetes" target="_blank" rel="noreferrer">here</a>.
+
 ## Dependencies
 
 To use the code hosted on this repo, it is required that you use <a href="https://www.docker.com/" target="_blank" rel="noreferrer">Docker</a>. To install Docker Engine, which is the required part, you can find the instructions <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noreferrer">here</a>.
