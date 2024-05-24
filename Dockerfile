@@ -121,5 +121,10 @@ RUN chmod +x entrypoint.sh
 COPY ./tmux ./tmux
 RUN chmod +x ./tmux/*.sh
 
+### KUBERNETES ONLY ###
+COPY ./workspace ./workspace
+WORKDIR /root
+#######################
+
 # Set entrypoint as startup script
 ENTRYPOINT ["./entrypoint.sh"]
