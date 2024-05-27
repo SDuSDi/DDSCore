@@ -52,8 +52,8 @@ WORKDIR /root
 RUN mkdir workspace
 
 # Copy and set up the entrypoint script and tmux configs
-COPY ./entrypoint.sh .
-RUN chmod +x entrypoint.sh
+COPY ./entrypoint-ddscore.sh .
+RUN chmod +x entrypoint-ddscore.sh
 
 ### KUBERNETES ONLY ###
 COPY ./workspace ./workspace

@@ -69,8 +69,8 @@ WORKDIR /root
 RUN mkdir workspace
 
 # Copy and set up the entrypoint script and tmux configs
-COPY ./entrypoint.sh .
-RUN chmod +x entrypoint.sh
+COPY ./entrypoint-px4.sh .
+RUN chmod +x entrypoint-px4.sh
 
 ### KUBERNETES ONLY ###
 COPY ./workspace ./workspace
@@ -78,4 +78,4 @@ WORKDIR /root
 #######################
 
 # Set entrypoint as startup script
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./entrypoint-px4.sh"]
