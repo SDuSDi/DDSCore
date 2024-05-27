@@ -61,4 +61,4 @@ WORKDIR /root
 #######################
 
 # Set entrypoint as startup script
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./entrypoint-ddscore.sh"]
