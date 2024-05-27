@@ -8,11 +8,11 @@ This proyect is still a WIP.
 
 ## Attention
 
-This branch is for the use of the Kubernetes tool <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noreferrer">Minikube</a>. If you wish to test this repository through Docker, please go <a href="https://github.com/SDuSDi/DDSCore/tree/master" target="_blank" rel="noreferrer">here</a>.
+This branch is for the use of multi-UAV Kubernetes applications through <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noreferrer">Minikube</a>. If you wish to use the single-UAV version through Docker, please head to <a href="https://github.com/SDuSDi/DDSCore/tree/master" target="_blank" rel="noreferrer">here</a>.
 
 ## Dependencies
 
-To use the code hosted on this repo, it is required that you use <a href="https://www.docker.com/" target="_blank" rel="noreferrer">Docker</a>. To install Docker Engine, which is the required part, you can find the instructions <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noreferrer">here</a>.
+To use the code hosted on this repo, it is advised that you use <a href="https://www.docker.com/" target="_blank" rel="noreferrer">Docker</a>. To install Docker Engine, which is the advised part, you can find the instructions <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noreferrer">here</a>.
 
 ```
 # Add Docker's official GPG key:
@@ -76,25 +76,59 @@ sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 ```
 
+The use of Minikube is <b>REQUIRED</b> to work with this branch of the repository. I advise that you head to the Minikube installation guide that can be found <a href="https://minikube.sigs.k8s.io/docs/start/" target="_blank" rel="noreferrer">here</a>, since it will best suit your needs.
+
 ## Build
 
+First, to use this repository, you have to clone it in you host computer. The following commands clones the repository in a nested folder called ```ros2_ws/ddscore```.
+
 ```
-git clone https://github.com/SDuSDi/DDSCore.git ros2_ws/ddscore
-
-minikube docker-env
-
-docker build -t local/ddscore:v1 ./ros2_ws/ddscore/.
+git clone -b kubernetes https://github.com/SDuSDi/DDSCore.git ros2_ws/ddscore
 ```
 
-## Usage
-
-To begin using this repository
+Next, to use the code present, you need to build the Docker image through the present Dockerfile. To do this, you need to build that image <b>inside</b> Minikube for it to be accesible from the Minikube cluster. To do this, you need to start Minikue and change the path where the Docker will be built.
 
 ```
 minikube start
+minikube docker-env
+```
 
+Now if you check the Docker images through terminal commands, you'll find a few Docker images that you may not recognize. Those are Minikube's own Docker images that it uses to work. Additionally, if Minikube is up, you'll find a container running that belongs to Minikube's internal processes. To build the repository's Docker image, please use the following command.
+
+```
+docker build -t local/ddscore:v1 ./ros2_ws/ddscore/.
+```
+
+This will take >10 minutes, so relax for a bit.
+
+## Usage
+
+Now, to begin using this repository, get Minikube up if it isnt already up with the following command.
+
+```
+minikube start
+```
+
+Now that Minikube is up, the next step is deploying some pods in the Minikube cluster. To do this, a deployment file is used, that specifies how the pods should be build and what should they contain. This way, if a pod ceases to exist, the deployment will generate another one according to the deployment file. The deployment file can be used through the following command.
+
+```
 kubectl apply -f ./ros2_ws/ddscore/deployment.yaml
+```
 
+To end the execution of Minikube and its cluster, the following commands are helpful.
+
+```
+# Deletes the deployment and its pods
+kubectl delete deployment my-deployment
+
+# Halts the execution of the Minikube master node
+minikube stop
+
+# Stop Minikube and deletes the cluster
+minikube delete
+
+# Remove everything about the Minikube cluster (use with caution)
+minikube delete --all
 ```
 
 ## Work in progress
