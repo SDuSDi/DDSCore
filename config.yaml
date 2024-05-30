@@ -1,0 +1,21 @@
+### Fast-DDS specific configuration for ROS 2 environmental variables
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fastdds-config-domain-0
+  namespace: default
+data:
+  ROS_DOMAIN_ID: "0"
+  RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fastdds-config-domain-0-px4
+  namespace: default
+data:
+  ROS_DOMAIN_ID: "0"
+  RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+  # PX4_UXRCE_DDS_NS: "" #Namespace del DDS de PX4
