@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(test_set)
+project(link)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -19,15 +19,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(geometry_msgs REQUIRED)
 find_package(core_msgs REQUIRED)
-
-add_executable(node src/test_case.cpp)
-ament_target_dependencies(node rclcpp std_msgs geometry_msgs core_msgs)
-
-install(TARGETS
-  node
-  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
