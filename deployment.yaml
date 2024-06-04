@@ -14,11 +14,10 @@ spec:
       labels:
         app: dds_l
     spec:
+      hostNetwork: true
       containers:
       - name: ddscore-pod
         image: local/ddscore:v1
-        # ports: #It seems there is no need for ports rn
-        # - containerPort: 8888
         envFrom:
           - configMapRef:
               name: fastdds-config-domain-0
@@ -41,22 +40,10 @@ spec:
       labels:
         app: px4_l
     spec:
+      hostNetwork: true
       containers:
       - name: px4-pod
         image: local/px4:v1
-        # ports: #It seems there is no need for ports rn
-        # - containerPort: 8888
         envFrom:
           - configMapRef:
-              name: fastdds-config-domain-0-px4
-      #   volumeMounts: #Experiments to work with Gazebo GUI (currently not working)
-      #   - mountPath: /tmp/.X11-unix
-      #     name: xserver
-      #   env:
-      #   - name: DISPLAY
-      #     value: ":1"
-      # volumes:
-      # - name: xserver
-      #   hostPath:
-      #     path: /tmp/.X11-unix
-      #     type: Directory # host should have this always
+              name: fastdds-config-domain-0

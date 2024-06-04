@@ -1,13 +1,14 @@
-### Fast-DDS specific configuration for ROS 2 environmental variables
+---
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fastdds-config-domain-0
   namespace: default
 data:
-  ROS_DOMAIN_ID: "0"
+  ROS_DOMAIN_ID: '0'
   RMW_IMPLEMENTATION: rmw_fastrtps_cpp
-  PX4_UXRCE_DDS_PORT: "8888"
+  PX4_UXRCE_DDS_PORT: '8000'
 
 ---
 
@@ -17,6 +18,7 @@ metadata:
   name: fastdds-config-domain-1
   namespace: default
 data:
-  ROS_DOMAIN_ID: "0"
+  ROS_DOMAIN_ID: '1'
   RMW_IMPLEMENTATION: rmw_fastrtps_cpp
-  PX4_UXRCE_DDS_PORT: "7777"
+  PX4_UXRCE_DDS_PORT: '8001'
+
