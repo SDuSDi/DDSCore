@@ -20,6 +20,19 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(core_msgs REQUIRED)
+find_package(PahoMqttCpp REQUIRED)
+find_package(nlohmann_json REQUIRED)
+
+# Link CPP source code to main code
+file(GLOB SOURCES src/mqtt.cpp)
+
+add_executable(node src/link_node.cpp)
+target_link_libraries(node paho-mqtt3a paho-mqttpp3)
+ament_target_dependencies(node rclcpp std_msgs core_msgs nlohmann_json)
+
+install(TARGETS
+  node
+  DESTINATION lib/${PROJECT_NAME}) 
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
