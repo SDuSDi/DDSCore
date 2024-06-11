@@ -36,6 +36,18 @@ RUN git clone https://github.com/eclipse/paho.mqtt.cpp && \
 RUN apt-get update && apt-get install nlohmann-json3-dev
 
 ######################################################################################################
+
+# Install Mosquitto Broker for MQTT
+RUN apt update && \
+    apt-get install -y software-properties-common && \
+    apt-get update && \
+    apt-add-repository ppa:mosquitto-dev/mosquitto-ppa && \
+    apt-get update && \
+    apt-get install -y mosquitto && \
+    apt-get install -y mosquitto-clients && \
+    apt clean
+
+######################################################################################################
 #                                            STARTUP                                                 #
 ######################################################################################################
 
@@ -43,16 +55,16 @@ RUN apt-get update && apt-get install nlohmann-json3-dev
 WORKDIR /root
 
 # Create user workspace
-RUN mkdir workspace
+RUN mkdir master
 
 # Copy and set up the entrypoint script and tmux configs
-COPY ./entrypoint-ddscore.sh .
-RUN chmod +x entrypoint-ddscore.sh
+COPY ./dockerfiles/entrypoints/entrypoint-rosmaster.sh .
+RUN chmod +x entrypoint-rosmaster.sh
 
 ### KUBERNETES ONLY ########
-COPY ./workspace ./workspace
+COPY ./master ./master
 WORKDIR /root
 ############################
 
 # Set entrypoint as startup script
-ENTRYPOINT ["./entrypoints/entrypoint-rosmaster.sh"]
+ENTRYPOINT ["./entrypoint-rosmaster.sh"]

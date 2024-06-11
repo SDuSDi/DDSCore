@@ -44,8 +44,8 @@ RUN cd /root/PX4-Autopilot && \
 WORKDIR /root
 
 # Copy and set up the entrypoint script and tmux configs
-COPY ./entrypoint-px4.sh .
+COPY ./dockerfiles/entrypoints/entrypoint-px4.sh .
 RUN chmod +x entrypoint-px4.sh
 
 # Set entrypoint as startup script
-ENTRYPOINT ["./entrypoints/entrypoint-px4.sh"]
+ENTRYPOINT ["./entrypoint-px4.sh"]

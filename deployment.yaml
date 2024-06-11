@@ -47,3 +47,25 @@ spec:
         envFrom:
           - configMapRef:
               name: fastdds-config-domain-0
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mosquitto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: mosquitto
+  template:
+    metadata:
+      labels:
+        name: mosquitto
+    spec:
+      hostNetwork: true
+      containers:
+        - name: mosquitto
+          image: eclipse-mosquitto:2.0.18
+      imagePullPolicy: IfNotPresent

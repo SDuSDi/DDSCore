@@ -1,0 +1,16 @@
+/root/master/install/master/lib/master/node
+/root/master/install/master/share/ament_index/resource_index/package_run_dependencies/master
+/root/master/install/master/share/ament_index/resource_index/parent_prefix_path/master
+/root/master/install/master/share/master/environment/ament_prefix_path.sh
+/root/master/install/master/share/master/environment/ament_prefix_path.dsv
+/root/master/install/master/share/master/environment/path.sh
+/root/master/install/master/share/master/environment/path.dsv
+/root/master/install/master/share/master/local_setup.bash
+/root/master/install/master/share/master/local_setup.sh
+/root/master/install/master/share/master/local_setup.zsh
+/root/master/install/master/share/master/local_setup.dsv
+/root/master/install/master/share/master/package.dsv
+/root/master/install/master/share/ament_index/resource_index/packages/master
+/root/master/install/master/share/master/cmake/masterConfig.cmake
+/root/master/install/master/share/master/cmake/masterConfig-version.cmake
+/root/master/install/master/share/master/package.xml

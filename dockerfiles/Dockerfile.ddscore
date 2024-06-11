@@ -85,13 +85,13 @@ WORKDIR /root
 RUN mkdir workspace
 
 # Copy and set up the entrypoint script and tmux configs
-COPY ./entrypoint-ddscore.sh .
+COPY ./dockerfiles/entrypoints/entrypoint-ddscore.sh .
 RUN chmod +x entrypoint-ddscore.sh
 
 ### KUBERNETES ONLY ########
-COPY ./workspace ./workspace
+COPY ./workspace/ ./workspace
 WORKDIR /root
 ############################
 
 # Set entrypoint as startup script
-ENTRYPOINT ["./entrypoints/entrypoint-ddscore.sh"]
+ENTRYPOINT ["./entrypoint-ddscore.sh"]

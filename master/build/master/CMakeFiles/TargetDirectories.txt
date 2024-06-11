@@ -1,0 +1,10 @@
+/root/master/build/master/CMakeFiles/uninstall.dir
+/root/master/build/master/CMakeFiles/master_uninstall.dir
+/root/master/build/master/CMakeFiles/node.dir
+/root/master/build/master/CMakeFiles/test.dir
+/root/master/build/master/CMakeFiles/edit_cache.dir
+/root/master/build/master/CMakeFiles/rebuild_cache.dir
+/root/master/build/master/CMakeFiles/list_install_components.dir
+/root/master/build/master/CMakeFiles/install.dir
+/root/master/build/master/CMakeFiles/install/local.dir
+/root/master/build/master/CMakeFiles/install/strip.dir

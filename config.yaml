@@ -9,14 +9,14 @@ data:
   RMW_IMPLEMENTATION: rmw_fastrtps_cpp
   PX4_UXRCE_DDS_PORT: "8888"
 
----
+# ---
 
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: fastdds-config-domain-1
-  namespace: default
-data:
-  ROS_DOMAIN_ID: "0"
-  RMW_IMPLEMENTATION: rmw_fastrtps_cpp
-  PX4_UXRCE_DDS_PORT: "7777"
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: fastdds-config-domain-1
+#   namespace: default
+# data:
+#   ROS_DOMAIN_ID: "0"
+#   RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+#   PX4_UXRCE_DDS_PORT: "7777"
