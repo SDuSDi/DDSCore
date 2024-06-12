@@ -23,6 +23,7 @@ find_package(nlohmann_json REQUIRED)
 
 # Link CPP source code to main code
 file(GLOB SOURCES src/publisher.cpp)
+file(GLOB SOURCES src/listener.cpp)
 
 add_executable(node src/master_node.cpp)
 target_link_libraries(node paho-mqtt3a paho-mqttpp3)
