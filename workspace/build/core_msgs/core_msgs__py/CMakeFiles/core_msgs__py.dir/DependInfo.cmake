@@ -17,6 +17,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/__init__.py" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_aux_global_position.py" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_status_provider.py" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_status_provider_s.c" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_trajectory.py" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/msg/_trajectory_s.c" "/root/workspace/build/core_msgs/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
   )

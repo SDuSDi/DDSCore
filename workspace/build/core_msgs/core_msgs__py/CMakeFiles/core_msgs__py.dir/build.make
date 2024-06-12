@@ -71,9 +71,11 @@ core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/_core_msgs
 core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_c.c
 core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/_trajectory.py
 core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/_aux_global_position.py
+core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/_status_provider.py
 core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/__init__.py
 core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/_trajectory_s.c
 core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c
+core_msgs__py/CMakeFiles/core_msgs__py: rosidl_generator_py/core_msgs/msg/_status_provider_s.c
 
 rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -90,6 +92,7 @@ rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /
 rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/core_msgs/msg/Trajectory.idl
 rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/core_msgs/msg/AuxGlobalPosition.idl
+rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/core_msgs/msg/StatusProvider.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/workspace/build/core_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /root/workspace/build/core_msgs/core_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /root/workspace/build/core_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -105,6 +108,9 @@ rosidl_generator_py/core_msgs/msg/_trajectory.py: rosidl_generator_py/core_msgs/
 rosidl_generator_py/core_msgs/msg/_aux_global_position.py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/core_msgs/msg/_aux_global_position.py
 
+rosidl_generator_py/core_msgs/msg/_status_provider.py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/core_msgs/msg/_status_provider.py
+
 rosidl_generator_py/core_msgs/msg/__init__.py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/core_msgs/msg/__init__.py
 
@@ -114,6 +120,9 @@ rosidl_generator_py/core_msgs/msg/_trajectory_s.c: rosidl_generator_py/core_msgs
 rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c
 
+rosidl_generator_py/core_msgs/msg/_status_provider_s.c: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/core_msgs/msg/_status_provider_s.c
+
 core_msgs__py: core_msgs__py/CMakeFiles/core_msgs__py
 core_msgs__py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_c.c
 core_msgs__py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -121,6 +130,8 @@ core_msgs__py: rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_
 core_msgs__py: rosidl_generator_py/core_msgs/msg/__init__.py
 core_msgs__py: rosidl_generator_py/core_msgs/msg/_aux_global_position.py
 core_msgs__py: rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c
+core_msgs__py: rosidl_generator_py/core_msgs/msg/_status_provider.py
+core_msgs__py: rosidl_generator_py/core_msgs/msg/_status_provider_s.c
 core_msgs__py: rosidl_generator_py/core_msgs/msg/_trajectory.py
 core_msgs__py: rosidl_generator_py/core_msgs/msg/_trajectory_s.c
 core_msgs__py: core_msgs__py/CMakeFiles/core_msgs__py.dir/build.make

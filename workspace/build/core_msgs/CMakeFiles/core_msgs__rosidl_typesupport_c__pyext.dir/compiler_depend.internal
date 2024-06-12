@@ -250,4 +250,7 @@ CMakeFiles/core_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/core_m
  /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__type_support.h
  /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h
  /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__type_support.h
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__struct.h
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.h
 

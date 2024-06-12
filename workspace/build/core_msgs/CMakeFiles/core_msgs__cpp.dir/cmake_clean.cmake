@@ -4,9 +4,13 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__builder.hpp"
   "rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__struct.hpp"
   "rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__traits.hpp"
+  "rosidl_generator_cpp/core_msgs/msg/detail/status_provider__builder.hpp"
+  "rosidl_generator_cpp/core_msgs/msg/detail/status_provider__struct.hpp"
+  "rosidl_generator_cpp/core_msgs/msg/detail/status_provider__traits.hpp"
   "rosidl_generator_cpp/core_msgs/msg/detail/trajectory__builder.hpp"
   "rosidl_generator_cpp/core_msgs/msg/detail/trajectory__struct.hpp"
   "rosidl_generator_cpp/core_msgs/msg/detail/trajectory__traits.hpp"
+  "rosidl_generator_cpp/core_msgs/msg/status_provider.hpp"
   "rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
 )
 

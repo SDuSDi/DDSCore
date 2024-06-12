@@ -16,9 +16,13 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__builder.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
   "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__struct.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
   "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__traits.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
+  "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/status_provider__builder.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
+  "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/status_provider__struct.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
+  "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/status_provider__traits.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
   "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/trajectory__builder.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
   "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/trajectory__struct.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
   "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/detail/trajectory__traits.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
+  "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/status_provider.hpp" "/root/workspace/build/core_msgs/rosidl_generator_cpp/core_msgs/msg/trajectory.hpp"
   )
 
 

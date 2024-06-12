@@ -1,0 +1,49 @@
+[0.004s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/workspace/src/core -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core
+[0.010s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.073s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.086s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.087s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.091s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.097s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.105s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.136s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.136s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.187s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.272s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.295s] -- Found core_msgs: 0.0.0 (/root/workspace/install/core_msgs/share/core_msgs/cmake)
+[0.303s] -- Found px4_msgs: 2.0.1 (/root/microros_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.322s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.366s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.366s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.366s] -- Configured cppcheck include dirs: 
+[0.366s] -- Configured cppcheck exclude dirs and/or files: 
+[0.367s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.367s] -- Configured cpplint exclude dirs and/or files: 
+[0.367s] -- Added test 'lint_cmake' to check CMake code style
+[0.367s] -- Added test 'uncrustify' to check C / C++ code style
+[0.367s] -- Configured uncrustify additional arguments: 
+[0.368s] -- Added test 'xmllint' to check XML markup files
+[0.368s] -- Configuring done
+[0.373s] -- Generating done
+[0.374s] -- Build files have been written to: /root/workspace/build/core
+[0.377s] Invoked command in '/root/workspace/build/core' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /root/workspace/src/core -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core
+[0.378s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.400s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/core_node.cpp.o[0m
+[1.825s] [01m[K/root/workspace/src/core/src/core_node.cpp:143:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.825s]   143 |     void status_checker(px4_msgs::msg::VehicleStatus::SharedPtr msg[01;31m[K)[m[K
+[1.825s]       |                                                                    [01;31m[K^[m[K
+[1.825s]       |                                                                     [32m[K;[m[K
+[1.861s] [01m[K/root/workspace/src/core/src/core_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::status_checker(px4_msgs::msg::VehicleStatus_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.861s] [01m[K/root/workspace/src/core/src/core_node.cpp:322:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing StatusProvider = struct core_msgs::msg::StatusProvider_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct core_msgs::msg::StatusProvider_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktimestamp[m[K’
+[1.861s]   322 |     tmp.[01;31m[Ktimestamp[m[K = this -> get_clock() -> now().nanoseconds() / 1000;
+[1.861s]       |         [01;31m[K^~~~~~~~~[m[K
+[1.861s] [01m[K/root/workspace/src/core/src/core_node.cpp:323:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+[1.861s]   323 |     status_writer -> publish(tmp)
+[1.861s]       |                                  [01;31m[K^[m[K
+[1.861s]       |                                  [32m[K;[m[K
+[1.861s]   324 | [32m[K}[m[K
+[1.861s]       | [32m[K~[m[K                                 
+[7.678s] gmake[2]: *** [CMakeFiles/node.dir/build.make:76: CMakeFiles/node.dir/src/core_node.cpp.o] Error 1
+[7.678s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/node.dir/all] Error 2
+[7.678s] gmake: *** [Makefile:146: all] Error 2
+[7.679s] Invoked command in '/root/workspace/build/core' returned '2': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20

@@ -1,0 +1,257 @@
+[0.000000] (-) TimerEvent: {}
+[0.000250] (core_msgs) JobQueued: {'identifier': 'core_msgs', 'dependencies': OrderedDict()}
+[0.000298] (core) JobQueued: {'identifier': 'core', 'dependencies': OrderedDict([('core_msgs', '/root/workspace/install/core_msgs')])}
+[0.000378] (link) JobQueued: {'identifier': 'link', 'dependencies': OrderedDict([('core_msgs', '/root/workspace/install/core_msgs')])}
+[0.000507] (core_msgs) JobStarted: {'identifier': 'core_msgs'}
+[0.004311] (core_msgs) JobProgress: {'identifier': 'core_msgs', 'progress': 'cmake'}
+[0.004593] (core_msgs) JobProgress: {'identifier': 'core_msgs', 'progress': 'build'}
+[0.005008] (core_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/workspace/build/core_msgs', '--', '-j20', '-l20'], 'cwd': '/root/workspace/build/core_msgs', 'env': OrderedDict([('HOSTNAME', 'GTX-3060-2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/root/microros_ws/install/px4_msgs/lib/'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PX4_UXRCE_DDS_PORT', '8888'), ('PWD', '/root/workspace/build/core_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.030298] (core_msgs) StdoutLine: {'line': b'[  2%] Built target core_msgs__cpp\n'}
+[0.030495] (core_msgs) StdoutLine: {'line': b'[ 12%] Built target core_msgs__rosidl_generator_c\n'}
+[0.034269] (core_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_core_msgs\n'}
+[0.044829] (core_msgs) StdoutLine: {'line': b'[ 23%] Built target core_msgs__rosidl_typesupport_cpp\n'}
+[0.045334] (core_msgs) StdoutLine: {'line': b'[ 34%] Built target core_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.047207] (core_msgs) StdoutLine: {'line': b'[ 44%] Built target core_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.048902] (core_msgs) StdoutLine: {'line': b'[ 55%] Built target core_msgs__rosidl_typesupport_c\n'}
+[0.049014] (core_msgs) StdoutLine: {'line': b'[ 65%] Built target core_msgs__rosidl_typesupport_introspection_c\n'}
+[0.049430] (core_msgs) StdoutLine: {'line': b'[ 76%] Built target core_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.057743] (core_msgs) StdoutLine: {'line': b'[ 76%] Built target core_msgs\n'}
+[0.066206] (core_msgs) StdoutLine: {'line': b'[ 78%] Built target core_msgs__py\n'}
+[0.076356] (core_msgs) StdoutLine: {'line': b'[ 87%] Built target core_msgs__rosidl_generator_py\n'}
+[0.085882] (core_msgs) StdoutLine: {'line': b'[100%] Built target core_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.085994] (core_msgs) StdoutLine: {'line': b'[100%] Built target core_msgs__rosidl_typesupport_c__pyext\n'}
+[0.086031] (core_msgs) StdoutLine: {'line': b'[100%] Built target core_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.100009] (-) TimerEvent: {}
+[0.129206] (core_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.129528] (core_msgs) StdoutLine: {'line': b'writing core_msgs.egg-info/PKG-INFO\n'}
+[0.129647] (core_msgs) StdoutLine: {'line': b'writing dependency_links to core_msgs.egg-info/dependency_links.txt\n'}
+[0.129697] (core_msgs) StdoutLine: {'line': b'writing top-level names to core_msgs.egg-info/top_level.txt\n'}
+[0.130613] (core_msgs) StdoutLine: {'line': b"reading manifest file 'core_msgs.egg-info/SOURCES.txt'\n"}
+[0.130955] (core_msgs) StdoutLine: {'line': b"writing manifest file 'core_msgs.egg-info/SOURCES.txt'\n"}
+[0.143538] (core_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_core_msgs_egg\n'}
+[0.148353] (core_msgs) CommandEnded: {'returncode': 0}
+[0.187295] (core_msgs) JobProgress: {'identifier': 'core_msgs', 'progress': 'install'}
+[0.196950] (core_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/workspace/build/core_msgs'], 'cwd': '/root/workspace/build/core_msgs', 'env': OrderedDict([('HOSTNAME', 'GTX-3060-2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/root/microros_ws/install/px4_msgs/lib/'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PX4_UXRCE_DDS_PORT', '8888'), ('PWD', '/root/workspace/build/core_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.200092] (-) TimerEvent: {}
+[0.208002] (core_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.208231] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/ament_index/resource_index/rosidl_interfaces/core_msgs\n'}
+[0.208347] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs\n'}
+[0.208413] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg\n'}
+[0.208474] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/status_provider.h\n'}
+[0.208528] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail\n'}
+[0.208580] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__functions.h\n'}
+[0.208633] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__type_support.h\n'}
+[0.208683] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__functions.c\n'}
+[0.208752] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.h\n'}
+[0.208866] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__functions.c\n'}
+[0.208921] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__functions.h\n'}
+[0.208999] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__type_support.h\n'}
+[0.209048] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__functions.h\n'}
+[0.209109] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.h\n'}
+[0.209161] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__type_support.h\n'}
+[0.209213] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__struct.h\n'}
+[0.209276] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__functions.c\n'}
+[0.209326] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.h\n'}
+[0.209406] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.h\n'}
+[0.209457] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.209501] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/library_path.sh\n'}
+[0.209548] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/library_path.dsv\n'}
+[0.209597] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_c.so\n'}
+[0.209666] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs\n'}
+[0.209733] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg\n'}
+[0.209779] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail\n'}
+[0.209823] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h\n'}
+[0.209882] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_fastrtps_c.h\n'}
+[0.209986] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.210035] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.210079] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.210124] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs\n'}
+[0.210168] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg\n'}
+[0.210212] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.210257] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail\n'}
+[0.210300] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_introspection_c.h\n'}
+[0.210343] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_introspection_c.h\n'}
+[0.210386] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__type_support.c\n'}
+[0.210428] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__type_support.c\n'}
+[0.210508] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__type_support.c\n'}
+[0.210591] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_introspection_c.h\n'}
+[0.210633] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.210673] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_c.so\n'}
+[0.210733] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs\n'}
+[0.210776] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg\n'}
+[0.210825] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail\n'}
+[0.210864] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__builder.hpp\n'}
+[0.210916] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__traits.hpp\n'}
+[0.210956] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__builder.hpp\n'}
+[0.210994] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.hpp\n'}
+[0.211032] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp\n'}
+[0.211070] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__builder.hpp\n'}
+[0.211108] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.hpp\n'}
+[0.211147] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__traits.hpp\n'}
+[0.211196] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__struct.hpp\n'}
+[0.211272] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.hpp\n'}
+[0.211310] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/status_provider.hpp\n'}
+[0.211347] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.hpp\n'}
+[0.211386] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs\n'}
+[0.211419] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg\n'}
+[0.211452] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail\n'}
+[0.211484] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.211523] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/dds_fastrtps\n'}
+[0.211557] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.211591] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.211630] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.211664] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.211700] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs\n'}
+[0.211732] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg\n'}
+[0.211764] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail\n'}
+[0.211801] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__type_support.cpp\n'}
+[0.211832] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__type_support.cpp\n'}
+[0.211865] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__type_support.cpp\n'}
+[0.211897] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.211930] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.211964] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.211996] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.212030] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_cpp.so\n'}
+[0.212064] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/pythonpath.sh\n'}
+[0.212097] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/pythonpath.dsv\n'}
+[0.212129] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info\n'}
+[0.212161] (core_msgs) StdoutLine: {'line': b'-- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.212195] (core_msgs) StdoutLine: {'line': b'-- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.212229] (core_msgs) StdoutLine: {'line': b'-- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.212263] (core_msgs) StdoutLine: {'line': b'-- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.212296] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs\n'}
+[0.212330] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.212367] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/__init__.py\n'}
+[0.212401] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.212437] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/_core_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.212473] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.212509] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.212544] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/libcore_msgs__rosidl_generator_py.so\n'}
+[0.212585] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg\n'}
+[0.212621] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_status_provider_s.c\n'}
+[0.212656] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_aux_global_position.py\n'}
+[0.212691] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/__init__.py\n'}
+[0.212726] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_status_provider.py\n'}
+[0.212767] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_aux_global_position_s.c\n'}
+[0.212812] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_trajectory_s.c\n'}
+[0.212850] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_trajectory.py\n'}
+[0.212886] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/_core_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.231879] (core_msgs) StdoutLine: {'line': b"Listing '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs'...\n"}
+[0.231968] (core_msgs) StdoutLine: {'line': b"Listing '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg'...\n"}
+[0.234112] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.234216] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.234304] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.234395] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_py.so\n'}
+[0.234456] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/msg/Trajectory.idl\n'}
+[0.234493] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/msg/AuxGlobalPosition.idl\n'}
+[0.234531] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/msg/StatusProvider.idl\n'}
+[0.234557] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/msg/Trajectory.msg\n'}
+[0.234582] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/msg/AuxGlobalPosition.msg\n'}
+[0.234623] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/msg/StatusProvider.msg\n'}
+[0.234649] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/ament_index/resource_index/package_run_dependencies/core_msgs\n'}
+[0.234674] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/ament_index/resource_index/parent_prefix_path/core_msgs\n'}
+[0.234712] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/ament_prefix_path.sh\n'}
+[0.234735] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/ament_prefix_path.dsv\n'}
+[0.234758] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/path.sh\n'}
+[0.234786] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/environment/path.dsv\n'}
+[0.234835] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/local_setup.bash\n'}
+[0.234861] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/local_setup.sh\n'}
+[0.234886] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/local_setup.zsh\n'}
+[0.234910] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/local_setup.dsv\n'}
+[0.234935] (core_msgs) StdoutLine: {'line': b'-- Installing: /root/workspace/install/core_msgs/share/core_msgs/package.dsv\n'}
+[0.234960] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/ament_index/resource_index/packages/core_msgs\n'}
+[0.235008] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_cExport.cmake\n'}
+[0.235035] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.235096] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.235123] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.235149] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.235174] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.235199] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.235224] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.235249] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.235296] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.235377] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.235406] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.235434] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.235459] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.235483] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.235507] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.235532] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.235558] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.235581] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.235605] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.235628] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.235651] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.235674] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.235696] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.235719] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgsConfig.cmake\n'}
+[0.235742] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgsConfig-version.cmake\n'}
+[0.235766] (core_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/core_msgs/share/core_msgs/package.xml\n'}
+[0.236364] (core_msgs) CommandEnded: {'returncode': 0}
+[0.292084] (core_msgs) JobEnded: {'identifier': 'core_msgs', 'rc': 0}
+[0.293287] (core) JobStarted: {'identifier': 'core'}
+[0.295163] (link) JobStarted: {'identifier': 'link'}
+[0.298143] (core) JobProgress: {'identifier': 'core', 'progress': 'cmake'}
+[0.298576] (core) JobProgress: {'identifier': 'core', 'progress': 'build'}
+[0.298886] (core) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/workspace/build/core', '--', '-j20', '-l20'], 'cwd': '/root/workspace/build/core', 'env': OrderedDict([('HOSTNAME', 'GTX-3060-2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/workspace/install/core_msgs/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/root/microros_ws/install/px4_msgs/lib/'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/root/workspace/install/core_msgs:/opt/ros/humble'), ('PX4_UXRCE_DDS_PORT', '8888'), ('PWD', '/root/workspace/build/core'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/workspace/install/core_msgs:/opt/ros/humble')]), 'shell': False}
+[0.300513] (-) TimerEvent: {}
+[0.300620] (link) JobProgress: {'identifier': 'link', 'progress': 'cmake'}
+[0.301126] (link) JobProgress: {'identifier': 'link', 'progress': 'build'}
+[0.301504] (link) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/workspace/build/link', '--', '-j20', '-l20'], 'cwd': '/root/workspace/build/link', 'env': OrderedDict([('HOSTNAME', 'GTX-3060-2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/workspace/install/core_msgs/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/root/microros_ws/install/px4_msgs/lib/'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/root/workspace/install/core_msgs:/opt/ros/humble'), ('PX4_UXRCE_DDS_PORT', '8888'), ('PWD', '/root/workspace/build/link'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/workspace/install/core_msgs:/opt/ros/humble')]), 'shell': False}
+[0.330740] (core) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/node.dir/src/core_node.cpp.o\x1b[0m\n'}
+[0.330957] (link) StdoutLine: {'line': b'[100%] Built target node\n'}
+[0.335104] (link) CommandEnded: {'returncode': 0}
+[0.345156] (link) JobProgress: {'identifier': 'link', 'progress': 'install'}
+[0.345413] (link) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/workspace/build/link'], 'cwd': '/root/workspace/build/link', 'env': OrderedDict([('HOSTNAME', 'GTX-3060-2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/workspace/install/core_msgs/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/root/microros_ws/install/px4_msgs/lib/'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/root/workspace/install/core_msgs:/opt/ros/humble'), ('PX4_UXRCE_DDS_PORT', '8888'), ('PWD', '/root/workspace/build/link'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/workspace/install/core_msgs:/opt/ros/humble')]), 'shell': False}
+[0.348621] (link) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.348735] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/lib/link/node\n'}
+[0.348847] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/ament_index/resource_index/package_run_dependencies/link\n'}
+[0.348901] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/ament_index/resource_index/parent_prefix_path/link\n'}
+[0.348931] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/environment/ament_prefix_path.sh\n'}
+[0.348959] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/environment/ament_prefix_path.dsv\n'}
+[0.348987] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/environment/path.sh\n'}
+[0.349028] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/environment/path.dsv\n'}
+[0.349054] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/local_setup.bash\n'}
+[0.349079] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/local_setup.sh\n'}
+[0.349105] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/local_setup.zsh\n'}
+[0.349130] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/local_setup.dsv\n'}
+[0.349167] (link) StdoutLine: {'line': b'-- Installing: /root/workspace/install/link/share/link/package.dsv\n'}
+[0.349190] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/ament_index/resource_index/packages/link\n'}
+[0.349213] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/cmake/linkConfig.cmake\n'}
+[0.349236] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/cmake/linkConfig-version.cmake\n'}
+[0.349264] (link) StdoutLine: {'line': b'-- Up-to-date: /root/workspace/install/link/share/link/package.xml\n'}
+[0.349678] (link) CommandEnded: {'returncode': 0}
+[0.363995] (link) JobEnded: {'identifier': 'link', 'rc': 0}
+[0.400602] (-) TimerEvent: {}
+[0.500798] (-) TimerEvent: {}
+[0.600999] (-) TimerEvent: {}
+[0.701206] (-) TimerEvent: {}
+[0.801426] (-) TimerEvent: {}
+[0.901640] (-) TimerEvent: {}
+[1.001849] (-) TimerEvent: {}
+[1.102065] (-) TimerEvent: {}
+[1.202275] (-) TimerEvent: {}
+[1.302484] (-) TimerEvent: {}
+[1.402690] (-) TimerEvent: {}
+[1.502900] (-) TimerEvent: {}
+[1.603107] (-) TimerEvent: {}
+[1.703314] (-) TimerEvent: {}
+[1.803522] (-) TimerEvent: {}
+[1.903729] (-) TimerEvent: {}
+[2.003936] (-) TimerEvent: {}
+[2.104144] (-) TimerEvent: {}
+[2.204347] (-) TimerEvent: {}
+[2.304554] (-) TimerEvent: {}
+[2.404762] (-) TimerEvent: {}
+[2.504971] (-) TimerEvent: {}
+[2.605180] (-) TimerEvent: {}
+[2.705388] (-) TimerEvent: {}
+[2.805593] (-) TimerEvent: {}
+[2.905793] (-) TimerEvent: {}
+[3.005994] (-) TimerEvent: {}
+[3.018842] (core) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/node.dir/build.make:76: CMakeFiles/node.dir/src/core_node.cpp.o] Interrupt\n'}
+[3.019122] (core) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/node.dir/all] Interrupt\n'}
+[3.019212] (core) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Interrupt\n'}
+[3.036504] (core) CommandEnded: {'returncode': -2}
+[3.049102] (core) JobEnded: {'identifier': 'core', 'rc': 'SIGINT'}
+[3.059365] (-) EventReactorShutdown: {}

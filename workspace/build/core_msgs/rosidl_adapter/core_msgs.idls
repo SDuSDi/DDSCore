@@ -1,2 +1,3 @@
 /root/workspace/build/core_msgs/rosidl_adapter/core_msgs:msg/Trajectory.idl
 /root/workspace/build/core_msgs/rosidl_adapter/core_msgs:msg/AuxGlobalPosition.idl
+/root/workspace/build/core_msgs/rosidl_adapter/core_msgs:msg/StatusProvider.idl

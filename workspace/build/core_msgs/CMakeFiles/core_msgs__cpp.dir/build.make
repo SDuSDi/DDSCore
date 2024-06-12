@@ -74,6 +74,10 @@ CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/aux_global_positio
 CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__builder.hpp
 CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__struct.hpp
 CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__traits.hpp
+CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/status_provider.hpp
+CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/status_provider__builder.hpp
+CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/status_provider__struct.hpp
+CMakeFiles/core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/status_provider__traits.hpp
 
 rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -92,6 +96,7 @@ rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: /opt/ros/humble/share/rosidl_
 rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: rosidl_adapter/core_msgs/msg/Trajectory.idl
 rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: rosidl_adapter/core_msgs/msg/AuxGlobalPosition.idl
+rosidl_generator_cpp/core_msgs/msg/trajectory.hpp: rosidl_adapter/core_msgs/msg/StatusProvider.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/workspace/build/core_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /root/workspace/build/core_msgs/rosidl_generator_cpp__arguments.json
 
@@ -116,14 +121,30 @@ rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__struct.hpp: rosid
 rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__traits.hpp: rosidl_generator_cpp/core_msgs/msg/trajectory.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__traits.hpp
 
+rosidl_generator_cpp/core_msgs/msg/status_provider.hpp: rosidl_generator_cpp/core_msgs/msg/trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/core_msgs/msg/status_provider.hpp
+
+rosidl_generator_cpp/core_msgs/msg/detail/status_provider__builder.hpp: rosidl_generator_cpp/core_msgs/msg/trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/core_msgs/msg/detail/status_provider__builder.hpp
+
+rosidl_generator_cpp/core_msgs/msg/detail/status_provider__struct.hpp: rosidl_generator_cpp/core_msgs/msg/trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/core_msgs/msg/detail/status_provider__struct.hpp
+
+rosidl_generator_cpp/core_msgs/msg/detail/status_provider__traits.hpp: rosidl_generator_cpp/core_msgs/msg/trajectory.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/core_msgs/msg/detail/status_provider__traits.hpp
+
 core_msgs__cpp: CMakeFiles/core_msgs__cpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/aux_global_position.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__builder.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__struct.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/aux_global_position__traits.hpp
+core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/status_provider__builder.hpp
+core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/status_provider__struct.hpp
+core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/status_provider__traits.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/trajectory__builder.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/trajectory__struct.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/detail/trajectory__traits.hpp
+core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/status_provider.hpp
 core_msgs__cpp: rosidl_generator_cpp/core_msgs/msg/trajectory.hpp
 core_msgs__cpp: CMakeFiles/core_msgs__cpp.dir/build.make
 .PHONY : core_msgs__cpp

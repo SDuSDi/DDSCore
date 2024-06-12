@@ -68,6 +68,7 @@ include CMakeFiles/core_msgs.dir/progress.make
 
 CMakeFiles/core_msgs: /root/workspace/src/core_msgs/msg/Trajectory.msg
 CMakeFiles/core_msgs: /root/workspace/src/core_msgs/msg/AuxGlobalPosition.msg
+CMakeFiles/core_msgs: /root/workspace/src/core_msgs/msg/StatusProvider.msg
 
 core_msgs: CMakeFiles/core_msgs
 core_msgs: CMakeFiles/core_msgs.dir/build.make

@@ -1,0 +1,282 @@
+[0.004s] Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/workspace/src/core_msgs -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core_msgs
+[0.030s] -- The C compiler identification is GNU 11.4.0
+[0.071s] -- The CXX compiler identification is GNU 11.4.0
+[0.074s] -- Detecting C compiler ABI info
+[0.136s] -- Detecting C compiler ABI info - done
+[0.144s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.144s] -- Detecting C compile features
+[0.144s] -- Detecting C compile features - done
+[0.146s] -- Detecting CXX compiler ABI info
+[0.200s] -- Detecting CXX compiler ABI info - done
+[0.204s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.204s] -- Detecting CXX compile features
+[0.204s] -- Detecting CXX compile features - done
+[0.206s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.281s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.324s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.325s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.328s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.347s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.482s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.577s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.701s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.712s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.713s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.725s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.725s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.725s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.725s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.736s] -- Found PythonExtra: .so  
+[0.758s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.767s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.768s] -- Added test 'lint_cmake' to check CMake code style
+[0.768s] -- Added test 'xmllint' to check XML markup files
+[0.769s] -- Configuring done
+[0.783s] -- Generating done
+[0.784s] -- Build files have been written to: /root/workspace/build/core_msgs
+[0.787s] Invoked command in '/root/workspace/build/core_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/workspace/src/core_msgs -DCMAKE_INSTALL_PREFIX=/root/workspace/install/core_msgs
+[0.787s] Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core_msgs -- -j20 -l20
+[0.804s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.808s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.811s] [  4%] Built target ament_cmake_python_copy_core_msgs
+[0.897s] running egg_info
+[0.897s] creating core_msgs.egg-info
+[0.897s] writing core_msgs.egg-info/PKG-INFO
+[0.897s] writing dependency_links to core_msgs.egg-info/dependency_links.txt
+[0.897s] writing top-level names to core_msgs.egg-info/top_level.txt
+[0.897s] writing manifest file 'core_msgs.egg-info/SOURCES.txt'
+[0.898s] reading manifest file 'core_msgs.egg-info/SOURCES.txt'
+[0.898s] writing manifest file 'core_msgs.egg-info/SOURCES.txt'
+[0.910s] [  4%] Built target ament_cmake_python_build_core_msgs_egg
+[0.964s] [  4%] Built target core_msgs__cpp
+[0.968s] [  8%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.968s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.968s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.974s] [ 17%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o[0m
+[0.974s] [ 17%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c.o[0m
+[0.974s] [ 17%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o[0m
+[0.996s] [ 19%] [32m[1mLinking C shared library libcore_msgs__rosidl_generator_c.so[0m
+[1.013s] [ 19%] Built target core_msgs__rosidl_generator_c
+[1.017s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.017s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.017s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.095s] [ 31%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/core_msgs/msg/status_provider__type_support.cpp.o[0m
+[1.095s] [ 31%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/core_msgs/msg/aux_global_position__type_support.cpp.o[0m
+[1.095s] [ 31%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/core_msgs/msg/trajectory__type_support.cpp.o[0m
+[1.113s] [ 34%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/core_msgs/msg/detail/trajectory__type_support.cpp.o[0m
+[1.114s] [ 36%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/core_msgs/msg/detail/aux_global_position__type_support.cpp.o[0m
+[1.115s] [ 38%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/core_msgs/msg/detail/status_provider__type_support.cpp.o[0m
+[1.127s] [ 40%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/aux_global_position__type_support.cpp.o[0m
+[1.127s] [ 42%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/status_provider__type_support.cpp.o[0m
+[1.127s] [ 44%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o[0m
+[1.159s] [ 48%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/core_msgs/msg/status_provider__type_support.cpp.o[0m
+[1.159s] [ 48%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/core_msgs/msg/trajectory__type_support.cpp.o[0m
+[1.160s] [ 51%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/core_msgs/msg/aux_global_position__type_support.cpp.o[0m
+[1.174s] [ 55%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/core_msgs/msg/detail/aux_global_position__type_support.c.o[0m
+[1.175s] [ 55%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/core_msgs/msg/detail/trajectory__type_support.c.o[0m
+[1.175s] [ 57%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/core_msgs/msg/detail/status_provider__type_support.c.o[0m
+[1.182s] [ 61%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o[0m
+[1.182s] [ 61%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/status_provider__type_support_c.cpp.o[0m
+[1.182s] [ 63%] [32mBuilding CXX object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o[0m
+[1.183s] [ 65%] [32m[1mLinking CXX shared library libcore_msgs__rosidl_typesupport_c.so[0m
+[1.201s] [ 68%] [32m[1mLinking C shared library libcore_msgs__rosidl_typesupport_introspection_c.so[0m
+[1.214s] [ 68%] Built target core_msgs__rosidl_typesupport_c
+[1.224s] [ 68%] Built target core_msgs__rosidl_typesupport_introspection_c
+[1.325s] [ 70%] [32m[1mLinking CXX shared library libcore_msgs__rosidl_typesupport_cpp.so[0m
+[1.338s] [ 72%] [32m[1mLinking CXX shared library libcore_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[1.345s] [ 72%] Built target core_msgs__rosidl_typesupport_cpp
+[1.355s] [ 74%] [32m[1mLinking CXX shared library libcore_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.358s] [ 74%] Built target core_msgs__rosidl_typesupport_introspection_cpp
+[1.392s] [ 74%] Built target core_msgs__rosidl_typesupport_fastrtps_cpp
+[1.399s] [ 76%] [32m[1mLinking CXX shared library libcore_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[1.436s] [ 76%] Built target core_msgs__rosidl_typesupport_fastrtps_c
+[1.443s] [ 76%] Built target core_msgs
+[1.452s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[1.691s] [ 78%] Built target core_msgs__py
+[1.698s] [ 80%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_generator_py.dir/rosidl_generator_py/core_msgs/msg/_trajectory_s.c.o[0m
+[1.698s] [ 82%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_generator_py.dir/rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c.o[0m
+[1.699s] [ 85%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_generator_py.dir/rosidl_generator_py/core_msgs/msg/_status_provider_s.c.o[0m
+[1.758s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/core_msgs/libcore_msgs__rosidl_generator_py.so[0m
+[1.776s] [ 87%] Built target core_msgs__rosidl_generator_py
+[1.783s] [ 91%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[1.783s] [ 91%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[1.783s] [ 93%] [32mBuilding C object CMakeFiles/core_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/core_msgs/_core_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[1.829s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/core_msgs/core_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.829s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/core_msgs/core_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.830s] [100%] [32m[1mLinking C shared library rosidl_generator_py/core_msgs/core_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.843s] [100%] Built target core_msgs__rosidl_typesupport_c__pyext
+[1.843s] [100%] Built target core_msgs__rosidl_typesupport_introspection_c__pyext
+[1.844s] [100%] Built target core_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.848s] Invoked command in '/root/workspace/build/core_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/workspace/build/core_msgs -- -j20 -l20
+[1.887s] Invoking command in '/root/workspace/build/core_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/core_msgs
+[1.896s] -- Install configuration: ""
+[1.896s] -- Installing: /root/workspace/install/core_msgs/share/ament_index/resource_index/rosidl_interfaces/core_msgs
+[1.896s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs
+[1.896s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg
+[1.896s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/status_provider.h
+[1.896s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail
+[1.896s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__functions.h
+[1.896s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__type_support.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__functions.c
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__functions.c
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__functions.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__type_support.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__functions.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__type_support.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__struct.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__functions.c
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.h
+[1.897s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_generator_c__visibility_control.h
+[1.898s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/library_path.sh
+[1.898s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/library_path.dsv
+[1.898s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_c.so
+[1.898s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_c.so" to ""
+[1.898s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs
+[1.898s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg
+[1.898s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail
+[1.898s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+[1.898s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_fastrtps_c.h
+[1.898s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_c.h
+[1.898s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.898s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_fastrtps_c.so
+[1.899s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[1.899s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs
+[1.899s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.899s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_introspection_c.h
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_introspection_c.h
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__type_support.c
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__type_support.c
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__type_support.c
+[1.899s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_introspection_c.h
+[1.899s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_c.so
+[1.899s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_c.so" to ""
+[1.899s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_c.so
+[1.900s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_c.so" to ""
+[1.900s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs
+[1.900s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg
+[1.900s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__builder.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__traits.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__builder.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__struct.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__traits.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__builder.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__struct.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__traits.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__struct.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/aux_global_position.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/status_provider.hpp
+[1.900s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/trajectory.hpp
+[1.900s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs
+[1.901s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg
+[1.901s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_fastrtps_cpp.hpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/dds_fastrtps
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_cpp.hpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.901s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_fastrtps_cpp.so
+[1.901s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[1.901s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs
+[1.901s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg
+[1.901s] -- Up-to-date: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__type_support.cpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__type_support.cpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__type_support.cpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_introspection_cpp.hpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/status_provider__rosidl_typesupport_introspection_cpp.hpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/include/core_msgs/core_msgs/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp
+[1.901s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_cpp.so
+[1.901s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[1.902s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_cpp.so
+[1.902s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_typesupport_cpp.so" to ""
+[1.902s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/pythonpath.sh
+[1.902s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/pythonpath.dsv
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/__init__.py
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/_core_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/_core_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/libcore_msgs__rosidl_generator_py.so
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_status_provider_s.c
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_aux_global_position.py
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/__init__.py
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_status_provider.py
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_aux_global_position_s.c
+[1.902s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_trajectory_s.c
+[1.903s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_trajectory.py
+[1.903s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/_core_msgs_s.ep.rosidl_typesupport_c.c
+[1.926s] Listing '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs'...
+[1.926s] Compiling '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/__init__.py'...
+[1.926s] Listing '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg'...
+[1.926s] Compiling '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/__init__.py'...
+[1.926s] Compiling '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_aux_global_position.py'...
+[1.926s] Compiling '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_status_provider.py'...
+[1.926s] Compiling '/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/msg/_trajectory.py'...
+[1.929s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.929s] -- Set runtime path of "/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.929s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.929s] -- Set runtime path of "/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.929s] -- Installing: /root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.929s] -- Set runtime path of "/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages/core_msgs/core_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.929s] -- Installing: /root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_py.so
+[1.929s] -- Set runtime path of "/root/workspace/install/core_msgs/lib/libcore_msgs__rosidl_generator_py.so" to ""
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/msg/Trajectory.idl
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/msg/AuxGlobalPosition.idl
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/msg/StatusProvider.idl
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/msg/Trajectory.msg
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/msg/AuxGlobalPosition.msg
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/msg/StatusProvider.msg
+[1.929s] -- Installing: /root/workspace/install/core_msgs/share/ament_index/resource_index/package_run_dependencies/core_msgs
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/ament_index/resource_index/parent_prefix_path/core_msgs
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/ament_prefix_path.sh
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/ament_prefix_path.dsv
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/path.sh
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/environment/path.dsv
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/local_setup.bash
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/local_setup.sh
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/local_setup.zsh
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/local_setup.dsv
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/package.dsv
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/ament_index/resource_index/packages/core_msgs
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_cExport.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_cExport-noconfig.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cExport.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cExport.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_cppExport.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.930s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cppExport.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_pyExport.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/export_core_msgs__rosidl_generator_pyExport-noconfig.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/rosidl_cmake-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgsConfig.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/cmake/core_msgsConfig-version.cmake
+[1.931s] -- Installing: /root/workspace/install/core_msgs/share/core_msgs/package.xml
+[1.932s] Invoked command in '/root/workspace/build/core_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/workspace/build/core_msgs

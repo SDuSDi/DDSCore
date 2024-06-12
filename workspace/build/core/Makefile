@@ -77,8 +77,8 @@ test/fast: test
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -210,29 +210,29 @@ node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/build
 .PHONY : node/fast
 
-src/offb_node.o: src/offb_node.cpp.o
-.PHONY : src/offb_node.o
+src/core_node.o: src/core_node.cpp.o
+.PHONY : src/core_node.o
 
 # target to build an object file
-src/offb_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/src/offb_node.cpp.o
-.PHONY : src/offb_node.cpp.o
+src/core_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/src/core_node.cpp.o
+.PHONY : src/core_node.cpp.o
 
-src/offb_node.i: src/offb_node.cpp.i
-.PHONY : src/offb_node.i
+src/core_node.i: src/core_node.cpp.i
+.PHONY : src/core_node.i
 
 # target to preprocess a source file
-src/offb_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/src/offb_node.cpp.i
-.PHONY : src/offb_node.cpp.i
+src/core_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/src/core_node.cpp.i
+.PHONY : src/core_node.cpp.i
 
-src/offb_node.s: src/offb_node.cpp.s
-.PHONY : src/offb_node.s
+src/core_node.s: src/core_node.cpp.s
+.PHONY : src/core_node.s
 
 # target to generate assembly for a file
-src/offb_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/src/offb_node.cpp.s
-.PHONY : src/offb_node.cpp.s
+src/core_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/node.dir/build.make CMakeFiles/node.dir/src/core_node.cpp.s
+.PHONY : src/core_node.cpp.s
 
 # Help Target
 help:
@@ -250,9 +250,9 @@ help:
 	@echo "... core_uninstall"
 	@echo "... uninstall"
 	@echo "... node"
-	@echo "... src/offb_node.o"
-	@echo "... src/offb_node.i"
-	@echo "... src/offb_node.s"
+	@echo "... src/core_node.o"
+	@echo "... src/core_node.i"
+	@echo "... src/core_node.s"
 .PHONY : help
 
 

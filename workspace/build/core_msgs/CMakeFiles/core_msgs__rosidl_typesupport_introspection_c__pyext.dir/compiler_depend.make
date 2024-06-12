@@ -248,8 +248,17 @@ CMakeFiles/core_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_gener
   rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.h \
   rosidl_generator_c/core_msgs/msg/detail/aux_global_position__type_support.h \
   rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h \
-  rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h
+  rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h \
+  rosidl_generator_c/core_msgs/msg/detail/status_provider__type_support.h \
+  rosidl_generator_c/core_msgs/msg/detail/status_provider__struct.h \
+  rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.h
 
+
+rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.h:
+
+rosidl_generator_c/core_msgs/msg/detail/status_provider__struct.h:
+
+rosidl_generator_c/core_msgs/msg/detail/status_provider__type_support.h:
 
 rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h:
 

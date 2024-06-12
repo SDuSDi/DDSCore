@@ -1,0 +1,25 @@
+[0.004s] Invoking command in '/root/workspace/build/link': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/link -- -j20 -l20
+[0.025s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/link_node.cpp.o[0m
+[3.834s] [100%] [32m[1mLinking CXX executable node[0m
+[4.001s] [100%] Built target node
+[4.006s] Invoked command in '/root/workspace/build/link' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/link -- -j20 -l20
+[4.017s] Invoking command in '/root/workspace/build/link': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/workspace/build/link
+[4.020s] -- Install configuration: ""
+[4.020s] -- Installing: /root/workspace/install/link/lib/link/node
+[4.021s] -- Set runtime path of "/root/workspace/install/link/lib/link/node" to ""
+[4.021s] -- Installing: /root/workspace/install/link/share/ament_index/resource_index/package_run_dependencies/link
+[4.021s] -- Installing: /root/workspace/install/link/share/ament_index/resource_index/parent_prefix_path/link
+[4.021s] -- Installing: /root/workspace/install/link/share/link/environment/ament_prefix_path.sh
+[4.022s] -- Installing: /root/workspace/install/link/share/link/environment/ament_prefix_path.dsv
+[4.022s] -- Installing: /root/workspace/install/link/share/link/environment/path.sh
+[4.022s] -- Installing: /root/workspace/install/link/share/link/environment/path.dsv
+[4.022s] -- Installing: /root/workspace/install/link/share/link/local_setup.bash
+[4.022s] -- Installing: /root/workspace/install/link/share/link/local_setup.sh
+[4.022s] -- Installing: /root/workspace/install/link/share/link/local_setup.zsh
+[4.022s] -- Installing: /root/workspace/install/link/share/link/local_setup.dsv
+[4.022s] -- Installing: /root/workspace/install/link/share/link/package.dsv
+[4.022s] -- Installing: /root/workspace/install/link/share/ament_index/resource_index/packages/link
+[4.022s] -- Installing: /root/workspace/install/link/share/link/cmake/linkConfig.cmake
+[4.022s] -- Installing: /root/workspace/install/link/share/link/cmake/linkConfig-version.cmake
+[4.022s] -- Installing: /root/workspace/install/link/share/link/package.xml
+[4.023s] Invoked command in '/root/workspace/build/link' returned '0': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /root/workspace/build/link

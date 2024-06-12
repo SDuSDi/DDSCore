@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/core_msgs/msg/__init__.py"
   "../rosidl_generator_py/core_msgs/msg/_aux_global_position.py"
   "../rosidl_generator_py/core_msgs/msg/_aux_global_position_s.c"
+  "../rosidl_generator_py/core_msgs/msg/_status_provider.py"
+  "../rosidl_generator_py/core_msgs/msg/_status_provider_s.c"
   "../rosidl_generator_py/core_msgs/msg/_trajectory.py"
   "../rosidl_generator_py/core_msgs/msg/_trajectory_s.c"
   "CMakeFiles/core_msgs__py"

@@ -17,10 +17,12 @@
 #include "px4_msgs/msg/offboard_control_mode.hpp"
 #include "px4_msgs/msg/trajectory_setpoint.hpp"
 #include "px4_msgs/msg/vehicle_attitude_setpoint.hpp"
+#include "px4_msgs/msg/vehicle_status.hpp"
 
 // Own messages from core_msgs
 #include "core_msgs/msg/trajectory.hpp"
 #include "core_msgs/msg/aux_global_position.hpp"
+#include "core_msgs/msg/status_provider.hpp"
 
 // Linked cpp code
 #include "pid.cpp"
@@ -71,6 +73,11 @@ public:
                                 std::bind(&ControlNode::aux_global, this, std::placeholders::_1));
         attitude_sub =          this -> create_subscription<geometry_msgs::msg::Twist>("/ddscore/attitude",qos,
                                 std::bind(&ControlNode::set_attitude, this, std::placeholders::_1));
+
+        // Information pipeline for ROSMaster
+        status_writer = this -> create_publisher<core_msgs::msg::StatusProvider>("/ddscore/status",10);
+        status_reader = this -> create_subscription<px4_msgs::msg::VehicleStatus>("/fmu/out/vehicle_status",qos,
+                                std::bind(&ControlNode::status_checker, this, std::placeholders::_1));
 
         // Definition of loop timer function
         auto publish_offboard_control = [this]() -> void {
@@ -129,6 +136,11 @@ private:
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr attitude_sub;
 
     rclcpp::TimerBase::SharedPtr offboard_ctrl;
+
+    // ROSMaster information pipeline
+    rclcpp::Publisher<core_msgs::msg::StatusProvider>::SharedPtr status_writer;
+    rclcpp::Subscription<px4_msgs::msg::VehicleStatus>::SharedPtr status_reader;
+    void status_checker(px4_msgs::msg::VehicleStatus::SharedPtr msg);
 
 };
 
@@ -297,6 +309,18 @@ void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){ 
     float deg_x = atan2(tmp.thrust_body[2], 1.0);
     RCLCPP_INFO(this -> get_logger(), "Hip: %f Deg: %f", hip_x, deg_x);
 
+}
+
+void ControlNode::status_checker(px4_msgs::msg::VehicleStatus::SharedPtr msg){
+    // RCLCPP_INFO(this -> get_logger(), "Relaying status to upper echelons");
+    core_msgs::msg::StatusProvider tmp{};
+    tmp.lat = global_pos[1];
+    tmp.lon = global_pos[2];
+    tmp.alt = global_pos[3];
+    tmp.arming_state = msg -> arming_state;
+    tmp.nav_state = msg -> nav_state;
+    // tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
+    status_writer -> publish(tmp);
 }
 
 void ControlNode::euler2quaternion(float roll, float pitch, float yaw, float *q){

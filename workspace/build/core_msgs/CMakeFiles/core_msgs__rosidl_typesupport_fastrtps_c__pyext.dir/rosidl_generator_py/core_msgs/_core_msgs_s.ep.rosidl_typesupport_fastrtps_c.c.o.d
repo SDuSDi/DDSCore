@@ -207,4 +207,7 @@ CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_
  /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.h \
  /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__type_support.h \
  /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h \
- /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h \
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__type_support.h \
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__struct.h \
+ /root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.h

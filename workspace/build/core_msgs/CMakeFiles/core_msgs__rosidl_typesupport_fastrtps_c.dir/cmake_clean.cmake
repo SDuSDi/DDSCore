@@ -1,12 +1,16 @@
 file(REMOVE_RECURSE
   "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o"
   "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp.o.d"
+  "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/status_provider__type_support_c.cpp.o"
+  "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/status_provider__type_support_c.cpp.o.d"
   "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o"
   "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp.o.d"
   "libcore_msgs__rosidl_typesupport_fastrtps_c.pdb"
   "libcore_msgs__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/aux_global_position__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/status_provider__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/status_provider__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/core_msgs/msg/detail/trajectory__type_support_c.cpp"
 )

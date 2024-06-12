@@ -69,28 +69,28 @@ include CMakeFiles/node.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/node.dir/flags.make
 
-CMakeFiles/node.dir/src/offb_node.cpp.o: CMakeFiles/node.dir/flags.make
-CMakeFiles/node.dir/src/offb_node.cpp.o: /root/workspace/src/core/src/offb_node.cpp
-CMakeFiles/node.dir/src/offb_node.cpp.o: CMakeFiles/node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/workspace/build/core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/node.dir/src/offb_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/node.dir/src/offb_node.cpp.o -MF CMakeFiles/node.dir/src/offb_node.cpp.o.d -o CMakeFiles/node.dir/src/offb_node.cpp.o -c /root/workspace/src/core/src/offb_node.cpp
+CMakeFiles/node.dir/src/core_node.cpp.o: CMakeFiles/node.dir/flags.make
+CMakeFiles/node.dir/src/core_node.cpp.o: /root/workspace/src/core/src/core_node.cpp
+CMakeFiles/node.dir/src/core_node.cpp.o: CMakeFiles/node.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/workspace/build/core/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/node.dir/src/core_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/node.dir/src/core_node.cpp.o -MF CMakeFiles/node.dir/src/core_node.cpp.o.d -o CMakeFiles/node.dir/src/core_node.cpp.o -c /root/workspace/src/core/src/core_node.cpp
 
-CMakeFiles/node.dir/src/offb_node.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node.dir/src/offb_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/workspace/src/core/src/offb_node.cpp > CMakeFiles/node.dir/src/offb_node.cpp.i
+CMakeFiles/node.dir/src/core_node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/node.dir/src/core_node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/workspace/src/core/src/core_node.cpp > CMakeFiles/node.dir/src/core_node.cpp.i
 
-CMakeFiles/node.dir/src/offb_node.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node.dir/src/offb_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/src/core/src/offb_node.cpp -o CMakeFiles/node.dir/src/offb_node.cpp.s
+CMakeFiles/node.dir/src/core_node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/node.dir/src/core_node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/workspace/src/core/src/core_node.cpp -o CMakeFiles/node.dir/src/core_node.cpp.s
 
 # Object files for target node
 node_OBJECTS = \
-"CMakeFiles/node.dir/src/offb_node.cpp.o"
+"CMakeFiles/node.dir/src/core_node.cpp.o"
 
 # External object files for target node
 node_EXTERNAL_OBJECTS =
 
-node: CMakeFiles/node.dir/src/offb_node.cpp.o
+node: CMakeFiles/node.dir/src/core_node.cpp.o
 node: CMakeFiles/node.dir/build.make
 node: /opt/ros/humble/lib/librclcpp.so
 node: /opt/ros/humble/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so

@@ -1,0 +1,17 @@
+[01m[K/root/workspace/src/core/src/core_node.cpp:143:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  143 |     void status_checker(px4_msgs::msg::VehicleStatus::SharedPtr msg[01;31m[K)[m[K
+      |                                                                    [01;31m[K^[m[K
+      |                                                                     [32m[K;[m[K
+[01m[K/root/workspace/src/core/src/core_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::status_checker(px4_msgs::msg::VehicleStatus_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/root/workspace/src/core/src/core_node.cpp:322:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing StatusProvider = struct core_msgs::msg::StatusProvider_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct core_msgs::msg::StatusProvider_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktimestamp[m[K’
+  322 |     tmp.[01;31m[Ktimestamp[m[K = this -> get_clock() -> now().nanoseconds() / 1000;
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/root/workspace/src/core/src/core_node.cpp:323:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  323 |     status_writer -> publish(tmp)
+      |                                  [01;31m[K^[m[K
+      |                                  [32m[K;[m[K
+  324 | [32m[K}[m[K
+      | [32m[K~[m[K                                 
+gmake[2]: *** [CMakeFiles/node.dir/build.make:76: CMakeFiles/node.dir/src/core_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

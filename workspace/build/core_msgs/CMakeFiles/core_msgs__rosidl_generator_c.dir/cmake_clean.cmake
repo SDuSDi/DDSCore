@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o"
   "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o.d"
+  "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c.o"
+  "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c.o.d"
   "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o"
   "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o.d"
   "libcore_msgs__rosidl_generator_c.pdb"
@@ -10,10 +12,15 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h"
   "rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h"
   "rosidl_generator_c/core_msgs/msg/detail/aux_global_position__type_support.h"
+  "rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c"
+  "rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.h"
+  "rosidl_generator_c/core_msgs/msg/detail/status_provider__struct.h"
+  "rosidl_generator_c/core_msgs/msg/detail/status_provider__type_support.h"
   "rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c"
   "rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.h"
   "rosidl_generator_c/core_msgs/msg/detail/trajectory__struct.h"
   "rosidl_generator_c/core_msgs/msg/detail/trajectory__type_support.h"
+  "rosidl_generator_c/core_msgs/msg/status_provider.h"
   "rosidl_generator_c/core_msgs/msg/trajectory.h"
 )
 

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c" "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o" "gcc" "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.c.o.d"
+  "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c" "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c.o" "gcc" "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c.o.d"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c" "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o" "gcc" "CMakeFiles/core_msgs__rosidl_generator_c.dir/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c.o.d"
   )
 
@@ -19,10 +20,15 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__functions.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__struct.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/aux_global_position__type_support.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
+  "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.c" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
+  "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__functions.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
+  "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__struct.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
+  "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/status_provider__type_support.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.c" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__functions.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__struct.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/detail/trajectory__type_support.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
+  "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/status_provider.h" "/root/workspace/build/core_msgs/rosidl_generator_c/core_msgs/msg/trajectory.h"
   )
 
 

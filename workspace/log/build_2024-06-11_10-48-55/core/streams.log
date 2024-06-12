@@ -1,0 +1,14 @@
+[0.008s] Invoking command in '/root/workspace/build/core': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target node[0m
+[0.040s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/core_node.cpp.o[0m
+[1.493s] [01m[K/root/workspace/src/core/src/core_node.cpp:[m[K In member function ‘[01m[Kvoid ControlNode::status_checker(px4_msgs::msg::VehicleStatus_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.493s] [01m[K/root/workspace/src/core/src/core_node.cpp:323:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+[1.493s]   323 |     status_writer -> publish(tmp)
+[1.493s]       |                                  [01;31m[K^[m[K
+[1.493s]       |                                  [32m[K;[m[K
+[1.493s]   324 | [32m[K}[m[K
+[1.493s]       | [32m[K~[m[K                                 
+[7.361s] gmake[2]: *** [CMakeFiles/node.dir/build.make:76: CMakeFiles/node.dir/src/core_node.cpp.o] Error 1
+[7.361s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/node.dir/all] Error 2
+[7.361s] gmake: *** [Makefile:146: all] Error 2
+[7.362s] Invoked command in '/root/workspace/build/core' returned '2': AMENT_PREFIX_PATH=/root/workspace/install/core_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/workspace/install/core_msgs:/root/microros_ws/install/px4_ros_com:/root/microros_ws/install/px4_msgs:/root/microros_ws/install/micro_ros_setup:/root/microros_ws/install/micro_ros_agent:/root/microros_ws/install/micro_ros_msgs:/opt/ros/humble LD_LIBRARY_PATH=/root/workspace/install/core_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/workspace/install/core_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /root/workspace/build/core -- -j20 -l20

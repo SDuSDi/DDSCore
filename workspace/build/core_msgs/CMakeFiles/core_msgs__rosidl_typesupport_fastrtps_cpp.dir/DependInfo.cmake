@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/aux_global_position__type_support.cpp" "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/aux_global_position__type_support.cpp.o" "gcc" "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/aux_global_position__type_support.cpp.o.d"
+  "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/status_provider__type_support.cpp" "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/status_provider__type_support.cpp.o" "gcc" "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/status_provider__type_support.cpp.o.d"
   "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp" "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o" "gcc" "CMakeFiles/core_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o.d"
   )
 
@@ -16,6 +17,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/aux_global_position__rosidl_typesupport_fastrtps_cpp.hpp" "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp"
   "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/aux_global_position__type_support.cpp" "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp"
+  "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/status_provider__type_support.cpp" "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp"
+  "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/status_provider__rosidl_typesupport_fastrtps_cpp.hpp" "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp"
   "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp" "/root/workspace/build/core_msgs/rosidl_typesupport_fastrtps_cpp/core_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp"
   )
 
