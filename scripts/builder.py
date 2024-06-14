@@ -13,10 +13,9 @@ if __name__ == "__main__":
     config = open("/home/{0}/ros2_ws/ddscore/scripts/k8s-builder-files/new_config.yaml".format(user),"a")
     deploy = open("/home/{0}/ros2_ws/ddscore/scripts/k8s-builder-files/new_deploy.yaml".format(user),"a")
 
-    deploy.writelines(["apiVersion: apps/v1\n","kind: Deployment\n","metadata:\n","  name: mosquitto\n","spec:\n","  replicas: 1\n","   selector:\n",
+    deploy.writelines(["apiVersion: apps/v1\n","kind: Deployment\n","metadata:\n","  name: mosquitto\n","spec:\n","  replicas: 1\n","  selector:\n",
                        "    matchLabels:\n","      name: mosquitto\n","  template:\n","    metadata:\n","      labels:\n","        name: mosquitto\n","    spec:\n",
-                       "      hostNetwork: true\n","      containers:\n","        - name: mosquitto\n","          image: eclipse-mosquitto:2.0.18\n",
-                       "      imagePullPolicy: IfNotPresent\n","\n"])
+                       "      hostNetwork: true\n","      containers:\n","        - name: mosquitto\n","          image: eclipse-mosquitto:2.0.18\n","\n"])
 
     for i in range(0,replicas):
 

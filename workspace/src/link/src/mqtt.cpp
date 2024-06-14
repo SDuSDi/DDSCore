@@ -1,23 +1,30 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <thread>
+#include <atomic>
+#include <chrono>
 #include <cstring>
 #include <cctype>
-#include <thread>
-#include <chrono>
 #include "mqtt/async_client.h"
 
 // JSON library
 #include <nlohmann/json.hpp>
 using json = nlohmann::json; // for convenience
 
-namespace listener{
+namespace mqttlink{
 
 	json data;
-	const std::string SERVER_ADDRESS("mqtt://localhost:1883");
-	const std::string CLIENT_ID("Link MQTT Listener"); //paho_cpp_async_subcribe
-	const std::string TOPIC("MQTT-Controller");
-	const int	QOS = 1;
+	const char* ros_id = std::getenv("ROS_DOMAIN_ID");
+	const std::string SERVER_ADDRESS        {"mqtt://localhost:1883"};
+	const std::string CLIENT_ID				{"Link MQTT Provider ID~" + std::string(ros_id)};
+	const std::string TOPIC_PUB             {"MQTT-Status-Provider"};
+	const std::string TOPIC_SUB             {"MQTT-Controller"};
+	const std::string PERSIST_DIR           {"./persist"};
+
+	const char* LWT_PAYLOAD = "Last will and testament";
+	const int  QOS = 1;
+	const auto TIMEOUT = std::chrono::seconds(10);
 	const int	N_RETRY_ATTEMPTS = 5;
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -103,12 +110,12 @@ namespace listener{
 		void connected(const std::string& cause) override {
 			(void) cause; // Shuts the system up about warnings from unused variable
 			std::cout << "\nConnection success" << std::endl;
-			std::cout << "\nSubscribing to topic '" << TOPIC << "'\n"
+			std::cout << "\nSubscribing to topic '" << TOPIC_SUB << "'\n"
 				<< "\tfor client " << CLIENT_ID
 				<< " using QoS" << QOS << "\n"
 				<< "\nPress Q<Enter> to quit\n" << std::endl;
 
-			cli_.subscribe(TOPIC, QOS, nullptr, subListener_);
+			cli_.subscribe(TOPIC_SUB, QOS, nullptr, subListener_);
 		}
 
 		// Callback for when the connection is lost.
@@ -125,17 +132,17 @@ namespace listener{
 
 		// Callback for when a message arrives.
 		void message_arrived(mqtt::const_message_ptr msg) override {
+			std::cout << "Message arrived" << std::endl;
 			data = json::parse(msg -> get_payload_str());
 		}
 
-		void delivery_complete(mqtt::delivery_token_ptr token) override {
-			(void) token; // Shuts the system up about warnings from unused variable
+		void delivery_complete(mqtt::delivery_token_ptr tok) override {
+			std::cout << "\tDelivery complete for token: "
+				<< (tok ? tok->get_message_id() : -1) << std::endl;
 		}
 
 	public:
 		callback(mqtt::async_client& cli, mqtt::connect_options& connOpts) : nretry_(0), cli_(cli), connOpts_(connOpts), subListener_("Subscription") {}
 	};
-
-	/////////////////////////////////////////////////////////////////////////////
 
 }

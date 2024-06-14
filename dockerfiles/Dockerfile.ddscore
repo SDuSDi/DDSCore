@@ -4,10 +4,6 @@ FROM ros:humble
 # Set bash as default shell
 SHELL ["/bin/bash", "-c"]
 
-ENV ROS_DOMAIN_ID="0"
-ENV RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-ENV PX4_UXRCE_DDS_PORT="8888"
-
 ######################################################################################################
 #                                            BUILD                                                   #
 ######################################################################################################

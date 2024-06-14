@@ -7,50 +7,21 @@
 
 // Own messages from core_msgs
 #include "core_msgs/msg/aux_global_position.hpp"
-#include "core_msgs/msg/StatusProvider.hpp"
+#include "core_msgs/msg/status_provider.hpp"
 
 // JSON library
 #include <nlohmann/json.hpp>
 using json = nlohmann::json; // for convenience
 
 // MQTT files and setup
-#include "listener.cpp"
-#include "publisher.cpp"
+#include "mqtt.cpp"
 mqtt::async_client *client = NULL;
 
 class LinkNode : public rclcpp::Node
 {
 public:
-    LinkNode(int argc, char **argv) : Node("linknode")
+    LinkNode() : Node("linknode")
     {
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        std::string	address  = (argc > 1) ? std::string(argv[1]) : publisher::DFLT_SERVER_ADDRESS,
-		            clientID = (argc > 2) ? std::string(argv[2]) : publisher::CLIENT_ID;
-        
-        std::cout << "\nInitializing for server '" << address << "'..." << std::endl;
-	    mqtt::async_client client(address, clientID, publisher::PERSIST_DIR);
-
-    	publisher::callback cb;
-	    client.set_callback(cb);
-
-        auto connOpts = mqtt::connect_options_builder()
-            .clean_session()
-            .will(mqtt::message(publisher::TOPIC, publisher::LWT_PAYLOAD, strlen(publisher::LWT_PAYLOAD), publisher::QOS, false))
-            .finalize();
-
-        std::cout << "Everything OK. Starting..." << std::endl;
-
-        // Connect
-		std::cout << "\nConnecting...";
-		mqtt::token_ptr conntok = client.connect(connOpts);
-		std::cout << " OK" << std::endl << "Waiting for the connection...";
-		conntok->wait();
-		std::cout << " OK" << std::endl;
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
         mode_pub = this -> create_publisher<std_msgs::msg::Int16>("/ddscore/mode",10);
         arm_pub = this -> create_publisher<std_msgs::msg::Empty>("/ddscore/arm",10);
         disarm_pub = this -> create_publisher<std_msgs::msg::Empty>("/ddscore/disarm",10);
@@ -65,8 +36,18 @@ public:
         status_sub = this -> create_subscription<core_msgs::msg::StatusProvider>("/ddscore/status",qos,
                              std::bind(&LinkNode::status_cb, this, std::placeholders::_1));
 
-        caller();
+		auto timer_callback = [this]() -> void {
+            if(mqttlink::data["id"]==mqttlink::ros_id){
+                if(mqttlink::data["command"]=="takeoff"){do_takeoff();}
+                if(mqttlink::data["command"]=="land"){do_land();}
+                if(mqttlink::data["command"]=="move"){gp_move();}
+                mqttlink::data["id"]="-1"; mqttlink::data["command"]="none"; mqttlink::data["param1"]=0; 
+                mqttlink::data["param2"]=0; mqttlink::data["param3"]=0; mqttlink::data["param4"]=0; mqttlink::data["param5"]=0;
+            }
+		};
+		timer = this -> create_wall_timer(std::chrono::milliseconds(100), timer_callback);
     }
+
 private:
 
     rclcpp::Publisher<std_msgs::msg::Int16>::SharedPtr mode_pub;
@@ -79,19 +60,19 @@ private:
     rclcpp::Subscription<core_msgs::msg::StatusProvider>::SharedPtr status_sub;
     void status_cb(const core_msgs::msg::StatusProvider::SharedPtr msg);
 
-    void caller();
+    rclcpp::TimerBase::SharedPtr timer;
 
     void do_takeoff();
     void do_land();
     void gp_move();
-
 };
 
 void LinkNode::status_cb(const core_msgs::msg::StatusProvider::SharedPtr msg)
 {
-    publisher::action_listener listener;
+    mqttlink::action_listener listener("Status Listener");
     json tmp_msg = {
-        {"id",msg -> id},
+        {"recipient","-1"},
+        {"id",mqttlink::ros_id},
 	    {"lat",msg -> lat},
 	    {"lon",msg -> lon},
 	    {"alt",msg -> alt},
@@ -99,35 +80,18 @@ void LinkNode::status_cb(const core_msgs::msg::StatusProvider::SharedPtr msg)
 	    {"nav_state",msg -> nav_state},
     };
     std::string PAYLOAD = to_string(tmp_msg);
-    mqtt::message_ptr pubmsg = mqtt::make_message(publisher::TOPIC, PAYLOAD);
-    mqtt::delivery_token_ptr pubtok = client.publish(pubmsg, nullptr, listener);
+    mqtt::message_ptr pubmsg = mqtt::make_message(mqttlink::TOPIC_PUB, PAYLOAD);
+    mqtt::delivery_token_ptr pubtok = client->publish(pubmsg, nullptr, listener);
     pubtok->wait();
 
-    auto toks = client.get_pending_delivery_tokens();
+    auto toks = client->get_pending_delivery_tokens();
     if (!toks.empty())
         std::cout << "Error: There are pending delivery tokens!" << std::endl;
 
-    Disconnect
-    std::cout << "\nDisconnecting...";
-    client.disconnect()->wait();
-    std::cout << " OK" << std::endl;
-}
-
-void LinkNode::caller()
-{
-    char* id = std::getenv("ROS_DOMAIN_ID");
-    while(true)
-    {
-        if(listener::data["id"]==id){
-            // std::cout<<"ID: "<<data["id"]<<" Domain ID: "<<id<<std::endl;
-            if(listener::data["command"]=="takeoff"){do_takeoff();}
-            if(listener::data["command"]=="land"){do_land();}
-            if(listener::data["command"]=="move"){gp_move();}
-            listener::data["id"]="-1"; listener::data["command"]=""; listener::data["param1"]=0; 
-            listener::data["param2"]=0; listener::data["param3"]=0; listener::data["param4"]=0; listener::data["param5"]=0;
-        }
-
-    }
+    // // Disconnect
+    // std::cout << "\nDisconnecting...";
+    // client->disconnect()->wait();
+    // std::cout << " OK" << std::endl;
 }
 
 void LinkNode::do_takeoff()
@@ -137,7 +101,7 @@ void LinkNode::do_takeoff()
     mode_pub -> publish(mode);
     arm_pub -> publish(std_msgs::msg::Empty());
     std_msgs::msg::Float32 msg;
-    msg.data = listener::data["param1"];
+    msg.data = mqttlink::data["param1"];
     takeoff_pub -> publish(msg);
 }
 
@@ -150,27 +114,44 @@ void LinkNode::do_land()
 void LinkNode::gp_move()
 {
     core_msgs::msg::AuxGlobalPosition msg{};
-    msg.speed = listener::data["param1"];
-    msg.yaw = listener::data["param2"];
-    msg.lat = listener::data["param3"];
-    msg.lon = listener::data["param4"];
-    msg.alt = listener::data["param5"];
+    msg.speed = mqttlink::data["param1"];
+    msg.yaw = mqttlink::data["param2"];
+    msg.lat = mqttlink::data["param3"];
+    msg.lon = mqttlink::data["param4"];
+    msg.alt = mqttlink::data["param5"];
     global_movement_pub -> publish(msg);
 }
 
-int main(int argc, char **argv){ //TODO: Revisar que esto de aqui esta mal
+int main(int argc, char **argv){
 
     rclcpp::init(argc, argv);
 
-    client = new mqtt::async_client("127.0.0.1:1883", "Link-consumer", 0);
-    mqtt::connect_options connOpts;
-    connOpts.set_clean_session(false);
-    listener::callback mqtt_cb(*client, connOpts);
-    client->set_callback(mqtt_cb);
-    client->start_consuming();
-    client->connect(connOpts);
+    std::string	address  = (argc > 1) ? std::string(argv[1]) : mqttlink::SERVER_ADDRESS,
+                clientID = (argc > 2) ? std::string(argv[2]) : mqttlink::CLIENT_ID;
+    
+    std::cout << "\nInitializing for server '" << address << "'..." << std::endl;
+    client = new mqtt::async_client (address, clientID, 0, mqttlink::PERSIST_DIR); // async_client (const string &serverURI, const string &clientId, int maxBufferedMessages, const string &persistDir)
 
-    rclcpp::spin(std::make_shared<LinkNode>(argc,argv));
+    mqtt::connect_options connOpts = mqtt::connect_options_builder()
+        .clean_session()
+        .will(mqtt::message(mqttlink::TOPIC_PUB, mqttlink::LWT_PAYLOAD, strlen(mqttlink::LWT_PAYLOAD), mqttlink::QOS, false))
+        .finalize();
+
+    std::cout << "\nInitializing setup...";
+    mqttlink::callback mqtt_cb(*client, connOpts);
+    client->set_callback(mqtt_cb);
+    std::cout << " OK" << std::endl;
+    client->start_consuming();
+
+    std::cout << "\nConnecting...";
+    mqtt::token_ptr conntok = client->connect(connOpts);
+    std::cout << " OK" << std::endl;
+    conntok->wait();
+    std::cout << "Waiting for the connection... OK" << std::endl;
+
+    std::cout << "Everything OK. Starting..." << std::endl;
+
+    rclcpp::spin(std::make_shared<LinkNode>());
     rclcpp::shutdown();
 
     return 0;
