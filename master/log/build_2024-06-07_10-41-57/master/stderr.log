@@ -1,3 +1,0 @@
-[01m[K/root/master/src/master/src/master_node.cpp:45:54:[m[K [01;35m[Kwarning: [m[Kcharacter constant too long for its type
-   45 |                 std::string PAYLOAD = std::to_string([01;35m[K'{"id":"0","command":"takeoff","param1":0,"param2":0,"param3":0,"param4":0,"param5":0}'[m[K);
-      |                                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

@@ -138,6 +138,8 @@ private:
     rclcpp::TimerBase::SharedPtr offboard_ctrl;
 
     // ROSMaster information pipeline
+    const int status_frequency = 10;
+    int status_loop = 0;
     rclcpp::Publisher<core_msgs::msg::StatusProvider>::SharedPtr status_writer;
     rclcpp::Subscription<px4_msgs::msg::VehicleStatus>::SharedPtr status_reader;
     void status_checker(px4_msgs::msg::VehicleStatus::SharedPtr msg);
@@ -313,14 +315,18 @@ void ControlNode::set_attitude(const geometry_msgs::msg::Twist::SharedPtr msg){ 
 
 void ControlNode::status_checker(px4_msgs::msg::VehicleStatus::SharedPtr msg){
     // RCLCPP_INFO(this -> get_logger(), "Relaying status to upper echelons");
-    core_msgs::msg::StatusProvider tmp{};
-    tmp.lat = global_pos[1];
-    tmp.lon = global_pos[2];
-    tmp.alt = global_pos[3];
-    tmp.arming_state = msg -> arming_state;
-    tmp.nav_state = msg -> nav_state;
-    // tmp.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
-    status_writer -> publish(tmp);
+    // RCLCPP_INFO(this -> get_logger(), "Loop state: %i Frequency: %i",status_loop, status_frequency);
+    if(status_loop == status_frequency){
+        core_msgs::msg::StatusProvider tmp{};
+        tmp.lat = global_pos[1];
+        tmp.lon = global_pos[2];
+        tmp.alt = global_pos[3];
+        tmp.arming_state = msg -> arming_state;
+        tmp.nav_state = msg -> nav_state;
+        status_writer -> publish(tmp);
+        status_loop = 0;
+    }
+    status_loop ++;
 }
 
 void ControlNode::euler2quaternion(float roll, float pitch, float yaw, float *q){

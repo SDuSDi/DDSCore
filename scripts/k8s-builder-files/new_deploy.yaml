@@ -69,3 +69,55 @@ spec:
           - configMapRef:
               name: fastdds-config-domain-0
 
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ddscore-1
+  labels:
+    app: dds_l
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dds_l
+  template:
+    metadata:
+      labels:
+        app: dds_l
+    spec:
+      hostNetwork: true
+      containers:
+      - name: ddscore-pod-1
+        image: local/ddscore:v1
+        envFrom:
+          - configMapRef:
+              name: fastdds-config-domain-1
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: px4-1
+  labels:
+    app: px4_l
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: px4_l
+  template:
+    metadata:
+      labels:
+        app: px4_l
+    spec:
+      hostNetwork: true
+      containers:
+      - name: px4-pod-1
+        image: local/px4:v1
+        envFrom:
+          - configMapRef:
+              name: fastdds-config-domain-1
+

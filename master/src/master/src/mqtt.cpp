@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <string>
 #include <cstring>
+#include <atomic>
 #include <cctype>
 #include <thread>
 #include <chrono>
@@ -11,13 +12,19 @@
 #include <nlohmann/json.hpp>
 using json = nlohmann::json; // for convenience
 
-namespace listener{
+namespace mqttmaster{
 
     json data;
+    const char* ros_id = std::getenv("ROS_DOMAIN_ID");
     const std::string SERVER_ADDRESS    ("mqtt://localhost:1883");
     const std::string CLIENT_ID         ("Master MQTT Listener");
-    const std::string TOPIC             ("MQTT-Status-Provider");
+    const std::string TOPIC_SUB         ("MQTT-Status-Provider");
+	const std::string TOPIC_PUB         ("MQTT-Controller");
+	const std::string PERSIST_DIR       ("./persist");
+
+    const char* LWT_PAYLOAD = "Last will and testament.";
     const int	QOS = 1;
+    const auto TIMEOUT = std::chrono::seconds(10);
     const int	N_RETRY_ATTEMPTS = 5;
 
     /////////////////////////////////////////////////////////////////////////////
@@ -103,12 +110,12 @@ namespace listener{
         void connected(const std::string& cause) override {
             (void) cause; // Prevents warning from unused variables
             std::cout << "\nConnection success" << std::endl;
-            std::cout << "\nSubscribing to topic '" << TOPIC << "'\n"
+            std::cout << "\nSubscribing to topic '" << TOPIC_SUB << "'\n"
                 << "\tfor client " << CLIENT_ID
                 << " using QoS" << QOS << "\n"
                 << "\nPress Q<Enter> to quit\n" << std::endl;
 
-            cli_.subscribe(TOPIC, QOS, nullptr, subListener_);
+            cli_.subscribe(TOPIC_SUB, QOS, nullptr, subListener_);
         }
 
         // Callback for when the connection is lost.
@@ -128,9 +135,10 @@ namespace listener{
             data = json::parse(msg -> get_payload_str());
         }
 
-        void delivery_complete(mqtt::delivery_token_ptr token) override {
-            (void) token; // Prevents warning from unused variables
-        }
+		void delivery_complete(mqtt::delivery_token_ptr tok) override {
+			std::cout << "\tDelivery complete for token: "
+				<< (tok ? tok->get_message_id() : -1) << std::endl;
+		}
 
     public:
         callback(mqtt::async_client& cli, mqtt::connect_options& connOpts) : nretry_(0), cli_(cli), connOpts_(connOpts), subListener_("Subscription") {}

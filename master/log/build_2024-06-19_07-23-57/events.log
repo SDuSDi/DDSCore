@@ -1,0 +1,121 @@
+[0.000000] (-) TimerEvent: {}
+[0.000108] (master) JobQueued: {'identifier': 'master', 'dependencies': OrderedDict()}
+[0.000446] (master) JobStarted: {'identifier': 'master'}
+[0.004775] (master) JobProgress: {'identifier': 'master', 'progress': 'cmake'}
+[0.004921] (master) Command: {'cmd': ['/usr/bin/cmake', '/root/master/src/master', '-DCMAKE_INSTALL_PREFIX=/root/master/install/master'], 'cwd': '/root/master/build/master', 'env': OrderedDict([('HOSTNAME', 'a4d8ac89d0c6'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/root/master/build/master'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.033419] (master) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.063642] (master) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.067581] (master) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.098665] (master) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.099869] (-) TimerEvent: {}
+[0.102675] (master) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.102840] (master) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.103070] (master) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.104867] (master) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.142865] (master) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.147270] (master) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.147470] (master) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.147740] (master) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.149071] (master) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199969] (-) TimerEvent: {}
+[0.220218] (master) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.267694] (master) StdoutLine: {'line': b'-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.287077] (master) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.289487] (master) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.294178] (master) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.300054] (-) TimerEvent: {}
+[0.301638] (master) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.313653] (master) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.351975] (master) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.353160] (master) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400279] (-) TimerEvent: {}
+[0.417081] (master) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.434288] (master) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.467189] (master) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.476239] (master) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.502575] (-) TimerEvent: {}
+[0.529431] (master) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.529606] (master) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.583557] (master) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.584504] (master) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.602680] (-) TimerEvent: {}
+[0.702951] (-) TimerEvent: {}
+[0.749200] (master) StdoutLine: {'line': b'-- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") \n'}
+[0.750914] (master) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.803046] (-) TimerEvent: {}
+[0.822781] (master) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.823783] (master) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.823983] (master) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[0.824064] (master) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.824598] (master) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.824680] (master) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.825187] (master) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.826066] (master) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.826163] (master) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.826489] (master) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.827583] (master) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.835128] (master) StdoutLine: {'line': b'-- Generating done\n'}
+[0.836390] (master) StdoutLine: {'line': b'-- Build files have been written to: /root/master/build/master\n'}
+[0.841829] (master) CommandEnded: {'returncode': 0}
+[0.842270] (master) JobProgress: {'identifier': 'master', 'progress': 'build'}
+[0.842941] (master) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/master/build/master', '--', '-j20', '-l20'], 'cwd': '/root/master/build/master', 'env': OrderedDict([('HOSTNAME', 'a4d8ac89d0c6'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/root/master/build/master'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.877394] (master) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/node.dir/src/master_node.cpp.o\x1b[0m\n'}
+[0.903149] (-) TimerEvent: {}
+[1.003504] (-) TimerEvent: {}
+[1.103789] (-) TimerEvent: {}
+[1.204064] (-) TimerEvent: {}
+[1.304344] (-) TimerEvent: {}
+[1.404606] (-) TimerEvent: {}
+[1.504869] (-) TimerEvent: {}
+[1.605172] (-) TimerEvent: {}
+[1.705442] (-) TimerEvent: {}
+[1.805700] (-) TimerEvent: {}
+[1.905997] (-) TimerEvent: {}
+[2.006314] (-) TimerEvent: {}
+[2.106648] (-) TimerEvent: {}
+[2.206942] (-) TimerEvent: {}
+[2.307234] (-) TimerEvent: {}
+[2.407497] (-) TimerEvent: {}
+[2.507760] (-) TimerEvent: {}
+[2.608023] (-) TimerEvent: {}
+[2.708290] (-) TimerEvent: {}
+[2.808549] (-) TimerEvent: {}
+[2.908857] (-) TimerEvent: {}
+[3.009172] (-) TimerEvent: {}
+[3.109435] (-) TimerEvent: {}
+[3.209724] (-) TimerEvent: {}
+[3.310023] (-) TimerEvent: {}
+[3.410283] (-) TimerEvent: {}
+[3.510542] (-) TimerEvent: {}
+[3.610802] (-) TimerEvent: {}
+[3.711066] (-) TimerEvent: {}
+[3.811323] (-) TimerEvent: {}
+[3.911589] (-) TimerEvent: {}
+[3.992966] (master) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable node\x1b[0m\n'}
+[4.011679] (-) TimerEvent: {}
+[4.111919] (-) TimerEvent: {}
+[4.113136] (master) StdoutLine: {'line': b'[100%] Built target node\n'}
+[4.118398] (master) CommandEnded: {'returncode': 0}
+[4.127435] (master) JobProgress: {'identifier': 'master', 'progress': 'install'}
+[4.131283] (master) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/master/build/master'], 'cwd': '/root/master/build/master', 'env': OrderedDict([('HOSTNAME', 'a4d8ac89d0c6'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/root/master/build/master'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[4.134301] (master) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.134432] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/lib/master/node\n'}
+[4.135037] (master) StdoutLine: {'line': b'-- Set runtime path of "/root/master/install/master/lib/master/node" to ""\n'}
+[4.135135] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/ament_index/resource_index/package_run_dependencies/master\n'}
+[4.135214] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/ament_index/resource_index/parent_prefix_path/master\n'}
+[4.135295] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/environment/ament_prefix_path.sh\n'}
+[4.135455] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/environment/ament_prefix_path.dsv\n'}
+[4.135554] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/environment/path.sh\n'}
+[4.135648] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/environment/path.dsv\n'}
+[4.135720] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/local_setup.bash\n'}
+[4.135789] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/local_setup.sh\n'}
+[4.135879] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/local_setup.zsh\n'}
+[4.135946] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/local_setup.dsv\n'}
+[4.136012] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/package.dsv\n'}
+[4.136078] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/ament_index/resource_index/packages/master\n'}
+[4.136143] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/cmake/masterConfig.cmake\n'}
+[4.136209] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/cmake/masterConfig-version.cmake\n'}
+[4.136291] (master) StdoutLine: {'line': b'-- Installing: /root/master/install/master/share/master/package.xml\n'}
+[4.136739] (master) CommandEnded: {'returncode': 0}
+[4.156364] (master) JobEnded: {'identifier': 'master', 'rc': 0}
+[4.156831] (-) EventReactorShutdown: {}

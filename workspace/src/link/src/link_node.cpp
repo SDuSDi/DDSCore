@@ -17,6 +17,8 @@ using json = nlohmann::json; // for convenience
 #include "mqtt.cpp"
 mqtt::async_client *client = NULL;
 
+int arm_state = 1;
+
 class LinkNode : public rclcpp::Node
 {
 public:
@@ -79,6 +81,7 @@ void LinkNode::status_cb(const core_msgs::msg::StatusProvider::SharedPtr msg)
 	    {"arming_state",msg -> arming_state},
 	    {"nav_state",msg -> nav_state},
     };
+    arm_state = msg -> arming_state;
     std::string PAYLOAD = to_string(tmp_msg);
     mqtt::message_ptr pubmsg = mqtt::make_message(mqttlink::TOPIC_PUB, PAYLOAD);
     mqtt::delivery_token_ptr pubtok = client->publish(pubmsg, nullptr, listener);
@@ -87,11 +90,6 @@ void LinkNode::status_cb(const core_msgs::msg::StatusProvider::SharedPtr msg)
     auto toks = client->get_pending_delivery_tokens();
     if (!toks.empty())
         std::cout << "Error: There are pending delivery tokens!" << std::endl;
-
-    // // Disconnect
-    // std::cout << "\nDisconnecting...";
-    // client->disconnect()->wait();
-    // std::cout << " OK" << std::endl;
 }
 
 void LinkNode::do_takeoff()
@@ -99,7 +97,14 @@ void LinkNode::do_takeoff()
     std_msgs::msg::Int16 mode;
     mode.data = 1;
     mode_pub -> publish(mode);
-    arm_pub -> publish(std_msgs::msg::Empty());
+    rclcpp::sleep_for(std::chrono::seconds(1));
+    for (int i = 0; i < 50; i++){
+        if(arm_state == 1){
+            arm_pub -> publish(std_msgs::msg::Empty());
+            rclcpp::sleep_for(std::chrono::milliseconds(100));
+        }
+    }
+    rclcpp::sleep_for(std::chrono::seconds(2));
     std_msgs::msg::Float32 msg;
     msg.data = mqttlink::data["param1"];
     takeoff_pub -> publish(msg);

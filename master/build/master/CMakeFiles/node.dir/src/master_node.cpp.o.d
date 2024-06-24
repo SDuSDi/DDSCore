@@ -652,7 +652,7 @@ CMakeFiles/node.dir/src/master_node.cpp.o: \
  /usr/include/nlohmann/ordered_map.hpp \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /root/master/src/master/src/publisher.cpp \
+ /root/master/src/master/src/mqtt.cpp \
  /usr/local/include/mqtt/async_client.h /usr/local/include/MQTTAsync.h \
  /usr/local/include/MQTTExportDeclarations.h \
  /usr/local/include/MQTTProperties.h /usr/local/include/MQTTReasonCodes.h \

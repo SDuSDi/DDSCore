@@ -1,2 +1,0 @@
-Invoking command in '/root/master/build/master': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/master/src/master -DCMAKE_INSTALL_PREFIX=/root/master/install/master
-Invoked command in '/root/master/build/master' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/master/src/master -DCMAKE_INSTALL_PREFIX=/root/master/install/master
