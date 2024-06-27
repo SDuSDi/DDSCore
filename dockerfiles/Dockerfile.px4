@@ -18,6 +18,8 @@ RUN apt-get update  && \
 # Clone the PX4 repository and its dependencies
 WORKDIR /root
 RUN git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+
+# Fix problem with missing ground station
 RUN cd PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes && \
     sed -i "/NAV_DLL_ACT/d" 4001_gz_x500 && \
     echo "param set-default NAV_DLL_ACT 0" >> filename
