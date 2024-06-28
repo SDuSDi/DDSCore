@@ -1,69 +1,28 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mosquitto
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      name: mosquitto
-  template:
-    metadata:
-      labels:
-        name: mosquitto
-    spec:
-      hostNetwork: true
-      containers:
-        - name: mosquitto
-          image: eclipse-mosquitto:2.0.18
-
 ---
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ddscore-0
-  labels:
-    app: dds_l
+  name: drone-0
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dds_l
+      app: drn-0
   template:
     metadata:
       labels:
-        app: dds_l
+        app: drn-0
     spec:
-      hostNetwork: true
       containers:
-      - name: ddscore-pod-0
+      - name: ddscore
         image: local/ddscore:v1
+        ports:
+        - containerPort: 1883
         envFrom:
           - configMapRef:
               name: fastdds-config-domain-0
-
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: px4-0
-  labels:
-    app: px4_l
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: px4_l
-  template:
-    metadata:
-      labels:
-        app: px4_l
-    spec:
-      hostNetwork: true
-      containers:
-      - name: px4-pod-0
+      - name: px4
         image: local/px4:v1
         envFrom:
           - configMapRef:
@@ -74,48 +33,26 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ddscore-1
-  labels:
-    app: dds_l
+  name: drone-1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dds_l
+      app: drn-1
   template:
     metadata:
       labels:
-        app: dds_l
+        app: drn-1
     spec:
-      hostNetwork: true
       containers:
-      - name: ddscore-pod-1
+      - name: ddscore
         image: local/ddscore:v1
+        ports:
+        - containerPort: 1883
         envFrom:
           - configMapRef:
               name: fastdds-config-domain-1
-
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: px4-1
-  labels:
-    app: px4_l
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: px4_l
-  template:
-    metadata:
-      labels:
-        app: px4_l
-    spec:
-      hostNetwork: true
-      containers:
-      - name: px4-pod-1
+      - name: px4
         image: local/px4:v1
         envFrom:
           - configMapRef:
