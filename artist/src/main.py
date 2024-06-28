@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt
+import numpy as np
 import matplotlib.pyplot as plt
 import json
 from mpl_toolkits.basemap import Basemap
@@ -11,7 +12,9 @@ class PipListener(mqtt.Client):
         self.client_id = "DDSCore-Illustrator"
         self.lat = []
         self.lon = []
-        self.color = []
+        self.map = Basemap(llcrnrlon=-100.,llcrnrlat=0.,urcrnrlon=-20.,urcrnrlat=57.,
+            projection='lcc',lat_1=20.,lat_2=40.,lon_0=-60.,
+            resolution ='l',area_thresh=1000.)
 
     def on_connect(self, mqttc, obj, flags, reason_code, properties):
         print("\nConnection sucess")
@@ -36,8 +39,16 @@ class PipListener(mqtt.Client):
             self.lat.append(j["lat"])
             self.lon.append(j["lon"])
 
+            # self.map.plot(self.lat,self.lon,linewidth=1000,c='b')
             plt.scatter(self.lon,self.lat)
             plt.pause(0.05)
+
+            #self.map.shadedrelief()
+            #self.map.drawmapboundary(fill_color='#99ffff')
+            #self.map.fillcontinents(color='#cc9966',lake_color='#99ffff')
+            #self.map.drawparallels(np.arange(10,70,20),labels=[1,1,0,0])
+            #self.map.drawmeridians(np.arange(-100,0,20),labels=[0,0,0,1])
+
             plt.draw()
 
     def on_subscribe(self, mqttc, obj, mid, reason_code_list, properties):

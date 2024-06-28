@@ -1,48 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ddscore
-  labels:
-    app: dds_l
+  name: drone-0
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dds_l
+      app: drn-0
   template:
     metadata:
       labels:
-        app: dds_l
+        app: drn-0
     spec:
-      hostNetwork: true
       containers:
-      - name: ddscore-pod
+      - name: ddscore
         image: local/ddscore:v1
+        ports:
+        - containerPort: 1883
         envFrom:
           - configMapRef:
               name: fastdds-config-domain-0
-
----
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: px4
-  labels:
-    app: px4_l
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: px4_l
-  template:
-    metadata:
-      labels:
-        app: px4_l
-    spec:
-      hostNetwork: true
-      containers:
-      - name: px4-pod
+      - name: px4
         image: local/px4:v1
         envFrom:
           - configMapRef:
@@ -53,18 +31,46 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mosquitto
+  name: drone-1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: mosquitto
+      app: drn-1
   template:
     metadata:
       labels:
-        name: mosquitto
+        app: drn-1
     spec:
-      hostNetwork: true
       containers:
-        - name: mosquitto
-          image: eclipse-mosquitto:2.0.18
+      - name: ddscore
+        image: local/ddscore:v1
+        ports:
+        - containerPort: 1883
+        envFrom:
+          - configMapRef:
+              name: fastdds-config-domain-1
+      - name: px4
+        image: local/px4:v1
+        envFrom:
+          - configMapRef:
+              name: fastdds-config-domain-1
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: mosquitto
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: mosquitto
+#   template:
+#     metadata:
+#       labels:
+#         app: mosquitto
+#     spec:
+#       hostNetwork: true
+#       containers:
+#         - name: mosquitto
+#           image: eclipse-mosquitto:2.0.18

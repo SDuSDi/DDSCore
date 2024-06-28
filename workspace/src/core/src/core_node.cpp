@@ -82,10 +82,10 @@ public:
         // Definition of loop timer function
         auto publish_offboard_control = [this]() -> void {
                 px4_msgs::msg::OffboardControlMode msg{};
-                msg.position = false;
-                msg.velocity = false;//!enable;
+                msg.position = enable;
+                msg.velocity = !enable;
                 msg.acceleration = false;
-                msg.attitude = true;
+                msg.attitude = false;
                 msg.body_rate = false;
                 msg.timestamp = this -> get_clock() -> now().nanoseconds() / 1000;
                 offboard_controller -> publish(msg);

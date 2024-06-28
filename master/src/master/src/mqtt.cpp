@@ -16,7 +16,7 @@ namespace mqttmaster{
 
     json data;
     const char* ros_id = std::getenv("ROS_DOMAIN_ID");
-    const std::string SERVER_ADDRESS    ("mqtt://localhost:1883");
+    const std::string SERVER_ADDRESS    ("mqtt://192.168.21.86:1883");
     const std::string CLIENT_ID         ("Master MQTT Listener");
     const std::string TOPIC_SUB         ("MQTT-Status-Provider");
 	const std::string TOPIC_PUB         ("MQTT-Controller");

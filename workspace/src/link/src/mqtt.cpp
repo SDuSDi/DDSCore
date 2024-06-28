@@ -16,7 +16,7 @@ namespace mqttlink{
 
 	json data;
 	const char* ros_id = std::getenv("ROS_DOMAIN_ID");
-	const std::string SERVER_ADDRESS        {"mqtt://localhost:1883"};
+	const std::string SERVER_ADDRESS        {"mqtt://192.168.21.86:1883"};
 	const std::string CLIENT_ID				{"Link MQTT Provider ID~" + std::string(ros_id)};
 	const std::string TOPIC_PUB             {"MQTT-Status-Provider"};
 	const std::string TOPIC_SUB             {"MQTT-Controller"};
@@ -44,6 +44,8 @@ namespace mqttlink{
 		}
 
 		void on_success(const mqtt::token& tok) override {
+			(void) tok; // Prevent unused variable warning
+			// // Uncomment to get info about sent messages
 			// std::cout << name_ << " success";
 			// if (tok.get_message_id() != 0)
 			// 	std::cout << " for token: [" << tok.get_message_id() << "]" << std::endl;
